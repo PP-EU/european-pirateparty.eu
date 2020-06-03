@@ -1,7 +1,7 @@
 language: python
 python: 3.6
 install: "pip install Lektor"
-script: "lektor build -O web ; git init; git checkout -b gh-pages git add web; git -c user.name=$ -c LEKTOR_DEPLOY_USERNAME commit -m init"
+script: "lektor build -O web ; git init; git checkout -b gh-pages git add web; git commit --author="LEKTOR_DEPLOY_USERNAME <>" -m "whatever"
 deploy:
   provider: script
   script: "lektor deploy ghpages"
