@@ -3,12 +3,14 @@ python: 3.6
 install: "pip install Lektor"
 script: "lektor build -O web"
 after_succes: 
-    git checkout -b gh-pages
-    git add web
-    git -c user.name=$ -c LEKTOR_DEPLOY_USERNAME commit -m init
-    # Make sure to make the output quiet, or else the API token will leak!
-    # This works because the API key can replace your password.
-    git push -f -q https://LEKTOR_DEPLOY_USERNAME:LEKTOR_DEPLOY_PASSWORDY@github.com/LEKTOR_DEPLOY_USERNAME/european-pirateparty.eu-gh-pages gh-pages &>/dev/null
+    
+    
 deploy:
   provider: script
-  script: "lektor deploy ghpages"
+  script: git checkout -b gh-pages
+          git add web
+   	  git -c user.name=$ -c LEKTOR_DEPLOY_USERNAME commit -m init
+    # Make sure to make the output quiet, or else the API token will leak!
+    # This works because the API key can replace your password.
+    	  git push -f -q https://LEKTOR_DEPLOY_USERNAME:LEKTOR_DEPLOY_PASSWORDY@github.com/LEKTOR_DEPLOY_USERNAME/european-pirateparty.eu-gh-pages gh-pages &>/dev/null
+        
