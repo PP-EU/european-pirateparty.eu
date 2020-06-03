@@ -1,3 +1,4 @@
+lektor build -O web 
 git init
 git checkout -b gh-pages
 git add web
