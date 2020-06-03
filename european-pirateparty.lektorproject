@@ -6,3 +6,5 @@ url_style = absolute
 lektor-strip-html-tags = 0.3.1
 lektor-tags = 0.3
 
+[servers.ghpages]
+target = ghpages://PP-EU/european-pirateparty.eu
