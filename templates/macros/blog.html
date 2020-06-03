@@ -1,0 +1,27 @@
+{% macro render_blog_post(post, from_index=false) %}
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        {% if post.img %}
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="{{ post|url }}"><img class="thumbnail blog-posting__media" src="/img{{ post.img }}" alt="{{ post.title }}"></a>
+            </div>
+         {% endif %}
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="{{ post|url }}" itemprop="headline">{{ post.title }}</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="{{ post|url }}" />
+                    <i class="blog-posting__pubdate">{{ post.pub_date }} </i>
+                    <span itemprop="description">{{post.description}}</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="{{ post|url }}">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+{% endmacro %}
+

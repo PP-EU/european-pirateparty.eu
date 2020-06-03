@@ -1,0 +1,23 @@
+title: Streaming
+---
+pub_date: 2017-11-18
+---
+img: /logo_european_pirate_party.png
+---
+body: Live stream only available during ongoing events.  _Chrome users should set
+Settings- >Privacy->Flash-> URL= https ://european-pirateparty.eu/streaming
+__Windows users should activate enhanced features (speakers)._
+
+* * *
+
+VLC-Player URL: rtmp://89.238.65.23:1935/Vidiu/myStream
+
+* * *
+
+**Mobile:** Android: rtsp://89.238.65.23:1935/Vidiu/myStream macOS/IOS:
+<http://89.238.65.23:1935/Vidiu/myStream/playlist.m3u8>
+
+* * *
+
+
+

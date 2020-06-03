@@ -1,0 +1,172 @@
+title: Common EU toolbox for Member States on contact tracing apps
+---
+type: post
+---
+tags: 
+ 
+opensource
+covid19
+freesoftware
+default
+articles
+
+---
+pub_date: 2020-04-29
+---
+img: /mika-baumeister-eXlEmz0ewo8-unsplash.jpg
+---
+description: ## Pirate MEP Marcel Kolaja
+---
+body: :
+
+As part of the gradual lifting of confinement measures, the Commission
+published on April 16 an [EU
+toolbox](https://ec.europa.eu/health/sites/health/files/ehealth/docs/covid-19_apps_en.pdf),
+developed by Member States for the use of mobile applications for contact
+tracing and warning in response to the spreading of COVID-19. This is a very
+timely and welcome initiative given that certain countries started to work on
+their own measures, often declaring state of emergency and deprioritizing
+fundamental rights.[Poland](https://www.politico.eu/article/poland-
+coronavirus-app-offers-playbook-for-other-governments/) was one of the first
+Western countries to roll out an app that collects large amount of personal
+data, including people’s location and digital photos, in order to combat the
+pandemic.
+
+### Measures in Member States
+
+According to [information shared by Member
+States](https://autoriteitpersoonsgegevens.nl/nl/nieuws/gebruik-telecomdata-
+tegen-corona-alleen-met-wet), more than half of EU countries have tapped
+telecom companies data to monitor citizens’ movements under confinement
+measures. Even though data protection authorities in certain countries already
+stated that it’s not possible to anonymize telecom location data.
+![](https://european-pirateparty.eu/wp-content/uploads/2020/04/20200424-map-
+measures-en.png) Country | Measures  
+---|---  
+**Austria** | Austrian telecom operator A1,
+[confirmed](https://newsroom.a1.net/news-stellungnahme-zur-aktuellen-
+medienberichterstattung?id=103337&menueid=12658&l=deutsch) that they made
+analyses on aggregate movement of people available to government agencies.  
+**Belgium** | _Data Against Corona Taskforce_ established by the Ministers for
+Health and Digital Agenda. Task is to analyze anonymized data from telecom
+companies to assess the spread of the virus and identify high risk areas.  
+**Bulgaria** | A
+[law](https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=147150) has been
+recently adopted on measures and actions to be taken during the emergency. It
+amends the Communications Act to allow police to request telephone and
+Internet operators’ data on people placed under compulsory quarantine, in
+order to monitor their movements, trace contacts, and enforce quarantine
+measures. Internet operators are obliged to retain user data for six months
+and to forward it to the police upon request.  
+**Croatia** | A [proposal to amend](https://www.sabor.hr/prijedlog-zakona-o-
+dopunama-zakona-o-elektronickim-komunikacijama-s-konacnim-prijedlogom-
+zakona?t=115803&tid=208662) the Electronic Communications Act was recently
+debated by the Parliament. It aims at making it easier for authorities to
+access the location data of people who are under prescribed self-isolation.  
+**Czechia** | Plans are underway to launch a [_smart quarantine_
+system](https://www.euractiv.com/section/all/short_news/prague-smart-
+quarantine/) to track the movements of persons who have been tested positive.
+The system shall require such persons to consent to share data from their
+mobile phones and payment cards in order to track contacts.  
+**Cyprus** | According to local news, the Health Minister was preparing new
+measures to combat COVID-19 that might include monitoring electronically
+infected people via a wristband or possibly an [ankle
+bracelet](https://www.thecyprusnow.com/cyprus-coronavirus-ankle-bracelet-gps-
+tracker-like-criminals/).  
+**France** | Mobile operator Orange confirmed that they have started sharing
+aggregate and anonymized [geolocation
+data](https://techcrunch.com/2020/03/27/telco-metadata-grab-is-for-modelling-
+covid-19-spread-not-tracking-citizens-says-ec/) with Inserm, a public research
+institute. The country has not taken yet any concrete initiative on location
+tracking, but is considering a [strategy](https://www.la-
+croix.com/France/Donnees-geolocalisation-contre-coronavirus-debat-couve-
+France-2020-03-25-1301086081) for the digital identification of people who
+have been in contact with infected persons.  
+**Germany** | Deutsche Telekom
+[announced](https://www.welt.de/politik/deutschland/article206624141/Coronavirus-
+Telekom-teilt-Bewegungsstroeme-von-Handynutzern-mit-RKI.html) publicly that it
+was sharing anonymized location data of its users with the _Robert-Koch
+Institute_ , a research institute and government agency responsible for
+disease control and prevention. The country is currently exploring introducing
+an app for tracking new infections and tracing contacts.  
+**Ireland** | Is preparing the [launch of an
+app](https://www.irishtimes.com/news/ireland/irish-news/coronavirus-
+smartphone-app-to-facilitate-contact-tracing-to-be-rolled-out-hse-
+says-1.4215036) to facilitate contact tracing. It shall use Bluetooth
+technology to detect devices in close proximity and store data about such
+contacts to facilitate contact tracing in case of infection.  
+**Italy** | Authorities have been working with mobile operators to analyze
+aggregate data to [monitor](https://www.reuters.com/article/us-health-
+coronavirus-europe-telecoms/european-mobile-operators-share-data-for-
+coronavirus-fight-idUSKBN2152C2) people’s movements. The government has also
+announced the establishment of a national task force to review and select
+technological solutions for [combating the
+spread](https://www.codastory.com/authoritarian-tech/italy-tech-limit-spread-
+coronavirus/) of COVID-19.  
+**Poland** | The Polish Ministry of Digitization released an app called _Home
+quarantine_ to help ensure that people observe quarantine measures. Accounts
+are automatically created for all those in quarantine. Users are requested to
+periodically send geo-located selfies to prove they are at home. If they fail
+to comply, the police is alerted. The data shall be retained for 6 years.  
+**Slovakia** | The [_corona
+bill_](https://www.euractiv.com/section/all/short_news/bratislava-parliament-
+approves-tracking-people-infected-with-covid-19/) adopted on March 25 allows
+the Public Health Office to use data from telecom operators to track the
+movements of persons infected with COVID-19, and of those in compulsory
+quarantine, based on their consent. Police and secret services have access to
+this data and may be able to identify a person after obtaining a court order.  
+**Slovenia** | A law was proposed that would allow the police to monitor the
+location of individuals who opt for self-isolation instead of mandatory
+quarantine. Due to strong criticism, the law was adopted without the
+controversial provisions.  
+**Spain** | Use of mobile phone location data is planned to [track people’s
+movements](https://www.thelocal.es/20200402/spain-plans-to-use-mobile-phone-
+data-to-track-citizens-during-coronavirus-crisis) in order to assess adherence
+to lockdown measures. It is reported that the Ministry of Health also intends
+to use location data to launch an app which shall alert users to carry out a
+self-assessment. Tracking apps have already been released in
+[Catalonia](http://canalsalut.gencat.cat/ca/salut-
+a-z/c/coronavirus-2019-ncov/stop-covid19-cat/) and
+[Madrid](https://carto.com/blog/carto-develops-app-against-coronavirus/).  
+  
+### Recommendations in the toolbox
+
+Although it is possible to agree with the basic outline of these
+recommendations, the devil is in the detail as usual. I would also have liked
+to see a more ambitious proposal from the Commission, with proper enforcement,
+instead of recommendation. Nevertheless, the four essential requirements for
+tracing apps laid out in the toolbox are on spot:
+
+  * **Voluntary:** Making the use of apps voluntary is important, as it would ensure that applications are used only with the consent of users, in line with current data protection laws. At the same time, the scope of these recommendations shouldn’t be limited to voluntary apps only (see the example of Poland above).
+  * **Approved by the national health authority:** It is also important that the applications have to be approved by the national health authority, as the most important task of such applications is to serve the purpose of tracing infection transmission chains inside the country and across borders. This would also ensure that the contact tracing app is used only for public health purposes and not for political ones.
+  * **Privacy-preserving—personal data is securely encrypted:** This is an absolute requirement for any app. Medical data is sensitive data even in the physical world protected under special conditions. However, additional safeguards such as decentralized data storage would be welcome.
+  * **Dismantled as soons as no longer needed** : Time limit on use is something I have been advocating for as this can ensure that interference with fundamental rights remains temporary. It’s unfortunate though that the recommendation doesn’t set any specific time limit, only mentions that it should be dismantled as soon as no longer needed.
+
+**In addition to these pillars, I see the following as key points:** The
+toolbox is not limited to contact tracing and warning functionality. Member
+States will consider further use such as symptom tracking. It is important to
+make users aware of such features from the beginning and empower them to
+consent to these uses. The toolbox also elaborates on how to prevent
+proliferation of harmful apps: app stores will have to cooperate and delist
+harmful applications and promote government apps. Thus, they will have to
+monitor their own service to see which one is the official application and
+which one isn’t. This shouldn’t become the backdoor to any future rules on
+platforms that would impose general monitoring obligation. The use of Open
+Source is explicitly recommended by the Commission in order to support
+transparency and interoperability. This is a very important requirement that
+for instance can help the verification whether the functioning is in line with
+data protection rules. Unfortunately, the Commission’s own hackathon taking
+place this weekend encourages the use of proprietary software, which
+contradicts this initiative. Jointly with 33 Members of the European
+Parliament, we
+[urged](https://mastodon.pirati.cz/@marcel_kolaja/104046342896480448) the
+Commission to change this. While the toolbox is a useful tool, it is silent on
+certain unclear provisions in the [Commission’s Joint European Roadmap towards
+lifting COVID-19 containment
+measures](https://ec.europa.eu/info/sites/info/files/communication_-
+_a_european_roadmap_to_lifting_coronavirus_containment_measures_0.pdf), such
+as _participatory surveillance_ , which is meant to complement information
+gathered by the authorities with data on search history and interaction on
+social media. A really inaccurate and unnecessary data which shouldn’t be used
+for purposes of tackling COVID-19.
+

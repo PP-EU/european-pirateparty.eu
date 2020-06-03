@@ -1,0 +1,115 @@
+title: India: The world's largest lockdown
+---
+type: post
+---
+tags: 
+ 
+opensource
+covid19
+india
+freesoftware
+foss
+default
+articles
+
+---
+pub_date: 2020-05-06
+---
+img: /20200505-Aarogya_Setu.png
+---
+description: # MEP Marcel Kolaja
+---
+body: :
+
+India has adopted the largest worldwide lockdown and 1.3 billion people must
+stay at their homes since March 25. To prevent the virus from spreading, the
+Indian government developed an app called _Aarogya Setu_ to trace COVID-19
+patients or suspected cases. Recently, there have been attacks from the
+government on the freedoms on the Internet, so the question of the tracing app
+raises concerns. As a member of the delegation for relations with India in the
+European Parliament, I have been watching the issue of digital rights for
+quite some time. On March 25, the conservative Prime Minister Nárendra Modi
+announced a lockdown of the entire country, consisting of a few phases and
+ending in the second half of May. The residents—and especially the
+commuters—had only 4 hours to return to their homes or to buy necessary items.
+For now, restrictions have been relaxed to some extent. However, nationwide
+lockdown cannot be a long-term solution.
+
+## What is at stake?
+
+India is going through the second phase of the lockdown. The government has
+relaxed restrictions on farming, banking, and public works; however, transport
+services and most businesses remain closed. Most of the measures were targeted
+at easing pressure on farming, which employs more than half the nation’s
+workforce and is essential to avoid food crisis, followed by a permission of
+resumption of manufacturing and farming activities in rural areas, where
+millions of daily wage earners were left without work. Overall, factors that
+may aggravate the situation in India are:
+
+  * the density of population, namely in urban areas and slums;
+  * weak hygiene and access to water for some vulnerable parts of society;
+  * weak quality and coverage of the health system;
+  * frequent heart and lungs diseases, namely due to pollution;
+  * and large and extended families, which make social distancing more difficult.
+
+Two factors might lead to experience lower overall mortality rates, on the
+other hand, such as the warmer climate and the average low age of the
+population.
+
+## _Aarogya Setu:_ Is this app the solution?
+
+As of today, India has reported 49,436 cases of the coronavirus and 1,695
+deaths. As is already being widely [discussed and implemented in the European
+countries](https://www.kolaja.eu/en/post/20200424-common_eu_toolbox_for_member_states_on_contact_tracing_apps_dos_and_donts/),
+India is looking for possibilities of applying smart quarantine as well.
+Because of that, India launched its own app to trace COVID-19 patients called
+_Aarogya Setu_. The core of its operation is based on a Bluetooth handshake
+complemented by collection localization data from GPS. _Aarogya Setu_ is not
+the only one used in the country; however, this one is supported by the
+government. [caption id="attachment_1422" align="alignnone"
+width="699"]![](https://european-pirateparty.eu/wp-
+content/uploads/2020/05/20200505-Aarogya_Setu.png) Aarogya Setu in Google
+Store[/caption] With the ubiquity of smartphones, which collect vast troves of
+personal information, surveillance can aid with rapid contact tracing. But
+owing to the peculiarities of the coronavirus, authorities across the world
+are beginning to realize the limited efficacy associated with respect to
+location surveillance. As a result, governments and other groups have released
+or are developing smartphone apps that use Bluetooth beacons or GPS signals to
+trace potentially infected patients. In case of Indian _Aarogya Setu_ , access
+to Bluetooth is key for the app to establish close range proximity between two
+people. When two smartphones with _Aarogya Setu_ installed come in each
+other’s Bluetooth range, the app will exchange information and store it in the
+users’ devices. If one of the two people tests positive, the app will alert
+the other person and shares the collected data with the government to allow
+tracing of potential cases. It remains a question, why the app also requests
+non-stop access to GPS location of users, while the Bluetooth solution should
+be sufficient by itself.
+
+## What is the risk?
+
+The Indian government has crossed several boundries in recent months in terms
+of human rights violations. The shutdowns of the Internet in various parts of
+the country—because of the protest due to the Citizenship Amendment Bill—are
+the most actual examples. Therefore, there is high risk that applications
+could also be misused. Why _Aarogya Setu_ could be a potencial risk for
+person’s privacy? There is a plenty of concerns how app is inconsistent with
+the right to privacy:
+
+  * Collection of large amount of redundant information. Unnecessarily, in addition to data from Bluetooth, the application stores data from GPS. After registration, it asks users to provide personal data such as sex, occupation, and countries visited in the last 30 days, which is unjustified and similar applications do not require them at all.
+  * The app’s privacy policy also does not specify which departments of the reponsible ministries will have access to the data collected by the app.
+  * Government declared to delete collected data after 30 days; however, there is no guarantee apart from the government’s promise.
+  * Lack of clear declaration of data anonymity.
+  * India’s surveillance, interception, and data protection laws are outdated and require significant reform.
+  * The application is not Open Source and therefore lacks transparency. Open Source Software is less prone to abuse or cracking, as more experts can verify the code and improve it.
+
+Fortunately, Indian digital rights defenders—such as the [Internet Freedom
+Foundation in Delhi](https://internetfreedom.in/is-aarogya-setu-privacy-first-
+nope-but-it-could-be-if-the-government-wanted/)—oversee the measures and
+inform about possible threats.
+
+## Guiding principles for contact tracing apps
+
+Applications for contact tracing must be voluntary. Solutions must be Open
+Source. Sensitive data must be stored locally on users’ devices and only
+temporary, so that it cannot be abused once the crisis is over.
+
