@@ -1,8 +1,7 @@
 language: python
 python: 3.6
 install: "pip install Lektor"
-script: "lektor build -O web"
+script: "lektor build -O web && git add ."
 deploy:
   provider: script
-  script: "git add web;"
-        
+  script: "lektor deploy ghpages"
