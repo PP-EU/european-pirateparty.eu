@@ -1,3 +1,4 @@
+git init
 git checkout -b gh-pages
 git add web
 git -c user.name=$ -c LEKTOR_DEPLOY_USERNAME commit -m init
