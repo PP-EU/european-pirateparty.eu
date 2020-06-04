@@ -4,8 +4,8 @@ type: post
 ---
 tags: 
  
-articles
 default
+articles
 press_release
 
 ---
@@ -33,9 +33,9 @@ Software, i.e. Open Source
 body: .
 
 > “ _Only when the application code is open, the developer community can check
-if the application collects only the necessary data. If the software is
-closed, we have to blindly trust the application developers, and that is a
-completely unnecessary risk,_ ” he comments on the main concerns.
+> if the application collects only the necessary data. If the software is
+> closed, we have to blindly trust the application developers, and that is a
+> completely unnecessary risk,_ ” he comments on the main concerns.
 
 Another point is to secure the system against external attacks. “ _So far_ _,
 it was not clarified, not even by the Commissioner, how the systems will be

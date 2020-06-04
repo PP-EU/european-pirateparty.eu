@@ -4,8 +4,8 @@ type: post
 ---
 tags: 
  
-articles
 default
+articles
 
 ---
 pub_date: 2020-05-19
@@ -60,10 +60,12 @@ of Bluetooth also makes the app very unreliable, says Pontier. "It's always a
 few metres off, even under ideal circumstances. What we can do better is to
 trace infections through human professionals. For example, you can keep a
 diary yourself or be interviewed by a trained person who can then map that
-out. That works much better."
+out. That works much better.
+---
+body: "
 
 > "I don't have much confidence that the Minister and his team are going to be
-okay now."
+> okay now."
 
 "I do have some technical knowledge and that was especially important when
 judging those apps. That I can assess that fairly well. I'm concerned with the
@@ -100,7 +102,7 @@ of themselves, but as a government you have to give the trust, and then you
 get that trust back. Then people are going to stick to those measures."
 
 > "Eventually this Corona crisis will blow over again, but now it's very
-important to stay alert."
+> important to stay alert."
 
 He absolutely does not agree with experts who say that society will degenerate
 into chaos if no measures are imposed. "A very large group of young people,
@@ -119,9 +121,7 @@ know what the best solution is because there's no access to that information.
 I think it's good to discuss this with each other and also ask critical
 questions. So that the government and the OMT just don’t get into that tunnel
 vision and make the wrong choices. Ultimately, the Corona crisis will blow
-over again, but it is now very important to remain alert"
----
-body: .
+over again, but it is now very important to remain alert".
 
 * * *
 
@@ -185,7 +185,7 @@ ein Tagebuch führen oder sich von einer geschulten Person interviewen lassen,
 die Ihnen dann einen Plan erstellen kann. Das funktioniert viel besser".
 
 > "Ich habe nicht viel Vertrauen, dass es dem Minister und seinem Team jetzt
-gut gehen wird."
+> gut gehen wird."
 
 "Ich verfüge über einige technische Kenntnisse, und das war bei der
 Beurteilung dieser Apps besonders wichtig. Dass ich das recht gut einschätzen
@@ -227,7 +227,7 @@ Regierung muss man das Vertrauen geben, und dann bekommt man dieses Vertrauen
 zurück. Dann werden die Menschen an diesen Maßnahmen festhalten".
 
 > "Irgendwann wird diese Coronakrise wieder aufflammen, aber jetzt ist es sehr
-wichtig, wachsam zu bleiben."
+> wichtig, wachsam zu bleiben."
 
 Er stimmt absolut nicht mit Experten überein, die sagen, dass die Gesellschaft
 in ein Chaos ausarten wird, wenn keine Maßnahmen ergriffen werden. "Eine sehr

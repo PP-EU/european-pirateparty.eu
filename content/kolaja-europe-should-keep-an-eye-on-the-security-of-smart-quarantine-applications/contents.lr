@@ -4,8 +4,8 @@ type: post
 ---
 tags: 
  
-articles
 default
+articles
 press_release
 
 ---
@@ -40,12 +40,12 @@ on citizens' mobile phones, has some additional pitfalls apart from protecting
 the data sent.
 
 > “ _I believe the most important element is that applications should be based
-on Free and Open Source Software (FOSS). This will make the code available for
-review to the entire developer community and the expert community, who can
-investigate and test it in detail, draw attention to security holes and other
-pitfalls that may be hidden in it. If the application were not open, citizens
-could never be sure that other data, which could be misused, are not being
-sent from the phone,”_ Kolaja continues.
+> on Free and Open Source Software (FOSS). This will make the code available
+> for review to the entire developer community and the expert community, who
+> can investigate and test it in detail, draw attention to security holes and
+> other pitfalls that may be hidden in it. If the application were not open,
+> citizens could never be sure that other data, which could be misused, are
+> not being sent from the phone,”_ Kolaja continues.
 
 _“One of the important powers of the Commission is to monitor the compliance
 of individual Member States with EU law, where data protection is directly

@@ -4,9 +4,9 @@ type: post
 ---
 tags: 
  
+default
 articles
 internet_freedom
-default
 
 ---
 pub_date: 2018-10-23
@@ -35,7 +35,9 @@ altogether after a copyright infringement has taken place in Germany. "In
 order to protect yourself from warnings and reprimands, WiFi users should join
 wireless community networks," advises Breyer. "Their technology ensures that
 data traffic can no longer be traced back to the subscriber. Anyone who
-receives a filesharing warning should seek legal advice."
+receives a filesharing warning should seek legal advice.
+---
+body: "
 
 * * *
 
@@ -45,6 +47,3 @@ Sources: [1] Press release on the ECJ ruling,
 infringement-study](https://juliareda.eu/2017/09/secret-copyright-
 infringement-study/)  
 
-
----
-body: 

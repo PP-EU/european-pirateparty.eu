@@ -4,9 +4,9 @@ type: post
 ---
 tags: 
  
+default
 articles
 internet_freedom
-default
 
 ---
 pub_date: 2019-09-24
