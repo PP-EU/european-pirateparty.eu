@@ -5,7 +5,7 @@ script: "lektor build -O web"
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: $LEKTOR_DEPLOY_USERNAME # Set in the settings page of your repository, as a secure variable
+  github_token: $LEKTOR_DEPLOY_PASSWORD # Set in the settings page of your repository, as a secure variable
   keep_history: true
   on:
     branch: master
