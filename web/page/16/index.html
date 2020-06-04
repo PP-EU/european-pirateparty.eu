@@ -1,0 +1,893 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicon/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicon/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicon/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="/favicon/favicon-196x196.png" sizes="196x196">
+<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon/favicon-128.png" sizes="128x128">
+<link rel="stylesheet" type="text/css" href="/static/foundation-icons.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/unmi.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/dropdown.css" />
+<link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/custom-modifications.css" />
+
+<link rel="stylesheet" href="/static/css/jquery.cookieBar.min.css">
+
+<link rel="stylesheet" type="text/css" href="/static/foundation-icons.css" />
+<link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" type="text/css" href="/static/css/share_buttons.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.cookieBar.min.js"></script>
+
+<title>Blog</title>
+
+<body>
+
+    <!-- Navigation -->
+<script>
+    $(document).ready(function () {
+        function getCookie(cname) {
+          var name = cname + "=";
+          var ca = document.cookie.split(';');
+          for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+            }
+          }
+          return "";
+        }
+        $(function() {
+            $.cookieBar('addTranslation', 'en', {
+                        message:	"This site uses Matomo to analyze traffic and help us to improve your user experience. We process part of you IP address and your cookies, they are stored on your browser for 13 months. These data are only processed by us and our web hosting platform. Please read our Privacy Policy to learn more.",
+                        acceptText:	'OK',
+                        infoText: "Privacy Policy",
+
+            });
+            if (getCookie('cookies-state') !== 'accepted'){
+                $.cookieBar({
+                    style: 'bottom-right',
+                    language: 'en',
+                    infoLink: "/gdpr/",
+                });
+            }
+        });
+    });
+</script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v6.0"></script>
+<script>
+    window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+              t._e.push(f);
+            };
+
+      return t;
+    }(document, "script", "twitter-wjs"));
+</script>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" id="mainNav">
+    <div class="container">
+        <a href="/">
+            <img class="nav__logo" src="/static/svg/Logo_European_Pirate_Party.svg" alt="Logo" />
+        </a>
+
+        <button class="navbar-toggler navbar-toggler-right" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#navbarResponsive"
+                                                            aria-controls="navbarResponsive"
+                                                            aria-expanded="false"
+                                                            aria-label="Toggle
+                                                            navigation">
+            Menu <i class="fas fi-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                                                 role="button"
+                                                                 data-toggle="dropdown"
+                                                                 aria-haspopup="true"
+                                                                 aria-expanded="false">
+                        PARTY
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item"
+                           href="/about">About</a>
+                        <a class="dropdown-item"
+                           href="/members">Members</a>
+                        <a class="dropdown-item" href="/board/">Board</a>
+
+
+                        <a class="dropdown-item" href="/statuses">Statuses</a>
+
+                        <a class="dropdown-item" href="https://wiki.ppeu.net/doku.php?id=european_pirate_party" target="_blank">Wiki</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"data-toggle="collapse" href="#collapseExample" href="#" id="navbarDropdown"
+                                                                     role="button"
+                                                                     data-toggle="dropdown"
+                                                                     aria-haspopup="true"
+                                                                     aria-expanded="false">
+                            PROGRAMME
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="collapseExample">
+                            <a class="dropdown-item" href="/programme">Preamble</a>
+                            <a class="dropdown-item" href="/programme/agriculture-fisheries/">Agriculture & Fisheries</a>
+                            <a class="dropdown-item" href="/programme/civil-society/">Civil Society</a>
+                            <a class="dropdown-item" href="/programme/education-culture-research-free-knowledge/">Education, Culture, Research & Free Knowledge</a>
+                            <a class="dropdown-item" href="/programme/environment-climate-and-energy/">Environment, Climate and Energy</a>
+                            <a class="dropdown-item" href="/programme/finances/">Finances</a>
+                            <a class="dropdown-item" href="/programme/free-software/">Free Software</a>
+                            <a class="dropdown-item" href="/programme/human-rights-in-the-digital-era/">Human Rights in the Digital Era</a>
+                            <a class="dropdown-item" href="/programme/international-affairs/">International Affairs</a>
+                            <a class="dropdown-item" href="/programme/net-policy/">Net Policy</a>
+                            <a class="dropdown-item" href="/programme/open-data/">Open Data</a>
+                            <a class="dropdown-item" href="/programme/social-affairs-healthcare/">Social Affairs & Healthcare</a>
+                            <a class="dropdown-item" href="/programme/space-programme/">Space Programme</a>
+                            <a class="dropdown-item" href="/programme/transport/">Transport</a>
+                        </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mep/">PARLIAMENT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">NEWS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/events/">EVENTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/career/">CAREER</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact-press/">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.facebook.com/europeanpirateparty"><i class="fi-social-facebook icon"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://twitter.com/EuropeanPirates"><i class="fi-social-twitter icon"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <main role="main">
+        <!-- Page Header -->
+        <header class="masthead">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-10 mx-auto">
+                        
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/ppeu-goes-luxembourg/"><img class="thumbnail blog-posting__media" src="/img/logo_european_pirate_party.png" alt="PPEU goes Luxembourg"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/ppeu-goes-luxembourg/" itemprop="headline">PPEU goes Luxembourg</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/ppeu-goes-luxembourg/" />
+                    <i class="blog-posting__pubdate">2013-08-21 </i>
+                    <span itemprop="description"><p>On Sept. 4th, 2013 the Pirateparty of Luxembourg will host the next conference
+of European pirate parties to finalize the foundation process.
+<a href="http://wiki.piratepartei.lu/wiki/Pirate_Party_Europe_Conference">http://wiki.piratepartei.lu/wiki/Pirate_Party_Europe_Conference</a> Warsaw
+Declaration of the European Pirate Party - Letter of Intent We, the
+undersigning European Pirates, realizing the need for a new political party in
+Europe, affirming the declaration of Prague, affirming the declaration of
+Paris, taking into account the negotiations at the Barcelona conference,
+taking into account the negotiations at the Manchester conference, taking into
+account the negotiations at the Paris conference, taking into account the
+negotiations at the Warsaw conference, noting the results of the meeting in
+Aarau, noting the results of the meeting in Potsdam, noting the results of the
+meeting in Rome, noting the results of the meeting in Zagreb, noting the
+results of the meeting in Kiev, noting the results of countless online
+meetings, Declare negotiation process for the foundation of the European
+Pirate Party as complete, Agree on the overall details of the structure of the
+statutes for the organization as was decided on the said conferences and
+meetings, State our commitment to the Manifesto as agreed upon at the Warsaw
+conference, Declare our intent to join the European Pirate Party, with regard
+to the ratification process that is set by individual Parties, Agree to
+convene in Luxembourg to lay the foundation of the European Pirate Party by
+formally adopting statutes and Manifesto, Invite other Pirates Parties of
+Europe to join us in the foundation of the European Pirate Party. MANIFESTO: [
+<a href="https://eu.piratenpad.de/warsaw-2013-manifesto-revised">https://eu.piratenpad.de/warsaw-2013-manifesto-revised</a> ]</p>
+<hr>
+<p>Update: Video of European Pirate Party - Signing Ceremony</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/ppeu-goes-luxembourg/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/ppeu-goes-barcelona/"><img class="thumbnail blog-posting__media" src="/img/logo_european_pirate_party.png" alt="PPEU goes Barcelona"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/ppeu-goes-barcelona/" itemprop="headline">PPEU goes Barcelona</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/ppeu-goes-barcelona/" />
+                    <i class="blog-posting__pubdate">2012-08-17 </i>
+                    <span itemprop="description"><p>On Sept. 1st / 2nd the Pirates de Catalunya will host the <a href="http://wiki.ppeu.net/doku.php?id=statutes:barcelona2012:overview" title="1.
+PPEU conference Barcelona">first conference of
+European pirate
+parties</a> solely dedicated to the objective of agreeing on
+draft statutes for the European Pirates, the organization that is to
+coordinate the policies and electoral campaigns of the pirate movement across
+Europe. Over 40 delegates from more than 15 countries all over Europe will
+attend the conference. It will be of vital importance for the founding of the
+European Pirate Party early 2013. Core topics include details of structure,
+membership, and decision making which have been prepared in regular online
+conferences during the previous months. The working sessions will take place
+throughout the weekend on the <a href="http://citilab.eu/en" title="Citilab
+Cornellà">Citilab premises</a> in Cornellà. Afterwards a series of talks is going to attract
+public interest in the <a href="http://www.anaglifos.es" title="Anaglifos Art Factory premises, Mònec, 17">heart of Barcelona's centre</a> on Sunday afternoon organized by
+<a href="http://pirata.cat" title="Pirates de Catalunya">Pirates de Catalunya</a>:   <em>Birgitta
+Jónsdóttir</em> : Member of the Icelandic Parliament. Activist and spokesperson
+for various groups, among them Wikileaks and the International Modern Media
+Institute. Proponent of the Freedom of Information Act passed in June 2010 and
+a founding member of the Icelandic Pirate Party. Jónsdóttir will discuss the
+Icelandic Revolution, the current situation faced by Wikileaks and Julian
+Assange and what led some of those involved in Iceland's movement to establish
+an Icelandic Pirate Party. <em>Aleks Lessmann</em> : Political director of PP Bavaria
+and one of the foreign policy leaders of the Pirate Party of Germany, which
+currently holds 45 state parliament seats and 163 city/municipal council
+seats, Lessmann will present the German pirates' vision for Europe. After
+climbing to 14% in the polls, the Piratenpartei is working towards bringing
+civic participation to the European elections as well. <em>Josep Jover</em> : Lawyer
+and coordinator of the legal group for the 15M movement. He defeated the SGAE
+(the Spanish MPAA and RIAA) in court, having Spain's private copying levy
+declared illegal in October 2010, and had its leadership arrested on
+corruption charges a year and a half later. He was also the Catalan Pirate
+candidate in the Spanish general elections. Jover will talk about
+international cooperation on the European level to protect the rights of
+citizens of the European Union. <em>Muriel from pirata.cat / Krishna</em></p>
+<p><a href="http://www.energie-buendnis.de/">http://www.energie-buendnis.de/</a></p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/ppeu-goes-barcelona/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/first-meetings-for-ppeu-statutes-and-organization-and-common-program/"><img class="thumbnail blog-posting__media" src="/img/logo_european_pirate_party.png" alt="First meetings for PPEU statutes and organization and common program"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/first-meetings-for-ppeu-statutes-and-organization-and-common-program/" itemprop="headline">First meetings for PPEU statutes and organization and common program</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/first-meetings-for-ppeu-statutes-and-organization-and-common-program/" />
+                    <i class="blog-posting__pubdate">2012-05-14 </i>
+                    <span itemprop="description"><p>Dear Pirates, The Prague declaration on cooperation between European Pirate
+Parties provides two concrete goals: A) to have a common election program
+included in the individual programs of the respective parties (§ II.) B) to
+establish a political party at European level (§ IV.) Both tasks require a lot
+of energy, ressources and time, so let's start now to work on them! For this
+purpose two seperate mailinglists were created to coordinate the tasks: A)
+<a href="http://lists.pp-international.net/listinfo/pp-eu.programme">pp-eu.programme</a>
+B) <a href="http://lists.pp-international.net/listinfo/pp-eu.statutes">pp-eu.statutes</a>
+In addition regular meetings are held to work on the seperate tasks. The first
+meetings will be A) <strong>Mai 15th 21:30 CET</strong> B) <strong>Mai 17th 20:00 CET</strong> We will
+meet in <strong>Mumble</strong> server mumble.piratenpartei-nrw.de (Port 64738) in the
+channel "International &gt; PPEU". In these meetings we will discuss only the
+respective topics, that means in A) we will not discuss the structure of PPEU
+f.ex. Also please bear in mind that these first meetings will be mainly about
+"how" we will work for the next few months and not already about detailled
+discussions of the topic itself. To avoid repeating arguments and discussing
+what has already been discussed please refer to //ppeu.net/ and read through
+the blogposts in preparation for the meetings. We will prepare a proposal for
+an agenda and share it a few days before both meetings so everyone can
+contribute. Please subscribe yourself to the respective mailinglists to
+receive these announcements. We hope a lot of you will participate - only
+together we can realize our ambitious goals! @jerryweyer @crackpille @LunaLoof
+@ortsman <a href="/ppeu.net/?p=339">The Prague declaration</a></p>
+<p><a href="http://www.energie-buendnis.de/">http://www.energie-buendnis.de/</a></p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/first-meetings-for-ppeu-statutes-and-organization-and-common-program/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/how-to-go-on/"><img class="thumbnail blog-posting__media" src="/img/logo_european_pirate_party.png" alt="How to go on?"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/how-to-go-on/" itemprop="headline">How to go on?</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/how-to-go-on/" />
+                    <i class="blog-posting__pubdate">2012-04-26 </i>
+                    <span itemprop="description"><p>So the conference in Prague is over - we got a good conversation about PPEU
+going, including some criticism that was being voiced</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/how-to-go-on/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/voting-in-ppeu-by-whom-and-on-what/"><img class="thumbnail blog-posting__media" src="/img/logo_european_pirate_party.png" alt="Voting in PPEU? By whom and on what?"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/voting-in-ppeu-by-whom-and-on-what/" itemprop="headline">Voting in PPEU? By whom and on what?</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/voting-in-ppeu-by-whom-and-on-what/" />
+                    <i class="blog-posting__pubdate">2012-04-24 </i>
+                    <span itemprop="description"><p><em>This is a post regarding current discussions among Pirates how PPEU should be
+organzied. It was written by<a href="http://ameliaandersdotter.eu/author/mab/" title="Mattias Bjärnemalm">Mattias
+Bjärnemalm</a> and
+is reposted here unchanged except for minor formatting. A<a href="http://creativecommons.org/licenses/by/3.0/" title="CC-BY"> cc-by-
+license</a> applies.</em> I
+would like to start by stating that what I write is always my personal opinion
+and that you can assume the majority of the Swedish Pirates to be both less
+positive towards and less interested in European cooperation and organization
+than I am. Sitting in the heart of EU and working in the European parliament
+gives me a bias towards European unity that by far outweighs the general
+position among the Swedish population and Swedish pirates. Perhaps that can
+explain why only two Swedish Pirates (me being one of them) filled in the
+Survey that was recently presented here.  Seeing that neither my previous
+posts about focusing on the common platform for the elections nor my email
+stating that it would essentially be those pirates that would have the
+capacity to get EU funding for a European political party that would in
+reality be the ones deciding on how that organization should be structured
+managed to discourage people here from discussing how a future PPEU should be
+organized I have decided to cater to the public and share some more of my
+thoughts on the matter. I hope you'll all enjoy to read it. <strong>Voting in PPEU?
+By whom and on what?</strong> What puzzles me the most is that there seems to be a
+lot concern on how the voting system within PPEU should work, but little or no
+concern on what they should vote about. I fail to see how you can debate the
+voting procedure without having discussed what the voting is all about.
+Especially since it could be argued that different issues could benefit from
+different voting mechanisms. Should decisions regarding allocation of money,
+election of representatives, coordination of events and positions of policy
+all be decided through the same mechanism? I would say that perhaps they
+should not. I hope my text will clarify how I've come to that conclusion. An
+organization is essentially a tool to be used by somebody. The success of an
+organization depends on the perceived utility of the organization. One problem
+with the discussions regarding PPEU sofar is that we don't agree on the
+purpose of the tool, or even for whom the tool should be built. Without
+agreement, or at least some form on compromise, on the question of whose
+interests the PPEU is meant to serve we will probably never be able to agree
+on how the organization should be run. I see four distinct groups of
+stakeholders that have an interest in having a PPEU tool. The first is the
+national/regional Pirate Parties. For them PPEU would be a useful tool to
+formalize interaction and cooperation with other Pirate Parties in Europe. I
+would especially assume this relevant regarding coordination of EU elections
+campaigns. When mentioned below I will assume that their interest is
+represented by a board or one or more individuals appointed by the party to do
+so. The second is individual Pirates living in Europe. For them PPEU would be
+useful to through dialogue build coherency within the movement and to find a
+common political vision for Europe. The third is elected Members of the
+European Parliament (MEPs). For them PPEU would be useful for representing the
+MEPs as a group vis-a-vis other political parties and in relation to the
+political groups within the European parliament. In the long run it could also
+be the backbone on which a separate Pirate Political Group within the
+parliament could be built. It could also serve as a vessel to transfer
+knowledge and contacts from one legislature to another. The fourth is elected
+Members of National and regional parliaments (MPs). For them PPEU could be a
+useful tool to represent the national or regional interest of the area they
+represent. Especially in a case where the pirates should manage to acquire
+significant sway over local politics. All these stakeholders have an interest
+in the decisions taken within the PPEU, and disregarding either group would
+weaken the organization, or, at worst, risk creating separate organizations
+competing for attention and resources. So who should decide what? <strong>EU
+elections</strong> The only ones to participate in EU elections are the national
+parties (in some countries there's also possibilities of individual
+candidates). At the moment no European Party can put forth candidates in the
+EU elections, so the actors within PPEU in this occasion are the national
+Pirate Parties. Cooperation is by nature dependent on the willingness of the
+entities that cooperates (otherwise it is per definition coercion). That means
+that cooperation among the national Pirate Parties can only be realized
+through consensus among the participating parties. To avoid individual parties
+to block the majority you could introduce possibilities of enhanced
+cooperation within the PPEU for a subset of member parties. And you could also
+include limitations that regulate how many time any individual party can
+exercise it's right to veto before it is deemed so uncooperative that it gets
+excluded from the joint platform all together. <strong>Election of representatives</strong>
+Any organization will need a board to represent the organization and to handle
+day to day affairs. Such a board will unavoidably be seen by the outside as
+the spokespersons for the movement in Europe, which gives all stakeholders
+mentioned above an interest in how the board is elected, and who gets to be
+part of the board meetings. The two major stakeholders will be the
+national/regional Pirate Parties and the individual members. The parties
+benefit from having someone on the "inside" in the PPEU when it comes to
+information flows (informal information will always exceed formal) and it
+could also be useful in the national debate to show the importance of the
+party on the transnational level by having elected representatives in PPEU.
+The individual pirates have a stake in electing representatives that they can
+identify themselves with and who they feel share their view of the development
+of the movement. A balance will have to be struck between these two groups.
+One solution is allowing member parties to nominate and individual members to
+vote. Another is to put a restriction on the number of board members that can
+be elected from the same party. yet another is to have a double majority
+system where a candidate needs both the majority of the votes at large and the
+majority of the votes from a majority of the member parties to be elected. The
+MEPs and MPs should probably not have any special voting rights regarding
+representation, but as cooperation between the board and the elected
+representatives of the movement on regional/national/EU-level is crucial they
+should be given the right to appoint representatives that get attached to the
+board but without voting rights. <strong>Coordination of events</strong> If we exclude the
+GA, where all categories of stakeholders are affected, and events related to
+election coordination, which mainly concerns the national/regional Parties,
+all other events mainly concerns the individual pirates who are given the
+opportunities to participate. The details of such events should therefor be
+decided by the individual members. Either all members (potential participants)
+or those who sign up for the event (actual participants) <strong>Policymaking</strong> If
+the organization has the aim to represent the unified Pirate movement of
+Europe the most logical way to decide on policy would be to have individual
+pirates or delegates representing individual pirates (as for example is the
+case within a liquid feedback system) decide on the policy. To ensure that
+such decisions does not risk dividing the movement we could give individual
+parties the option to state their disagreement with any policy taken by the
+individual members, or veto rights, or the option for the parties to vote down
+any policy decision that does not get the support of a certain percemtage of
+the member parties). <strong>Implementing policy on a European level</strong> This can only
+be decided by the individual pirates that, through candidacy for their
+national/regional parties, gets elected to become MEPs. The regulations
+regarding MEPs state quite clearly that they are bound by no decisions made by
+either PPEU or the parties that got them elected. Only they can decide on how
+to act if the position of the party that got them elected and the position of
+the PPEU differs. As they are the only ones faced with the down to earth
+realities of the inside work of the parliament they will most likely counsel
+each other and try to find a structure for cooperation within the political
+group they align themselves with (or as non inscripts if they decide they
+prefer to forsake any real influence in the parliament to stay unattached to
+any other political grouping). In the long run we will probably have a group
+of our own, and when that day arrives we will have to find a way to balance
+the interests of that group with the interests of the PPEU (as a political
+party at european level) as those two entities can not be the same (A
+political group in the parliament can only consist of the MEPs that belong to
+the group). So, to sum it up. Beliving that a catch all decision making system
+within the PPEU would be the best option is like believing that one monolithic
+catch all copyright regime is the best option to encourage every kind of
+cultural expression know to mankind. It is simplified, and wrong. Best regards
+Mattias Bjärnemalm</p>
+<p><a href="http://www.energie-buendnis.de/">http://www.energie-buendnis.de/</a></p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/voting-in-ppeu-by-whom-and-on-what/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/preliminary-survey-results/"><img class="thumbnail blog-posting__media" src="/img/logo_european_pirate_party.png" alt="Preliminary Survey Results"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/preliminary-survey-results/" itemprop="headline">Preliminary Survey Results</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/preliminary-survey-results/" />
+                    <i class="blog-posting__pubdate">2012-04-22 </i>
+                    <span itemprop="description"><p>Last night we closed our first survey. The results are not that easy to
+publish so it will take some time until we can make them fully available to
+you. Nevertheless, we do not want to make you wait that long and therefore
+publish the results, excluding the individual responses and without extra
+weight on votes given by Pirate Parties in comparison to individual Pirates,
+now. The percentages do not always add up exactly to 100 percent. That comes
+from the survey plug-in and should get corrected with the final results.
+<strong>What country do you come from?</strong></p>
+<p>(Countries without votes were deleted) Answer</p>
+<p>Votes Vote Count/Percentage</p>
+<p>Austria</p>
+<p>♦ 2 Votes(0%)</p>
+<p>Belgium</p>
+<p>♦♦♦♦♦ 5 Votes(2%)</p>
+<p>Catalonia</p>
+<p>♦♦♦♦♦♦♦♦♦♦♦♦ 26 Votes(12%)</p>
+<p>Croatia</p>
+<p>♦ 2 Votes(0%)</p>
+<p>Czech Republic</p>
+<p>♦ 2 Votes(0%)</p>
+<p>Estonia</p>
+<p>♦ 3 Votes(1%)</p>
+<p>Finland</p>
+<p>♦ 3 Votes(1%)</p>
+<p>France</p>
+<p>♦♦♦♦♦♦ 13 Votes(6%)</p>
+<p>Germany</p>
+<p>♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦ 109 Votes(53%)</p>
+<p>Greece</p>
+<p>♦ 2 Votes(0%)</p>
+<p>Italy</p>
+<p>♦ 3 Votes(1%)</p>
+<p>Kazakhstan</p>
+<p>1 Votes(0%)</p>
+<p>Luxembourg</p>
+<p>♦ 2 Votes(0%)</p>
+<p>Netherlands</p>
+<p>1 Votes(0%)</p>
+<p>Norway</p>
+<p>1 Votes(0%)</p>
+<p>Poland</p>
+<p>1 Votes(0%)</p>
+<p>Portugal</p>
+<p>1 Votes(0%)</p>
+<p>Romania</p>
+<p>1 Votes(0%)</p>
+<p>Russia</p>
+<p>♦ 2 Votes(0%)</p>
+<p>Slovenia</p>
+<p>1 Votes(0%)</p>
+<p>Spain</p>
+<p>♦♦♦♦♦♦ 14 Votes(6%)</p>
+<p>Sweden</p>
+<p>♦ 2 Votes(0%)</p>
+<p>Switzerland</p>
+<p>♦♦ 5 Votes(2%)</p>
+<p>Ukraine</p>
+<p>1 Votes(0%)</p>
+<p>United Kingdom</p>
+<p>♦ 2 Votes(0%)</p>
+<p>Total Votes: 205</p>
+<p><strong>How many members does your pirate party have?</strong> User inputed answers</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/preliminary-survey-results/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/the-prague-declaration/"><img class="thumbnail blog-posting__media" src="/img/logo_european_pirate_party.png" alt="The Prague Declaration"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/the-prague-declaration/" itemprop="headline">The Prague Declaration</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/the-prague-declaration/" />
+                    <i class="blog-posting__pubdate">2012-04-17 </i>
+                    <span itemprop="description"><p><strong>The First Step to Succeed in European Parliament Elections 2014</strong></p>
+<p>The assembled European Pirates signed below agreed on the following</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/the-prague-declaration/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/what-we-do-in-prague-and-how-to-prepare/"><img class="thumbnail blog-posting__media" src="/img/logo_european_pirate_party.png" alt="What we do in Prague and how to prepare?"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/what-we-do-in-prague-and-how-to-prepare/" itemprop="headline">What we do in Prague and how to prepare?</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/what-we-do-in-prague-and-how-to-prepare/" />
+                    <i class="blog-posting__pubdate">2012-04-11 </i>
+                    <span itemprop="description"><p>One reason of our blog-series was to lay the foundation of the discussions at
+the Pirate Parties International conference in Prague on April 14th to 15th.
+In this last post before the conference we would like to give a few tips on
+how to prepare for the conference to enable all participants to focus the
+discussions and get out of the panel with the most satisfying results</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/what-we-do-in-prague-and-how-to-prepare/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/survey/"><img class="thumbnail blog-posting__media" src="/img/logo_european_pirate_party.png" alt="Survey"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/survey/" itemprop="headline">Survey</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/survey/" />
+                    <i class="blog-posting__pubdate">2012-04-10 </i>
+                    <span itemprop="description"><p>Please read the previous blogposts and afterwards fill out our survey:
+<a href="/ppeu.net/?page_id=252" title="PPEU Survey">//ppeu.net/?page_id=252</a></p>
+<p><a href="http://www.energie-buendnis.de/">http://www.energie-buendnis.de/</a></p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/survey/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/how-should-ppeu-look-like/"><img class="thumbnail blog-posting__media" src="/img/logo_european_pirate_party.png" alt="How should PPEU look like?"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/how-should-ppeu-look-like/" itemprop="headline">How should PPEU look like?</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/how-should-ppeu-look-like/" />
+                    <i class="blog-posting__pubdate">2012-04-05 </i>
+                    <span itemprop="description"><p>When we established <a href="/ppeu.net/?p=148">why we want a European Pirate Party</a>,
+we forgot to mention that in previous discussions some people expressed
+reservations about a formalized structure of PPEU. The biggest risk of a PPEU
+without formal structure is that people will work on the same topics without
+knowing it, thus wasting time and resources instead of focussing them. One
+solution would be the creation of taskforces - each group taking care of
+specific tasks (f.ex. campaign organization, press team, helping new parties).
+A central register of taskforces should be kept to avoid creation of multiple
+teams working in parallel on same topics. Another option would be that every
+Pirate Party delegates at least one Pirate to work in a regular EU taskforce
+that works on the most necessary topics. While this model would ensure
+participation of all EU/European Pirate Parties, it will take manpower from
+national parties that might not be able to afford it. However, we think that a
+structured PPEU has many advantages (see <a href="/ppeu.net/?p=148">2nd blogpost</a>)
+while not restraining the creation of less formalized structures. Special
+taskforces should be created, especially for the planning of the EU election
+campaign - but they can be created within or parallel to the structure of PPEU
+to ensure the benefits of both models to be realized. As a structured
+PPEU/Europe does not prevent the creation and management of special European
+working groups, we continue to discuss some basic questions regarding its
+structure and form. We will pose these as a number of questions, and give
+possible answers. These answers are not the be-all, end-all answers for these
+questions, rather they are the answers people came up with in this discussion
+already. We think that most of these are the questions we should try to answer
+during the PPEU panel in Prague, while others should be tackled during the
+draft process of the statutes (and the subsequent votes on them during the
+founding conference). 1. The first question is geographical: What countries
+do we want to include? Possible answers</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/how-should-ppeu-look-like/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+
+  
+  <div class="pagination row">
+    
+      <a class="arrow" href="/page/15/">&laquo; Previous</a>
+    
+
+    
+        <a href="/"> 1 </a>
+    
+        <a href="/page/2/"> 2 </a>
+    
+        <a href="/page/3/"> 3 </a>
+    
+        <a href="/page/4/"> 4 </a>
+    
+        <a href="/page/5/"> 5 </a>
+    
+        <a href="/page/6/"> 6 </a>
+    
+        <a href="/page/7/"> 7 </a>
+    
+        <a href="/page/8/"> 8 </a>
+    
+        <a href="/page/9/"> 9 </a>
+    
+        <a href="/page/10/"> 10 </a>
+    
+        <a href="/page/11/"> 11 </a>
+    
+        <a href="/page/12/"> 12 </a>
+    
+        <a href="/page/13/"> 13 </a>
+    
+        <a href="/page/14/"> 14 </a>
+    
+        <a href="/page/15/"> 15 </a>
+    
+
+    <span class="pagination__current">16</span>
+
+    
+        <a href="/page/17/"> 17 </a>
+    
+        <a href="/page/18/"> 18 </a>
+    
+        <a href="/page/19/"> 19 </a>
+    
+
+    
+      <a class="arrow" href="/page/17/">Next &raquo;</a>
+    
+  </div>
+
+
+        </div>
+
+        <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row footer">
+            <div class="col-sm-4">
+                <img src="/static/svg/Logo_European_Pirate_Party-inversed.svg" alt="Logo" />
+            </div>
+            <div class="col-sm-4">
+                <h5>EUROPEAN ELECTIONS</h5>
+                <hr>
+                <a href="/ep-elections/"> Overview </a><br>
+                <a href="/programme">Programme</a><br>
+                <a href="/ep-elections/interviews-candidates/"> Interviews with Candidates </a><br>
+            </div>
+            <div class="col-sm-4">
+                <h5>ABOUT</h5>
+                <hr>
+                <a href="/contact-press/">Contact / Press</a><br>
+                <a href="/meetings/">Council meetings</a><br>
+                <a href="/streaming/">Streaming</a><br>
+                <a href="/provider/">Provider</a><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <hr>
+                <p class="copyright text-muted">♡2020 by Author/Artist. Copying is an act of love. Please copy.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </main>
+
+

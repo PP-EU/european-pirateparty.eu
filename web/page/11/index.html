@@ -1,0 +1,739 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicon/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicon/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicon/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="/favicon/favicon-196x196.png" sizes="196x196">
+<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon/favicon-128.png" sizes="128x128">
+<link rel="stylesheet" type="text/css" href="/static/foundation-icons.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/unmi.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/dropdown.css" />
+<link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/custom-modifications.css" />
+
+<link rel="stylesheet" href="/static/css/jquery.cookieBar.min.css">
+
+<link rel="stylesheet" type="text/css" href="/static/foundation-icons.css" />
+<link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" type="text/css" href="/static/css/share_buttons.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.cookieBar.min.js"></script>
+
+<title>Blog</title>
+
+<body>
+
+    <!-- Navigation -->
+<script>
+    $(document).ready(function () {
+        function getCookie(cname) {
+          var name = cname + "=";
+          var ca = document.cookie.split(';');
+          for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+            }
+          }
+          return "";
+        }
+        $(function() {
+            $.cookieBar('addTranslation', 'en', {
+                        message:	"This site uses Matomo to analyze traffic and help us to improve your user experience. We process part of you IP address and your cookies, they are stored on your browser for 13 months. These data are only processed by us and our web hosting platform. Please read our Privacy Policy to learn more.",
+                        acceptText:	'OK',
+                        infoText: "Privacy Policy",
+
+            });
+            if (getCookie('cookies-state') !== 'accepted'){
+                $.cookieBar({
+                    style: 'bottom-right',
+                    language: 'en',
+                    infoLink: "/gdpr/",
+                });
+            }
+        });
+    });
+</script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v6.0"></script>
+<script>
+    window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+              t._e.push(f);
+            };
+
+      return t;
+    }(document, "script", "twitter-wjs"));
+</script>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" id="mainNav">
+    <div class="container">
+        <a href="/">
+            <img class="nav__logo" src="/static/svg/Logo_European_Pirate_Party.svg" alt="Logo" />
+        </a>
+
+        <button class="navbar-toggler navbar-toggler-right" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#navbarResponsive"
+                                                            aria-controls="navbarResponsive"
+                                                            aria-expanded="false"
+                                                            aria-label="Toggle
+                                                            navigation">
+            Menu <i class="fas fi-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                                                 role="button"
+                                                                 data-toggle="dropdown"
+                                                                 aria-haspopup="true"
+                                                                 aria-expanded="false">
+                        PARTY
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item"
+                           href="/about">About</a>
+                        <a class="dropdown-item"
+                           href="/members">Members</a>
+                        <a class="dropdown-item" href="/board/">Board</a>
+
+
+                        <a class="dropdown-item" href="/statuses">Statuses</a>
+
+                        <a class="dropdown-item" href="https://wiki.ppeu.net/doku.php?id=european_pirate_party" target="_blank">Wiki</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"data-toggle="collapse" href="#collapseExample" href="#" id="navbarDropdown"
+                                                                     role="button"
+                                                                     data-toggle="dropdown"
+                                                                     aria-haspopup="true"
+                                                                     aria-expanded="false">
+                            PROGRAMME
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="collapseExample">
+                            <a class="dropdown-item" href="/programme">Preamble</a>
+                            <a class="dropdown-item" href="/programme/agriculture-fisheries/">Agriculture & Fisheries</a>
+                            <a class="dropdown-item" href="/programme/civil-society/">Civil Society</a>
+                            <a class="dropdown-item" href="/programme/education-culture-research-free-knowledge/">Education, Culture, Research & Free Knowledge</a>
+                            <a class="dropdown-item" href="/programme/environment-climate-and-energy/">Environment, Climate and Energy</a>
+                            <a class="dropdown-item" href="/programme/finances/">Finances</a>
+                            <a class="dropdown-item" href="/programme/free-software/">Free Software</a>
+                            <a class="dropdown-item" href="/programme/human-rights-in-the-digital-era/">Human Rights in the Digital Era</a>
+                            <a class="dropdown-item" href="/programme/international-affairs/">International Affairs</a>
+                            <a class="dropdown-item" href="/programme/net-policy/">Net Policy</a>
+                            <a class="dropdown-item" href="/programme/open-data/">Open Data</a>
+                            <a class="dropdown-item" href="/programme/social-affairs-healthcare/">Social Affairs & Healthcare</a>
+                            <a class="dropdown-item" href="/programme/space-programme/">Space Programme</a>
+                            <a class="dropdown-item" href="/programme/transport/">Transport</a>
+                        </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mep/">PARLIAMENT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">NEWS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/events/">EVENTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/career/">CAREER</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact-press/">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.facebook.com/europeanpirateparty"><i class="fi-social-facebook icon"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://twitter.com/EuropeanPirates"><i class="fi-social-twitter icon"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <main role="main">
+        <!-- Page Header -->
+        <header class="masthead">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-10 mx-auto">
+                        
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/tracking-down-license-plate-scanners-anpr-pirate-party-publishes-locations-and-presents-detection-device/"><img class="thumbnail blog-posting__media" src="/img/camera-89012_1920.jpg" alt="Tracking down license plate scanners (ANPR): Pirate Party publishes locations and presents detection device"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/tracking-down-license-plate-scanners-anpr-pirate-party-publishes-locations-and-presents-detection-device/" itemprop="headline">Tracking down license plate scanners (ANPR): Pirate Party publishes locations and presents detection device</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/tracking-down-license-plate-scanners-anpr-pirate-party-publishes-locations-and-presents-detection-device/" />
+                    <i class="blog-posting__pubdate">2019-02-04 </i>
+                    <span itemprop="description"><p>Automatic license plate reading systems (ANPR) are currently used in several
+<a href="https://piratenpartei.de/kfzscan">German states</a> to match the license plates
+of all passing cars with police databases. Although Germany does not follow
+the UK, Denmark and the Netherlands in retaining no-hits in a database, the
+system is facing growing opposition. Patrick Breyer, lead candidate of the
+German Pirate Party for the 2019 EU elections, today presents instructions for
+the construction of a device to uncover the location of <a href="https://github.com/Scan-Rec/Scan-Rec">hidden ANPR
+scanners</a>. 15 scanner locations have
+already been <a href="http://umap.openstreetmap.fr/en/map/ake-
+bayern_234435#7/48.904/11.766">mapped</a>. Now interested people are to participate in
+the search for ANPR scanners and provide transparency to road users. "The mass
+detection of vehicles is a door opener for various technologies to monitor the
+movements of any person. It is child's play for criminals to bypass or trick
+these systems; a fake number plate suffices. So it is above all millions of
+law-abiding commuters who end up being tracked permanently," Breyer comments.
+"There is no justification for placing all car drivers under general
+suspicion. If we are serious about abolishing internal border controls in the
+EU, we should not build new indiscriminate electronic controls either." The
+license plate scanners used in Germany have error rates (false positives)
+<a href="https://www.buzzfeed.com/de/marcusengert/kennzeichenerfassung-
+der-polizei-funktioniert-nicht">exceeding 90%</a> and are very easy to circumvent. Several
+constitutional complaints, including one brought by Breyer, are pending at the
+<a href="http://www.daten-
+speicherung.de/index.php/uebersicht-zum-kfz-massenabgleich-in-deutschland-
+gesetze-praxis-widerstand/">Federal Constitutional Court</a>. A lawsuit against the recent introduction of ANPR
+technology for enforcing speed limits near the city of Hannover has been
+<a href="https://piraten-nds.de/2018/12/19/section-control-piraten-klagen-
+gegen-wahlloses-scanning-aller-autofahrer-in-niedersachsen/">announced</a>. A Government
+bill to use license plate scanners for enforcing driving ban zones for diesel
+cars is currently attracting
+<a href="https://www.piratenpartei.de/2019/01/11/diesel-fahrverbote-
+piratenpartei-warnt-vor-wahllosem-scanning-aller-autofahrer/">criticism</a>. In <a href="https://www.police.uk/information-and-advice/automatic-number-plate-
+recognition/#access-to-stored-data">Great
+Britain</a>, <a href="https://edri.org/denmark-
+targeted-anpr-data-retention-turned-into-mass-surveillance/">Denmark</a> and the
+<a href="https://www.government.nl/latest/news/2018/12/20/new-
+legislation-as-of-1-january-2019">Netherlands</a> all vehicle sightings are being retained for
+weeks or months. For Denmark, an inofficial map of ANPR devices has been
+<a href="https://www.anpg.dk/">published</a>. Police and intelligence agencies have
+issued alerts for over 3 million license plates throughout
+<a href="https://www.eulisa.europa.eu/Publications/Reports/2017%20SIS%20II%20Statistics.pdf">Europe</a>,
+including requests for seizure, checks, questioning or covert collection of
+information. ANPR portal of the German Pirate Party:
+<a href="https://piratenpartei.de/kfzscan">https://piratenpartei.de/kfzscan</a></p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/tracking-down-license-plate-scanners-anpr-pirate-party-publishes-locations-and-presents-detection-device/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/next-board-meeting-3rd-february/"><img class="thumbnail blog-posting__media" src="/img/microphone-704255_1920.jpg" alt="Next board meeting on 3rd February 16:00 CET"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/next-board-meeting-3rd-february/" itemprop="headline">Next board meeting on 3rd February 16:00 CET</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/next-board-meeting-3rd-february/" />
+                    <i class="blog-posting__pubdate">2019-02-02 </i>
+                    <span itemprop="description"><p>The next meeting of the PPEU Board will be held on 3rd February at 16:00 CET.
+We will meet on Mumble NRW, room PPEU/Board Meeting (instructions:
+<a href="https://wiki.piratenpartei.de/NRW:Mumble-Server">https://wiki.piratenpartei.de/NRW:Mumble-Server</a>). The agenda is here:
+<a href="https://etherpad.pp-international.net/p/board_meeting_03">https://etherpad.pp-international.net/p/board_meeting_03</a>. Everyone is
+welcome</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/next-board-meeting-3rd-february/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/eu-governments-want-to-introduce-electronic-communications-censorship/"><img class="thumbnail blog-posting__media" src="/img/censored.png" alt="EU governments want to introduce electronic communications censorship"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/eu-governments-want-to-introduce-electronic-communications-censorship/" itemprop="headline">EU governments want to introduce electronic communications censorship</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/eu-governments-want-to-introduce-electronic-communications-censorship/" />
+                    <i class="blog-posting__pubdate">2019-01-28 </i>
+                    <span itemprop="description"><p><strong>Germany, Great Britain and several other EU governments want to have
+Internet connections, e-mails and whatsapp messages filtered for illegal
+content. In search for “child pornography” and “terrorist content”, Internet
+providers, e-mail providers and messaging service providers are to be allowed
+to filter their customers’ use of the Internet and all messages sent. The
+confidentiality of telecommunications provided for in the proposed ePrivacy
+Regulation is to be lifted in this respect. National laws could make
+communications censorship mandatory.</strong> Patrick Breyer, activist and the German
+Pirate Party’s lead candidate for the EU elections, warns: “Mass censorship of
+Internet access and private communications violates the fundamental right to
+respect for our private and family life and our correspondence. This right
+must not be placed in the hands of intransparent and error-prone algorithms
+designed by private corporations. I call upon the telecommunications industry
+to speak out strongly against this trust-eroding proposal and join the civil
+society in stopping this plan.” In view of usual encryption technology Breyer
+decries the censorship plans as ineffective. They are being promoted
+particularly by the British government in the context of negotiations on the
+proposed ePrivacy regulation. A Council working group is to deal with the
+matter on Thursday.
+<a href="https://data.consilium.europa.eu/doc/document/CM-1289-2019-INIT/en/pdf">Agenda</a>
+Author: <a href="http://www.patrick-breyer.de/?p=575011">Patrick Breyer</a>, leader of
+the German Pirates' candidate list for the EP elections</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/eu-governments-want-to-introduce-electronic-communications-censorship/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/signing-of-the-common-programme-for-the-eu-elections-in-luxembourg/"><img class="thumbnail blog-posting__media" src="/img/mapa.png" alt="Signing of the Common Programme for the EU Elections in Luxembourg"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/signing-of-the-common-programme-for-the-eu-elections-in-luxembourg/" itemprop="headline">Signing of the Common Programme for the EU Elections in Luxembourg</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/signing-of-the-common-programme-for-the-eu-elections-in-luxembourg/" />
+                    <i class="blog-posting__pubdate">2019-01-18 </i>
+                    <span itemprop="description"><p>Dearest Pirates and readers, The Board of the European Pirate Party is happy
+to announce that on 9th February will the Pirate parties accross Europe meet
+in Luxembourg to sign the Common European Election Programme (CEEP) and
+officially begin the campaign for the elections to the European Parliament
+(EP). The EP elections will take place on 24th-26th May 2019 and Pirates all
+over Europe participated in the past several months on the creation of a new
+CEEP. They already run with a <a href="https://wiki.ppeu.net/doku.php?id=programme:ceep:final_cut">joint
+programme</a> in the
+EP elections in 2014. The weekend will be also filled with events the
+Luxembourg Pirates prepared, including speech from current Pirate member of
+the European Parliament, <a href="https://juliareda.eu/">Julia Reda</a>, or workshop for
+the campaign and media strategy. You are all welcome to come and join us -
+please just register yourself via the link below. <strong>Date</strong> : 9th-10th
+February, 2019 <strong>Place</strong> : <a href="https://meetings.visitluxembourg.com/venues/venues-
+details/centre-culturel-scheiss-"><strong>Centre Culturel
+'Schéiss'</strong></a> 142, Val-Sainte-Croix L-1370 Luxembourg
+<strong>Registration form</strong> : <a href="https://goo.gl/forms/jpq9BmXFR9y7q5Lv1">https://goo.gl/forms/jpq9BmXFR9y7q5Lv1</a> We are looking forward to meet with
+everyone. Let's make the European Parliament our sea together</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/signing-of-the-common-programme-for-the-eu-elections-in-luxembourg/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/next-board-meeting-is-on-december-12th-at-2030-cet/"><img class="thumbnail blog-posting__media" src="/img/logo_european_pirate_party.png" alt="Next board meeting is on December 12th at 20:30 CET"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/next-board-meeting-is-on-december-12th-at-2030-cet/" itemprop="headline">Next board meeting is on December 12th at 20:30 CET</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/next-board-meeting-is-on-december-12th-at-2030-cet/" />
+                    <i class="blog-posting__pubdate">2018-12-07 </i>
+                    <span itemprop="description"><p>The next meeting of the Board will be held on November, 12th 20.30h CEST on a
+jitsi instance run by the Swedish Pirate Party. We will meet on
+<a href="https://hangout.piratpartiet.se/PPEUBoard">https://hangout.piratpartiet.se/PPEUBoard</a>. The agenda is here:
+<a href="https://etherpad.pp-international.net/p/board_meeting_01">https://etherpad.pp-international.net/p/board_meeting_01</a>. All are welcome</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/next-board-meeting-is-on-december-12th-at-2030-cet/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/council-meeting-stream/"><img class="thumbnail blog-posting__media" src="/img/logo_european_pirate_party.png" alt="Council Meeting Stream"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/council-meeting-stream/" itemprop="headline">Council Meeting Stream</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/council-meeting-stream/" />
+                    <i class="blog-posting__pubdate">2018-11-27 </i>
+                    <span itemprop="description"><h3>Live stream from the European Pirate Party Council meeting in Reykjavik,</h3>
+<p>Iceland</p>
+<p>Starts on Saturday, December 1st at 9.30 am GMT [10.30 am CET]
+<a href="https://www.youtube.com/watch?v=DQq2TjbEsjU">https://www.youtube.com/watch?v=DQq2TjbEsjU</a></p>
+<hr>
+<h2>Flash (Browser)</h2>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/council-meeting-stream/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/european-pirate-party-4th-council-meeting-2018/"><img class="thumbnail blog-posting__media" src="/img/iceland-3800913_1920.jpg" alt="European Pirate Party 4th Council Meeting 2018"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/european-pirate-party-4th-council-meeting-2018/" itemprop="headline">European Pirate Party 4th Council Meeting 2018</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/european-pirate-party-4th-council-meeting-2018/" />
+                    <i class="blog-posting__pubdate">2018-11-24 </i>
+                    <span itemprop="description"><p>This Council Meeting will be held in Reykjavik <strong>1st-2nd of December 2018</strong> at
+<strong>Píratar headquarters on Síðumúli 23, 108 Reykjavík</strong>. Many buses go straight
+there from town (www.straeto.is) with a 3 min walk from the bus stop. The
+meeting will be held here both Saturday and Sunday.
+<a href="https://www.openstreetmap.org/?mlat=64.1340&amp;mlon=-21.8766#map=15/64.1340/-21.8765">Zoom</a></p>
+<h2>Meeting</h2>
+<h3>Venue and Helpful Things Nice to Know</h3>
+<p><a href="https://wiki.ppeu.net/doku.php?id=4th_council_meeting_2018:howto" title="4th_council_meeting_2018:howto">Howto
+Reykjavik</a></p>
+<h3>Delegations</h3>
+<p><a href="https://wiki.ppeu.net/doku.php?id=4th_council_meeting_2018:delegates" title="4th_council_meeting_2018:delegates">list of
+delegates</a> and other participants</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/european-pirate-party-4th-council-meeting-2018/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/next-board-meeting-on-november-12th/"><img class="thumbnail blog-posting__media" src="/img/logo_european_pirate_party.png" alt="Next Board Meeting on November 12th"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/next-board-meeting-on-november-12th/" itemprop="headline">Next Board Meeting on November 12th</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/next-board-meeting-on-november-12th/" />
+                    <i class="blog-posting__pubdate">2018-11-11 </i>
+                    <span itemprop="description"><p>The next meeting of the Board will be held on November, 12th 20.30h CEST on
+Mumble mumble.piratenpartei-nrw.de, Link: <a href="mumble://mumble.piratenpartei-
+nrw.de/International/PPEU/Board%20Meeting?title=Piratenpartei%20NRW&amp;version=1.2.0">Piratenpartei
+NRW</a>
+[1]. Draft Agenda: <a href="https://wiki.ppeu.net/doku.php?id=ppeu:boardmeeting13">https://wiki.ppeu.net/doku.php?id=ppeu:boardmeeting13</a>
+Maybe it will be streamed by <a href="https://piratesonair.net/live-
+stream/">@PiratesOnAir</a> (on Board’s decision) also. Guests are very welcome</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/next-board-meeting-on-november-12th/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/legalize-filesharing-and-stop-incriminating-families/"><img class="thumbnail blog-posting__media" src="/img/adventure-2345835_1920.jpg" alt="Legalize filesharing and stop incriminating families!"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/legalize-filesharing-and-stop-incriminating-families/" itemprop="headline">Legalize filesharing and stop incriminating families!</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/legalize-filesharing-and-stop-incriminating-families/" />
+                    <i class="blog-posting__pubdate">2018-10-23 </i>
+                    <span itemprop="description"><p><em><strong>Press statement:</strong></em> Legalize filesharing and stop incriminating families!
+Following last week's ruling by the European Court of Justice on the liability
+of internet users for alleged copyright infringements by family members[1],
+the German Pirate Party sharply criticizes EU copyright enforcement law and
+calls for the legalisation of file sharing. "In the pure profit interest of
+the entertainment industry, innocent consumers are being forced either to
+snoop on family members and denounce them or to pay high costs," criticises
+Patrick Breyer, lawyer and top candidate of the German Pirate Party in the
+2019 European elections. "In order to put an end to this untenable situation,
+the EU must finally legalise private file sharing by compensating authors."
+<a href="https://european-
+pirateparty.eu/wp-content/uploads/2018/01/reda-683x1024.jpg"><img src="https://european-pirateparty.eu/wp-
+content/uploads/2018/01/reda-683x1024-200x300.jpg" alt=""></a>MEP Julia Reda has
+revealed a study according to which private file sharing does not harm the
+industry.[2] Until 2017, German WiFi operators often had to pay warning costs
+and damages in file-sharing cases. Since the abolition of "Stoererhaftung" in
+2017, the entertainment industry can still demand that the WiFi router be
+blocked (port blocking), encrypted (password protection) or switched off
+altogether after a copyright infringement has taken place in Germany. "In
+order to protect yourself from warnings and reprimands, WiFi users should join
+wireless community networks," advises Breyer. "Their technology ensures that
+data traffic can no longer be traced back to the subscriber. Anyone who
+receives a filesharing warning should seek legal advice."</p>
+<hr>
+<p>Sources: [1] Press release on the ECJ ruling,
+<a href="https://curia.europa.eu/jcms/upload/docs/application/pdf/2018-10/cp180158en.pdf">https://curia.europa.eu/jcms/upload/docs/application/pdf/2018-10/cp180158en.pdf</a>
+[2] File sharing study, <a href="https://juliareda.eu/2017/09/secret-copyright-
+infringement-study/">https://juliareda.eu/2017/09/secret-copyright-
+infringement-study</a></p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/legalize-filesharing-and-stop-incriminating-families/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/breaking-news-next-council-meeting/"><img class="thumbnail blog-posting__media" src="/img/reykjavik-1988082_1920.jpg" alt="Breaking News - Next Council meeting"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/breaking-news-next-council-meeting/" itemprop="headline">Breaking News - Next Council meeting</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/breaking-news-next-council-meeting/" />
+                    <i class="blog-posting__pubdate">2018-10-17 </i>
+                    <span itemprop="description"><p>Hello Pirates! On behalf of the <strong>PPEU board</strong> I hereby announce and invite
+you to the annual General Assembly of the European Pirate Party. When: <strong>1st
+and 2nd December 2018</strong> Where: <strong>Reykjavík, Iceland</strong> Remote participation
+will be of course secured. Please in any case register yourself (and your
+other delegates) via this form:
+<a href="https://docs.google.com/forms/d/e/1FAIpQLScCHVB4KinJLjK5b6vGGGWN3jhqoEOgNlBx-
+MrGRXB5kHJuew/viewform?usp=sf_link">https://docs.google.com/forms/d/e/1FAIpQLScCHVB4KinJLjK5b6vGGGWN3jhqoEOgNlBx-
+MrGRXB5kHJuew/viewform?usp=sf_link</a> According to our Statutes, a new board
+shall be elected. Please deliver nominations (with specified position) on
+behalf of your party to the PPEU Council e-mail. Statutes make us deliver them
+a month prior to the meeting, so I naturally ask for that :), but as we are
+calling for it quite late and there is a precedent from last years, I think
+even later nominations will be taken into account. Thank you and I'm looking
+forward to meet you all! Best, <strong>Markéta Gregorová</strong> Vice-chairperson to the
+PPEU</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/breaking-news-next-council-meeting/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+
+  
+  <div class="pagination row">
+    
+      <a class="arrow" href="/page/10/">&laquo; Previous</a>
+    
+
+    
+        <a href="/"> 1 </a>
+    
+        <a href="/page/2/"> 2 </a>
+    
+        <a href="/page/3/"> 3 </a>
+    
+        <a href="/page/4/"> 4 </a>
+    
+        <a href="/page/5/"> 5 </a>
+    
+        <a href="/page/6/"> 6 </a>
+    
+        <a href="/page/7/"> 7 </a>
+    
+        <a href="/page/8/"> 8 </a>
+    
+        <a href="/page/9/"> 9 </a>
+    
+        <a href="/page/10/"> 10 </a>
+    
+
+    <span class="pagination__current">11</span>
+
+    
+        <a href="/page/12/"> 12 </a>
+    
+        <a href="/page/13/"> 13 </a>
+    
+        <a href="/page/14/"> 14 </a>
+    
+        <a href="/page/15/"> 15 </a>
+    
+        <a href="/page/16/"> 16 </a>
+    
+        <a href="/page/17/"> 17 </a>
+    
+        <a href="/page/18/"> 18 </a>
+    
+        <a href="/page/19/"> 19 </a>
+    
+
+    
+      <a class="arrow" href="/page/12/">Next &raquo;</a>
+    
+  </div>
+
+
+        </div>
+
+        <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row footer">
+            <div class="col-sm-4">
+                <img src="/static/svg/Logo_European_Pirate_Party-inversed.svg" alt="Logo" />
+            </div>
+            <div class="col-sm-4">
+                <h5>EUROPEAN ELECTIONS</h5>
+                <hr>
+                <a href="/ep-elections/"> Overview </a><br>
+                <a href="/programme">Programme</a><br>
+                <a href="/ep-elections/interviews-candidates/"> Interviews with Candidates </a><br>
+            </div>
+            <div class="col-sm-4">
+                <h5>ABOUT</h5>
+                <hr>
+                <a href="/contact-press/">Contact / Press</a><br>
+                <a href="/meetings/">Council meetings</a><br>
+                <a href="/streaming/">Streaming</a><br>
+                <a href="/provider/">Provider</a><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <hr>
+                <p class="copyright text-muted">♡2020 by Author/Artist. Copying is an act of love. Please copy.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </main>
+
+

@@ -1,0 +1,614 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicon/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicon/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicon/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="/favicon/favicon-196x196.png" sizes="196x196">
+<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon/favicon-128.png" sizes="128x128">
+<link rel="stylesheet" type="text/css" href="/static/foundation-icons.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/unmi.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/dropdown.css" />
+<link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/custom-modifications.css" />
+
+<link rel="stylesheet" href="/static/css/jquery.cookieBar.min.css">
+
+<link rel="stylesheet" type="text/css" href="/static/foundation-icons.css" />
+<link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" type="text/css" href="/static/css/share_buttons.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.cookieBar.min.js"></script>
+
+<title>Events</title>
+
+<body>
+
+    <!-- Navigation -->
+<script>
+    $(document).ready(function () {
+        function getCookie(cname) {
+          var name = cname + "=";
+          var ca = document.cookie.split(';');
+          for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+            }
+          }
+          return "";
+        }
+        $(function() {
+            $.cookieBar('addTranslation', 'en', {
+                        message:	"This site uses Matomo to analyze traffic and help us to improve your user experience. We process part of you IP address and your cookies, they are stored on your browser for 13 months. These data are only processed by us and our web hosting platform. Please read our Privacy Policy to learn more.",
+                        acceptText:	'OK',
+                        infoText: "Privacy Policy",
+
+            });
+            if (getCookie('cookies-state') !== 'accepted'){
+                $.cookieBar({
+                    style: 'bottom-right',
+                    language: 'en',
+                    infoLink: "/gdpr/",
+                });
+            }
+        });
+    });
+</script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v6.0"></script>
+<script>
+    window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+              t._e.push(f);
+            };
+
+      return t;
+    }(document, "script", "twitter-wjs"));
+</script>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" id="mainNav">
+    <div class="container">
+        <a href="/">
+            <img class="nav__logo" src="/static/svg/Logo_European_Pirate_Party.svg" alt="Logo" />
+        </a>
+
+        <button class="navbar-toggler navbar-toggler-right" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#navbarResponsive"
+                                                            aria-controls="navbarResponsive"
+                                                            aria-expanded="false"
+                                                            aria-label="Toggle
+                                                            navigation">
+            Menu <i class="fas fi-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                                                 role="button"
+                                                                 data-toggle="dropdown"
+                                                                 aria-haspopup="true"
+                                                                 aria-expanded="false">
+                        PARTY
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item"
+                           href="/about">About</a>
+                        <a class="dropdown-item"
+                           href="/members">Members</a>
+                        <a class="dropdown-item" href="/board/">Board</a>
+
+
+                        <a class="dropdown-item" href="/statuses">Statuses</a>
+
+                        <a class="dropdown-item" href="https://wiki.ppeu.net/doku.php?id=european_pirate_party" target="_blank">Wiki</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"data-toggle="collapse" href="#collapseExample" href="#" id="navbarDropdown"
+                                                                     role="button"
+                                                                     data-toggle="dropdown"
+                                                                     aria-haspopup="true"
+                                                                     aria-expanded="false">
+                            PROGRAMME
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="collapseExample">
+                            <a class="dropdown-item" href="/programme">Preamble</a>
+                            <a class="dropdown-item" href="/programme/agriculture-fisheries/">Agriculture & Fisheries</a>
+                            <a class="dropdown-item" href="/programme/civil-society/">Civil Society</a>
+                            <a class="dropdown-item" href="/programme/education-culture-research-free-knowledge/">Education, Culture, Research & Free Knowledge</a>
+                            <a class="dropdown-item" href="/programme/environment-climate-and-energy/">Environment, Climate and Energy</a>
+                            <a class="dropdown-item" href="/programme/finances/">Finances</a>
+                            <a class="dropdown-item" href="/programme/free-software/">Free Software</a>
+                            <a class="dropdown-item" href="/programme/human-rights-in-the-digital-era/">Human Rights in the Digital Era</a>
+                            <a class="dropdown-item" href="/programme/international-affairs/">International Affairs</a>
+                            <a class="dropdown-item" href="/programme/net-policy/">Net Policy</a>
+                            <a class="dropdown-item" href="/programme/open-data/">Open Data</a>
+                            <a class="dropdown-item" href="/programme/social-affairs-healthcare/">Social Affairs & Healthcare</a>
+                            <a class="dropdown-item" href="/programme/space-programme/">Space Programme</a>
+                            <a class="dropdown-item" href="/programme/transport/">Transport</a>
+                        </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mep/">PARLIAMENT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">NEWS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/events/">EVENTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/career/">CAREER</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact-press/">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.facebook.com/europeanpirateparty"><i class="fi-social-facebook icon"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://twitter.com/EuropeanPirates"><i class="fi-social-twitter icon"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <main role="main">
+        <!-- Page Header -->
+        <header class="masthead">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-10 mx-auto">
+                        
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            
+
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/5th-board-meeting-of-the-ppeu/"><img class="thumbnail blog-posting__media" src="/img/logo_european_pirate_party.png" alt="5th board meeting of the PPEU"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/5th-board-meeting-of-the-ppeu/" itemprop="headline">5th board meeting of the PPEU</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/5th-board-meeting-of-the-ppeu/" />
+                    <i class="blog-posting__pubdate">2020-01-19 </i>
+                    <span itemprop="description"><p>Dear Pirates,</p>
+<p>we hereby cordially invite you to the next board meeting of the PPEU on
+January 26th at 20:00 CET</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/5th-board-meeting-of-the-ppeu/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/4th-board-meeting/"><img class="thumbnail blog-posting__media" src="/img/pirates-globus.jpg" alt="4th Board meeting"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/4th-board-meeting/" itemprop="headline">4th Board meeting</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/4th-board-meeting/" />
+                    <i class="blog-posting__pubdate">2020-01-08 </i>
+                    <span itemprop="description"><p>Happy New year! We are kindly announcing that the 4th meeting of the PPEU
+Board will be held on mumble on 12th January at <a href="/time.is/">20:00 CET</a>. Let
+us get back to work! The minutes for this meeting can be found
+<a href="/etherpad.pp-international.net/p/board_meeting_1920_04">here</a>. We will meet
+on Mumble NRW, room PPEU/Board Meeting (<a href="https://wiki.piratenpartei.de/NRW:Mumble-Server">see
+instructions</a>)</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/4th-board-meeting/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/3rd-board-meeting/"><img class="thumbnail blog-posting__media" src="/img/lego.jpg" alt="3rd Board meeting"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/3rd-board-meeting/" itemprop="headline">3rd Board meeting</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/3rd-board-meeting/" />
+                    <i class="blog-posting__pubdate">2019-12-14 </i>
+                    <span itemprop="description"><p>We are kindly announcing that the 3rd meeting of the PPEU Board will be held
+on mumble on 15th December at <a href="/time.is/">18:00 CET</a>. It is time to move
+forward! The minutes for this meeting can be found <a href="/etherpad.pp-
+international.net/p/board_meeting_1920_03">here</a>. We will meet on Mumble NRW, room
+PPEU/Board Meeting (<a href="https://wiki.piratenpartei.de/NRW:Mumble-Server">see
+instructions</a>)</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/3rd-board-meeting/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/2nd-board-meeting/"><img class="thumbnail blog-posting__media" src="/img/IMG_0939.png" alt="2nd Board meeting"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/2nd-board-meeting/" itemprop="headline">2nd Board meeting</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/2nd-board-meeting/" />
+                    <i class="blog-posting__pubdate">2019-11-29 </i>
+                    <span itemprop="description"><p>We are kindly announcing that the second meeting of the newly elected PPEU
+Board will be held on mumble on 1st December at <a href="/time.is/">15:00 CET</a>. It is
+time to move forward! The minutes for this meeting can be found
+<a href="/etherpad.pp-international.net/p/board_meeting_1920_02">here</a>. We will meet
+on Mumble NRW, room PPEU/Board Meeting (<a href="https://wiki.piratenpartei.de/NRW:Mumble-Server">see
+instructions</a>)</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/2nd-board-meeting/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/initial-board-meeting/"><img class="thumbnail blog-posting__media" src="/img/online-3286012_1280.jpg" alt="Initial Board meeting"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/initial-board-meeting/" itemprop="headline">Initial Board meeting</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/initial-board-meeting/" />
+                    <i class="blog-posting__pubdate">2019-11-14 </i>
+                    <span itemprop="description"><p>We are kindly announcing that the first meeting of the newly elected PPEU
+Board will be held on mumble on 17th November at <a href="/time.is/">19:00 CEST</a>. It
+is time to get organized and start doing our job! The minutes for this meeting
+can be found <a href="/etherpad.pp-international.net/p/board_meeting_1920_01">here</a>.
+We will meet on Mumble NRW, room PPEU/Board Meeting (<a href="https://wiki.piratenpartei.de/NRW:Mumble-Server">see
+instructions</a>)</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/initial-board-meeting/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/annual-council-meeting-decided-2nd-3rd-november-in-milan-italy/"><img class="thumbnail blog-posting__media" src="/img/IMG_3784.jpg" alt="Annual Council Meeting Decided: 2nd-3rd November in Milan (Italy)!"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/annual-council-meeting-decided-2nd-3rd-november-in-milan-italy/" itemprop="headline">Annual Council Meeting Decided: 2nd-3rd November in Milan (Italy)!</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/annual-council-meeting-decided-2nd-3rd-november-in-milan-italy/" />
+                    <i class="blog-posting__pubdate">2019-09-25 </i>
+                    <span itemprop="description"><p>Dear Pirates, supporters, readers, The date and place of the next annual
+Council Meeting (General Assembly) of the European Pirate Party has been
+decided. We are looking to see you at the beginning of November in Italy!
+When: 2nd and 3rd November 2019 Where: Milan, Italy Spazio MIL - via Granelli
+1, Sesto San Giovanni - Milano | Sala Sacchi + Soppalco Website:
+<a href="/www.spaziomil.org/">www.spaziomil.org</a> Remote participation will be of
+course secured. Please in any case register yourself (and your other
+delegates) via this form:
+<a href="https://forms.gle/f4WLFVmUjGPuQSei8">//forms.gle/f4WLFVmUjGPuQSei8</a>. The
+first overview of the agenda</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/annual-council-meeting-decided-2nd-3rd-november-in-milan-italy/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/next-board-meeting-on-october-13th-at-2100-cest/"><img class="thumbnail blog-posting__media" src="/img/logo_european_pirate_party.png" alt="Next board meeting on October 13th at 21:00 CEST"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/next-board-meeting-on-october-13th-at-2100-cest/" itemprop="headline">Next board meeting on October 13th at 21:00 CEST</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/next-board-meeting-on-october-13th-at-2100-cest/" />
+                    <i class="blog-posting__pubdate">2019-09-25 </i>
+                    <span itemprop="description"><p>We are kindly announcing that the next meeting of the PPEU Board will be held
+on 13th of October at <a href="/time.is/">21:00 CEST</a>. We will meet on Mumble NRW,
+room PPEU/Board Meeting (instructions: <a href="/next-board-meeting-on-october-13th-at-2100-cest/Mumble-Server">//wiki.piratenpartei.de/NRW:Mumble-
+Server</a>). The agenda for this meeting can be found here:
+<a href="/etherpad.pp-
+international.net/p/board_meeting_11">//etherpad.pp-international.net/p/board_meeting_11</a></p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/next-board-meeting-on-october-13th-at-2100-cest/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/board-meeting-21st-july-2100-cet/"><img class="thumbnail blog-posting__media" src="/img/logo_european_pirate_party.png" alt="Board meeting 21st July - 21:00 CET"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/board-meeting-21st-july-2100-cet/" itemprop="headline">Board meeting 21st July - 21:00 CET</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/board-meeting-21st-july-2100-cet/" />
+                    <i class="blog-posting__pubdate">2019-07-21 </i>
+                    <span itemprop="description"><p>We are kindly announcing that the meeting of the PPEU Board tonight on 21st of
+July was held on mumble at <a href="/time.is/">21:00 CEST</a>. The minutes for this
+meeting can be found here: <a href="/etherpad.pp-
+international.net/p/board_meeting_07">//etherpad.pp-
+international.net/p/board_meeting_08</a>. The recording of the meeting is here:
+<a href="https://owncloud.ag-technik.de/s/Gg3HLP5xH2SNMCD">https://owncloud.ag-technik.de/s/Gg3HLP5xH2SNMCD</a></p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/board-meeting-21st-july-2100-cet/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/board-meeting-august/"><img class="thumbnail blog-posting__media" src="/img/adventure-2345835_1920-1024x683.jpg" alt="Next board meeting on August 7th at 21:00 CEST"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/board-meeting-august/" itemprop="headline">Next board meeting on August 7th at 21:00 CEST</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/board-meeting-august/" />
+                    <i class="blog-posting__pubdate">2019-07-21 </i>
+                    <span itemprop="description"><p>We are kindly announcing that the next meeting of the PPEU Board will be held
+on 7th of August at <a href="/time.is/">21:00 CEST</a>. We will meet on Mumble NRW, room
+PPEU/Board Meeting (instructions: <a href="/board-meeting-august/Mumble-Server">//wiki.piratenpartei.de/NRW:Mumble-
+Server</a>). The agenda for this meeting can be found here:
+<a href="/etherpad.pp-
+international.net/p/board_meeting_07">//etherpad.pp-international.net/p/board_meeting_09</a>. Everyone is welcome and we are looking
+forward to hear each other</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/board-meeting-august/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/next-board-meeting-on-june-5th-at-2100-cest/"><img class="thumbnail blog-posting__media" src="/img/logo_european_pirate_party.png" alt="Next board meeting on June 5th at 21:00 CEST"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/next-board-meeting-on-june-5th-at-2100-cest/" itemprop="headline">Next board meeting on June 5th at 21:00 CEST</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/next-board-meeting-on-june-5th-at-2100-cest/" />
+                    <i class="blog-posting__pubdate">2019-05-18 </i>
+                    <span itemprop="description"><p>We are kindly announcing that the next meeting of the PPEU Board will be held
+on 15th May at <a href="/time.is/">21:00 CEST</a>. We will meet on Mumble NRW, room
+PPEU/Board Meeting (instructions: <a href="/next-board-meeting-on-june-5th-at-2100-cest/Mumble-Server">//wiki.piratenpartei.de/NRW:Mumble-
+Server</a>). The agenda for this meeting can be found here:
+<a href="/etherpad.pp-
+international.net/p/board_meeting_07">//etherpad.pp-international.net/p/board_meeting_06</a>. Everyone is welcome and we are looking
+forward to hear each other</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/next-board-meeting-on-june-5th-at-2100-cest/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+
+  
+  <div class="pagination row">
+    
+      <a class="arrow" href="/events/">&laquo; Previous</a>
+    
+
+    
+        <a href="/events/"> 1 </a>
+    
+
+    <span class="pagination__current">2</span>
+
+    
+        <a href="/events/page/3/"> 3 </a>
+    
+        <a href="/events/page/4/"> 4 </a>
+    
+        <a href="/events/page/5/"> 5 </a>
+    
+        <a href="/events/page/6/"> 6 </a>
+    
+
+    
+      <a class="arrow" href="/events/page/3/">Next &raquo;</a>
+    
+  </div>
+
+
+        </div>
+
+        <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row footer">
+            <div class="col-sm-4">
+                <img src="/static/svg/Logo_European_Pirate_Party-inversed.svg" alt="Logo" />
+            </div>
+            <div class="col-sm-4">
+                <h5>EUROPEAN ELECTIONS</h5>
+                <hr>
+                <a href="/ep-elections/"> Overview </a><br>
+                <a href="/programme">Programme</a><br>
+                <a href="/ep-elections/interviews-candidates/"> Interviews with Candidates </a><br>
+            </div>
+            <div class="col-sm-4">
+                <h5>ABOUT</h5>
+                <hr>
+                <a href="/contact-press/">Contact / Press</a><br>
+                <a href="/meetings/">Council meetings</a><br>
+                <a href="/streaming/">Streaming</a><br>
+                <a href="/provider/">Provider</a><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <hr>
+                <p class="copyright text-muted">♡2020 by Author/Artist. Copying is an act of love. Please copy.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </main>
+
+

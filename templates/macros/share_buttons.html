@@ -1,0 +1,11 @@
+{% macro share_buttons(page, from_index=false) %}
+<div class="share_buttons row">
+    <div class="share_buttons___button">
+        <a class="twitter-share-button" href="https://twitter.com/intent/tweet" > Tweet</a>
+    </div>
+    <div class="share_buttons___button">
+        <div class="fb-share-button" data-href="{{page|url}}" data-layout="button_count"> </div>
+    </div>
+</div>
+
+{% endmacro %}

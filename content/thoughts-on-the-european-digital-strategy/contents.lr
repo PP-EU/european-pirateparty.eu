@@ -1,0 +1,44 @@
+title: Thoughts on the European Digital Strategy
+---
+type: post
+---
+tags: 
+ 
+articles
+default
+
+---
+pub_date: 2020-02-22
+---
+img: /patrick-freyer-qHTBlOyMljs-unsplash.jpg
+---
+description: # PIRATE MEP MARCEL KOLAJA
+---
+body: :
+
+Together with the white paper on Artifical Intelligence, the Commission
+presented their digital strategy for the upcoming legislature: [Shaping
+Europe’s digital future](https://ec.europa.eu/info/files/communication-
+shaping-europes-digital-future_en). The paper defines a three pillar strategy
+“that will ensure that Europe develops and pursues its own way of vibrant,
+globally competitive, value-based and inclusive digital economy and society”.
+My thoughts on this:
+
+## Technology that works for people
+
+  * **Cyber security:** The strategy refers to the [EU toolbox](https://ec.europa.eu/commission/presscorner/detail/en/qanda_20_127) for 5G as an important milestone for achieving resilience. However, banning technologies from one specific country or turning to European protectionism is not the right reply to the general trust issue, when it comes to critical infrastructure. We need to take measures to facilitate an independently verifiable solution. From that perspective, I miss a strategy on how to transform our critical infrastructure, so that it would run on open technologies, which by design can be verified by experts. Hand in hand with a certified manufacturing process, we would finally rely on trusted technologies instead of blackboxes.
+  * **Improving education and digital skills** should go hand in hand with the objective to incentivize the use of digital technologies. This, however, shouldn’t be limited to the technologies of one specific company but a variety of tools and should encourage the use of interoperable solutions and Free and Open Source Software.
+
+## A fair and competitive economy
+
+  * **Helping European SMEs and European digital independence:** In line with our Pirate Party program, I support small and medium-sized businesses and the development of new technologies. Promoting the growth of European technology companies will also require reconsideration of some of the rules under the current patent system and opening up of our infrastructure. For instance, we will need to support initiatives for Open Hardware and Open Source Software. This will help avoiding backdoors in software and devices and incentivize competition and innovation.
+  * **Review of competition law and gate keepers:** One idea to ensure this would be to foresee interoperability obligation for platforms to ease interaction between them, so that they would be able to access each others’ APIs (application programming interface). Users of such platforms (e.g. instant messaging providers) would then be able to communicate across providers as they are used to with e-mail, telephone, or even in case of bank accounts, since in all these examples, people can interact with each other even if they are customers of different providers.
+  * **Fair and effective taxation of digital economy** is a logical step to ensure all companies, regardless of their respective market power, equally pay taxes in the country where they make profit.
+
+## Open, democratic and sustainable society
+
+  * **Greater consumer control of and responsibility for their own data** is a clear priority in order to avoid unnecessary sharing of data. However, we should avoid merely channeling personal data from private companies to authorities, especially if authentication is not crucial (e.g. public data).
+  * **Illegal content:** The objective of achieving a trustworthy digital society which would be inclusive, fair, and accessible for all won’t be achieved by the suggested action to increase responsibility of digital platforms. This will only result in over-removal of content based on the terms and conditions of platforms. We need harmonized rules on what constitutes illegal content. This is a major step back from what was promised by Commissioner Breton during his [hearing in the European Parliament](https://webstreaming.europarl.europa.eu/ep/embed/embed.html?event=20191114-1300-SPECIAL-HEARING-2Q2&language=en).
+  * **Disinformation:** Greater transparency on how platforms operate is a good first step, as well as the production of independent quality news. However, it’s not clear what sort of role would the audiovisual industries play in that.
+  * **Right to repair and update your device** is a great initiative that can help with reducing waste. However, a necessary step to allow this would be for instance revisiting obligation under Article 6 of Directive 2001/29/EC, which prohibits circumvention of any effective technological measures, i.e. Digital Restrictions Management (DRM). Legal circumvention of technological measures should be allowed.
+

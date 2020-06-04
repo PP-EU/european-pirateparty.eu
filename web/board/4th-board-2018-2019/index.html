@@ -1,0 +1,370 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicon/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicon/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicon/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="/favicon/favicon-196x196.png" sizes="196x196">
+<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon/favicon-128.png" sizes="128x128">
+<link rel="stylesheet" type="text/css" href="/static/foundation-icons.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/unmi.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/dropdown.css" />
+<link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/custom-modifications.css" />
+
+<link rel="stylesheet" href="/static/css/jquery.cookieBar.min.css">
+
+<link rel="stylesheet" type="text/css" href="/static/foundation-icons.css" />
+<link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" type="text/css" href="/static/css/share_buttons.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.cookieBar.min.js"></script>
+
+<title>4th Board - 2018-2019</title>
+
+<body>
+
+    <!-- Navigation -->
+<script>
+    $(document).ready(function () {
+        function getCookie(cname) {
+          var name = cname + "=";
+          var ca = document.cookie.split(';');
+          for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+            }
+          }
+          return "";
+        }
+        $(function() {
+            $.cookieBar('addTranslation', 'en', {
+                        message:	"This site uses Matomo to analyze traffic and help us to improve your user experience. We process part of you IP address and your cookies, they are stored on your browser for 13 months. These data are only processed by us and our web hosting platform. Please read our Privacy Policy to learn more.",
+                        acceptText:	'OK',
+                        infoText: "Privacy Policy",
+
+            });
+            if (getCookie('cookies-state') !== 'accepted'){
+                $.cookieBar({
+                    style: 'bottom-right',
+                    language: 'en',
+                    infoLink: "/gdpr/",
+                });
+            }
+        });
+    });
+</script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v6.0"></script>
+<script>
+    window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+              t._e.push(f);
+            };
+
+      return t;
+    }(document, "script", "twitter-wjs"));
+</script>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" id="mainNav">
+    <div class="container">
+        <a href="/">
+            <img class="nav__logo" src="/static/svg/Logo_European_Pirate_Party.svg" alt="Logo" />
+        </a>
+
+        <button class="navbar-toggler navbar-toggler-right" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#navbarResponsive"
+                                                            aria-controls="navbarResponsive"
+                                                            aria-expanded="false"
+                                                            aria-label="Toggle
+                                                            navigation">
+            Menu <i class="fas fi-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                                                 role="button"
+                                                                 data-toggle="dropdown"
+                                                                 aria-haspopup="true"
+                                                                 aria-expanded="false">
+                        PARTY
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item"
+                           href="/about">About</a>
+                        <a class="dropdown-item"
+                           href="/members">Members</a>
+                        <a class="dropdown-item" href="/board/">Board</a>
+
+
+                        <a class="dropdown-item" href="/statuses">Statuses</a>
+
+                        <a class="dropdown-item" href="https://wiki.ppeu.net/doku.php?id=european_pirate_party" target="_blank">Wiki</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"data-toggle="collapse" href="#collapseExample" href="#" id="navbarDropdown"
+                                                                     role="button"
+                                                                     data-toggle="dropdown"
+                                                                     aria-haspopup="true"
+                                                                     aria-expanded="false">
+                            PROGRAMME
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="collapseExample">
+                            <a class="dropdown-item" href="/programme">Preamble</a>
+                            <a class="dropdown-item" href="/programme/agriculture-fisheries/">Agriculture & Fisheries</a>
+                            <a class="dropdown-item" href="/programme/civil-society/">Civil Society</a>
+                            <a class="dropdown-item" href="/programme/education-culture-research-free-knowledge/">Education, Culture, Research & Free Knowledge</a>
+                            <a class="dropdown-item" href="/programme/environment-climate-and-energy/">Environment, Climate and Energy</a>
+                            <a class="dropdown-item" href="/programme/finances/">Finances</a>
+                            <a class="dropdown-item" href="/programme/free-software/">Free Software</a>
+                            <a class="dropdown-item" href="/programme/human-rights-in-the-digital-era/">Human Rights in the Digital Era</a>
+                            <a class="dropdown-item" href="/programme/international-affairs/">International Affairs</a>
+                            <a class="dropdown-item" href="/programme/net-policy/">Net Policy</a>
+                            <a class="dropdown-item" href="/programme/open-data/">Open Data</a>
+                            <a class="dropdown-item" href="/programme/social-affairs-healthcare/">Social Affairs & Healthcare</a>
+                            <a class="dropdown-item" href="/programme/space-programme/">Space Programme</a>
+                            <a class="dropdown-item" href="/programme/transport/">Transport</a>
+                        </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mep/">PARLIAMENT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">NEWS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/events/">EVENTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/career/">CAREER</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact-press/">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.facebook.com/europeanpirateparty"><i class="fi-social-facebook icon"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://twitter.com/EuropeanPirates"><i class="fi-social-twitter icon"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <main role="main">
+        <!-- Page Header -->
+        <header class="masthead">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-10 mx-auto">
+                        
+<h1>4th Board - 2018-2019</h1>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            
+  <div class="row content">
+      <div class="col-md-10 col-lg-12 mx-auto">
+          <h2>Chairperson</h2>
+<h3><strong>Markéta Gregorová (PP-CZ)</strong> <strong>@<a href="/twitter.com/MarketkaG">MarketkaG</a></strong></h3>
+<p><a href="/european-pirateparty.eu/wp-
+content/uploads/2019/01/360x337.jpg"><img src="/european-pirateparty.eu/wp-
+content/uploads/2019/01/360x337-300x281.jpg" alt=""></a> <strong>Markéta Gregorová</strong> is a Czech activist
+and politician, member of the <a href="/en.wikipedia.org/wiki/Czech_Pirate_Party" title="Czech Pirate Party">Czech Pirate
+Party</a> and
+the Chairperson of the <a href="/en.wikipedia.org/wiki/European_Pirate_Party" title="European Pirate Party">European Pirate
+Party</a>.
+She is the second candidate for the <a href="/en.wikipedia.org/wiki/2019_European_Parliament_election_in_the_Czech_Republic" title="2019 European Parliament election in the Czech Republic">2019 European Parliament election in the
+Czech
+Republic</a>.</p>
+<hr>
+<h2>Vice-chairpersons</h2>
+<h3>Salvör Kristjana Gissurardóttir <strong>(PP-IS)</strong></h3>
+<p><a href="/european-
+pirateparty.eu/wp-content/uploads/2019/01/SalvorKGissurar-400x414.jpg"><img src="/european-pirateparty.eu/wp-
+content/uploads/2019/01/SalvorKGissurar-400x414-290x300.jpg" alt=""></a> Salvör
+is one of the founding members of the Icelandic Pirate Party and an Assistant
+Professor in University of Iceland, School of Education, where she teach
+courses on Information Technology in Education. She is an avid Wikipedia
+editor and the Vice-Chairperson of the PPEU.</p>
+<hr>
+<h3><strong>Mikuláš Peksa (PP-CZ)</strong> <strong>@<a href="/twitter.com/vonpecka">vonpecka</a></strong></h3>
+<p><a href="/european-
+pirateparty.eu/wp-content/uploads/2019/01/41099492501_f01a3c3ed6_z.jpg"><img src="/european-pirateparty.eu/wp-
+content/uploads/2019/01/41099492501_f01a3c3ed6_z-200x300.jpg" alt=""></a></p>
+<p>I have been member of Czech Pirate Party a and Pirate Party of Germany since</p>
+<ol>
+<li>Because of my cotutelle PhD I spend last years traveling between Prague
+(CZ) and Leipzig (DE). I concentrated on strengthening and intensifying of
+cross-border cooperation between PP-CZ and PP-DE. I participated in
+organization of following international Pirate conferences: PP3 in Dresden
+(2013), PP3 in Pilsen (2014) and Piratecon Mariánské lázně (2015). In autumn
+2014 I was appointed as Deputy International Coordinator of Czech Pirate
+Party. As a profession I am experimental physicist. I am native speaker in
+Czech so I can also understand Slovak. I am fluent in English and German. My
+main Pirate interest is the democracy update on a super-national level.</li>
+</ol>
+<hr>
+<h2>Treasurer</h2>
+<h3><strong>Peter Freitag (PP-LU)</strong></h3>
+<p><a href="/european-
+pirateparty.eu/wp-
+content/uploads/2019/05/41606138_1770073616395766_4416492558121697280_n.jpg"><img src="/european-pirateparty.eu/wp-
+content/uploads/2019/05/41606138_1770073616395766_4416492558121697280_n-300x300.jpg" alt=""></a> I
+am a member of PP Luxembourg, during my short career as political coordinator
+of the party I had the pleasure of organizing the international event of the
+signing of the common European Election campaign Program. I am sort of a Jack
+of all trades, I do not have a true specialization, but am able to work myself
+into most subjects if needs be. I am professionally bilingual in French and
+English, German and Luxembourgish being my native languages. I have notions of
+Dutch too. My interests are manifold, encompassing, politics, economics,
+psychology, philosophy in the broadest sense, tech in general, inter-personal
+and inter-societal relations. This list is hardly exhaustive. I adore learning
+new things and updating my already acquired knowledge, so my field of
+interests constantly broadens. My core beliefs are transparency, integrity and
+fairness. I believe that with people acting in good will, win-win solutions
+can be found most of the time.</p>
+<hr>
+<h2>Board members without appointed office</h2>
+<h3><strong>Magnus Andersson (PP-SE)</strong></h3>
+<h3><strong>@[ </strong>Moinois<strong> ](//twitter.com/Moinois)‏</strong></h3>
+<h3>**[![](//european-pirateparty.eu/wp-</h3>
+<p>content/uploads/2019/05/13438950_10154328603078453_1089940621516413996_n-300x300.jpg)](//european-
+pirateparty.eu/wp-
+content/uploads/2019/05/13438950_10154328603078453_1089940621516413996_n.jpg)**</p>
+<h3><em>**</em></h3>
+<hr>
+<h3>Oktavía Hrund Jónsdóttir (PP-IS)</h3>
+<h3><strong>@<a href="/twitter.com/oktavia">oktavia</a></strong></h3>
+<h3>[![](//european-pirateparty.eu/wp-content/uploads/2019/05/signal-</h3>
+<p>attachment-2019-05-01-122645-225x300.jpeg)](//european-pirateparty.eu/wp-
+content/uploads/2019/05/signal-attachment-2019-05-01-122645.jpeg)</p>
+<p>Oktavía Hrund is a Deputy Member of Parliament for the Icelandic Pirate Party
+(PPIS), the Chairperson of the Feminist branch of PPIS and sits on the
+Technical Advisory Board of the Freedom of the Press Foundation. Oktavía has
+been politically active ever since she can remember and a pirate even before
+that. Free Expression, transparency against corruption and autonomy of the
+individual drive Oktavía's activism.</p>
+<hr>
+<h3><strong>Tony Motakis (PP-GR)</strong> <strong>@<a href="/twitter.com/tvelocity">tvelocity</a></strong></h3>
+<p><a href="/european-
+pirateparty.eu/wp-content/uploads/2017/11/AntoniusMotakis.jpg"><img src="/european-pirateparty.eu/wp-
+content/uploads/2017/11/AntoniusMotakis-300x300.jpg" alt=""></a></p>
+<p>I joined the Pirate Party of Greece as soon as its founding process was
+announced. I am serving as the party’s international coordinator since
+February 2013 and have represented PP-GR in several international Pirate
+meetings.</p>
+<p>I am also happy to have had the opportunity to serve in the first Board of
+PPEU. That was a very interesting experience, which allowed me to learn a lot,
+and I hope that I can still do a few things to help the movement. I think
+there is a lot that still needs to be done to “kickstart” PPEU.</p>
+<p>For a living I am a software engineer, with most of my experience being on
+virtualization technology and the Linux kernel. I speak Greek, English, German
+and French. I am a bit of an international person: I am a half Greek half
+German who grew up in Greece, studied and worked for 5 years in France, and
+currently lives in Munich, Germany.</p>
+<hr>
+<h3><strong>Gabrielle Nereuil (PP-FR)</strong></h3>
+<h3><strong>@<a href="/twitter.com/Pirate7e">Pirate7e</a></strong></h3>
+<h3>**[![](//european-pirateparty.eu/wp-</h3>
+<p>content/uploads/2019/05/antigone-300x300.jpg)](//european-pirateparty.eu/wp-
+content/uploads/2019/05/antigone.jpg)**</p>
+<hr>
+<h3><strong>Ernst Spitaler (PP-AT)</strong></h3>
+<h3><strong>@<a href="/twitter.com/unas666">unas666</a></strong></h3>
+<h3>**[![](//european-pirateparty.eu/wp-</h3>
+<p>content/uploads/2019/05/60519267_2481780205165592_3730614503180599296_n-300x300.jpg)](//european-
+pirateparty.eu/wp-
+content/uploads/2019/05/60519267_2481780205165592_3730614503180599296_n.jpg)**</p>
+
+      </div>
+  </div>
+
+        </div>
+
+        <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row footer">
+            <div class="col-sm-4">
+                <img src="/static/svg/Logo_European_Pirate_Party-inversed.svg" alt="Logo" />
+            </div>
+            <div class="col-sm-4">
+                <h5>EUROPEAN ELECTIONS</h5>
+                <hr>
+                <a href="/ep-elections/"> Overview </a><br>
+                <a href="/programme">Programme</a><br>
+                <a href="/ep-elections/interviews-candidates/"> Interviews with Candidates </a><br>
+            </div>
+            <div class="col-sm-4">
+                <h5>ABOUT</h5>
+                <hr>
+                <a href="/contact-press/">Contact / Press</a><br>
+                <a href="/meetings/">Council meetings</a><br>
+                <a href="/streaming/">Streaming</a><br>
+                <a href="/provider/">Provider</a><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <hr>
+                <p class="copyright text-muted">♡2020 by Author/Artist. Copying is an act of love. Please copy.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </main>
+
+

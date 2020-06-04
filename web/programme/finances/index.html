@@ -1,0 +1,322 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicon/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicon/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicon/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="/favicon/favicon-196x196.png" sizes="196x196">
+<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon/favicon-128.png" sizes="128x128">
+<link rel="stylesheet" type="text/css" href="/static/foundation-icons.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/unmi.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/dropdown.css" />
+<link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/custom-modifications.css" />
+
+<link rel="stylesheet" href="/static/css/jquery.cookieBar.min.css">
+
+<link rel="stylesheet" type="text/css" href="/static/foundation-icons.css" />
+<link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" type="text/css" href="/static/css/share_buttons.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.cookieBar.min.js"></script>
+
+<title>FINANCES</title>
+
+<body>
+
+    <!-- Navigation -->
+<script>
+    $(document).ready(function () {
+        function getCookie(cname) {
+          var name = cname + "=";
+          var ca = document.cookie.split(';');
+          for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+            }
+          }
+          return "";
+        }
+        $(function() {
+            $.cookieBar('addTranslation', 'en', {
+                        message:	"This site uses Matomo to analyze traffic and help us to improve your user experience. We process part of you IP address and your cookies, they are stored on your browser for 13 months. These data are only processed by us and our web hosting platform. Please read our Privacy Policy to learn more.",
+                        acceptText:	'OK',
+                        infoText: "Privacy Policy",
+
+            });
+            if (getCookie('cookies-state') !== 'accepted'){
+                $.cookieBar({
+                    style: 'bottom-right',
+                    language: 'en',
+                    infoLink: "/gdpr/",
+                });
+            }
+        });
+    });
+</script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v6.0"></script>
+<script>
+    window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+              t._e.push(f);
+            };
+
+      return t;
+    }(document, "script", "twitter-wjs"));
+</script>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" id="mainNav">
+    <div class="container">
+        <a href="/">
+            <img class="nav__logo" src="/static/svg/Logo_European_Pirate_Party.svg" alt="Logo" />
+        </a>
+
+        <button class="navbar-toggler navbar-toggler-right" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#navbarResponsive"
+                                                            aria-controls="navbarResponsive"
+                                                            aria-expanded="false"
+                                                            aria-label="Toggle
+                                                            navigation">
+            Menu <i class="fas fi-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                                                 role="button"
+                                                                 data-toggle="dropdown"
+                                                                 aria-haspopup="true"
+                                                                 aria-expanded="false">
+                        PARTY
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item"
+                           href="/about">About</a>
+                        <a class="dropdown-item"
+                           href="/members">Members</a>
+                        <a class="dropdown-item" href="/board/">Board</a>
+
+
+                        <a class="dropdown-item" href="/statuses">Statuses</a>
+
+                        <a class="dropdown-item" href="https://wiki.ppeu.net/doku.php?id=european_pirate_party" target="_blank">Wiki</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"data-toggle="collapse" href="#collapseExample" href="#" id="navbarDropdown"
+                                                                     role="button"
+                                                                     data-toggle="dropdown"
+                                                                     aria-haspopup="true"
+                                                                     aria-expanded="false">
+                            PROGRAMME
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="collapseExample">
+                            <a class="dropdown-item" href="/programme">Preamble</a>
+                            <a class="dropdown-item" href="/programme/agriculture-fisheries/">Agriculture & Fisheries</a>
+                            <a class="dropdown-item" href="/programme/civil-society/">Civil Society</a>
+                            <a class="dropdown-item" href="/programme/education-culture-research-free-knowledge/">Education, Culture, Research & Free Knowledge</a>
+                            <a class="dropdown-item" href="/programme/environment-climate-and-energy/">Environment, Climate and Energy</a>
+                            <a class="dropdown-item" href="/programme/finances/">Finances</a>
+                            <a class="dropdown-item" href="/programme/free-software/">Free Software</a>
+                            <a class="dropdown-item" href="/programme/human-rights-in-the-digital-era/">Human Rights in the Digital Era</a>
+                            <a class="dropdown-item" href="/programme/international-affairs/">International Affairs</a>
+                            <a class="dropdown-item" href="/programme/net-policy/">Net Policy</a>
+                            <a class="dropdown-item" href="/programme/open-data/">Open Data</a>
+                            <a class="dropdown-item" href="/programme/social-affairs-healthcare/">Social Affairs & Healthcare</a>
+                            <a class="dropdown-item" href="/programme/space-programme/">Space Programme</a>
+                            <a class="dropdown-item" href="/programme/transport/">Transport</a>
+                        </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mep/">PARLIAMENT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">NEWS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/events/">EVENTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/career/">CAREER</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact-press/">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.facebook.com/europeanpirateparty"><i class="fi-social-facebook icon"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://twitter.com/EuropeanPirates"><i class="fi-social-twitter icon"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <main role="main">
+        <!-- Page Header -->
+        <header class="masthead">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-10 mx-auto">
+                        
+<h1>FINANCES</h1>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            
+  <div class="row content">
+      <div class="col-md-10 col-lg-12 mx-auto">
+          <h3>Taxes</h3>
+<p>EU is the richest economical area in the world. Yet the income from the burden of the taxation is
+not shared equally.</p>
+<p>Tax evasion schemes, primarily but not exclusively those employed by large international
+corporations, are one of the most pressing problems today. There are three main areas we are
+focusing on: breakdown of the social contract, race to the bottom, and the digital economy.</p>
+<h4>Breakdown of the Social Contract</h4>
+<p>It is a common practice that companies are tasked by their shareholders to pay as little taxes as
+possible. However, it is national states that use the collected taxes to provide an environment in
+which the companies can thrive. The companies are granted safety, rule-of-law, enforceability of
+obligations, legal protection, infrastructure, education. It is thus in their best interest to
+support such environment by paying their taxes.</p>
+<p>There are many tax evasion tools available and Pirates will strive to limit them as much as
+possible. Numbers from IMF suggest that tax evasion schemes cost us almost €500 billion a year,
+while in 1990 it was below €100 billion/year. This is an alarming trend. To illustrate the magnitude
+of the issue, €500 billion is almost half of the EU financial framework for 2014-2020, about 20 %
+more than the volume of charity worldwide, or 3-5 % of the worldwide tax collection.</p>
+<p>We propose to fight this by the OECD Base erosion and profit shifting and EU Anti tax-avoidance
+directive to deter profit shifting to a low or no tax country and virtual transfer of non-existing
+goods and services.</p>
+<h4>Race to the Bottom</h4>
+<p>Many states tend to provide tax breaks or other fiscal incentives to attract branch offices of large
+international corporations. These often do not produce anything of tangible value and thus serve
+only to reduce the tax burden of their parent companies. In many cases, the effective tax rate for
+companies taking advantage of these opportunities was less than 1% of the tax base. The result of
+the inter-state competition to attract companies is a race to the bottom in terms of tax revenue.</p>
+<p>The European Commission is struggling against the race to the bottom practices by enacting rules for
+the the single internal market. For example in an investigation under Article 107, TFEU ruled that
+the Irish tax system constitutes an illegal state subsidy to Apple and that Apple is required to pay
+€ 14 billion in tax debts.</p>
+<p>Proposed solutions – CCCTB (Common Consolidated Corporate Tax Base); greater oversight by the
+Commission over tax haven in the EU. The Common Consolidated Corporate Tax Base calculates the
+taxation of a multinational entity in each country of the EU based on the sales, capital and labor
+in each of the respective country. This will eliminate mismatches between national systems,
+preferential regimes and hidden tax rulings, which tax avoiders exploit. It will remove the need for
+transfer pricing and fights the profit erosion, which is a primary route for profit shifting.</p>
+<h4>Digital Economy</h4>
+<p>The internet is a global medium transcending geographical boundaries. Since the existing legal
+framework is more or less territorial, it often fails to grasp intricacies introduced by digital
+economy.</p>
+<p>Our goal is to bring the finances of the digital economy under democratic control and align its
+objectives with those of society.</p>
+<p>Proposed solution – to change the current rules of the so-called “permanent establishment” and tax
+certain digital services at the place where it was created at a rate of 3 % of the turnover. This
+will be applicable to the companies considered as to have taxable digital presence based on their
+annual revenues or number of contracts between digital and their customers in a taxable year.
+Ultimately, the new system secures a real link between where digital profits are made and where they
+are taxed.</p>
+<h3>Structural Funds</h3>
+<p>Structural funds are an important tool to strengthen the Europe’s cohesion and express solidarity in
+Europe still divided by the different performances of national and regional economies. We will
+support any effort to increase its flexibility so that it can respond promptly to the up-to-date
+developments of the economy or security situation. We will also support any effort to decrease the
+bureaucratic burden associated with the processing of the applications for subventions (for example,
+based on the differentiation among applicants according to the real results of their applications in
+the past.)</p>
+<p>The funds should be managed in a transparent and efficient way, the EU Commission should maintain a
+substantial control role in the shared management of the funds. A more important role of the EU
+Parliament could be considered in the future.</p>
+<p>It is fully legitimate to limit funding of the projects as a response to abuse of the funds and
+fraudulent use of the subsidies. However, we oppose, as a step contradictory to the original sense
+of the structural funds, any effort to use the limitation of the access to the funds as a means of
+pressure to the receiver countries in connection to unrelated political issues.</p>
+
+      </div>
+  </div>
+
+        </div>
+
+        <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row footer">
+            <div class="col-sm-4">
+                <img src="/static/svg/Logo_European_Pirate_Party-inversed.svg" alt="Logo" />
+            </div>
+            <div class="col-sm-4">
+                <h5>EUROPEAN ELECTIONS</h5>
+                <hr>
+                <a href="/ep-elections/"> Overview </a><br>
+                <a href="/programme">Programme</a><br>
+                <a href="/ep-elections/interviews-candidates/"> Interviews with Candidates </a><br>
+            </div>
+            <div class="col-sm-4">
+                <h5>ABOUT</h5>
+                <hr>
+                <a href="/contact-press/">Contact / Press</a><br>
+                <a href="/meetings/">Council meetings</a><br>
+                <a href="/streaming/">Streaming</a><br>
+                <a href="/provider/">Provider</a><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <hr>
+                <p class="copyright text-muted">♡2020 by Author/Artist. Copying is an act of love. Please copy.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </main>
+
+

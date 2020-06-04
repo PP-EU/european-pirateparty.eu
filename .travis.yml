@@ -1,0 +1,11 @@
+language: python
+python: 3.6
+install: "pip install Lektor"
+script: "lektor build -O web"
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $LEKTOR_DEPLOY_PASSWORD # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  on:
+    branch: master

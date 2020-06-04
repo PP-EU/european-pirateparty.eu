@@ -1,0 +1,722 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicon/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicon/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicon/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="/favicon/favicon-196x196.png" sizes="196x196">
+<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon/favicon-128.png" sizes="128x128">
+<link rel="stylesheet" type="text/css" href="/static/foundation-icons.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/unmi.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/dropdown.css" />
+<link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/custom-modifications.css" />
+
+<link rel="stylesheet" href="/static/css/jquery.cookieBar.min.css">
+
+<link rel="stylesheet" type="text/css" href="/static/foundation-icons.css" />
+<link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" type="text/css" href="/static/css/share_buttons.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.cookieBar.min.js"></script>
+
+<title>Blog</title>
+
+<body>
+
+    <!-- Navigation -->
+<script>
+    $(document).ready(function () {
+        function getCookie(cname) {
+          var name = cname + "=";
+          var ca = document.cookie.split(';');
+          for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+            }
+          }
+          return "";
+        }
+        $(function() {
+            $.cookieBar('addTranslation', 'en', {
+                        message:	"This site uses Matomo to analyze traffic and help us to improve your user experience. We process part of you IP address and your cookies, they are stored on your browser for 13 months. These data are only processed by us and our web hosting platform. Please read our Privacy Policy to learn more.",
+                        acceptText:	'OK',
+                        infoText: "Privacy Policy",
+
+            });
+            if (getCookie('cookies-state') !== 'accepted'){
+                $.cookieBar({
+                    style: 'bottom-right',
+                    language: 'en',
+                    infoLink: "/gdpr/",
+                });
+            }
+        });
+    });
+</script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v6.0"></script>
+<script>
+    window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+              t._e.push(f);
+            };
+
+      return t;
+    }(document, "script", "twitter-wjs"));
+</script>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" id="mainNav">
+    <div class="container">
+        <a href="/">
+            <img class="nav__logo" src="/static/svg/Logo_European_Pirate_Party.svg" alt="Logo" />
+        </a>
+
+        <button class="navbar-toggler navbar-toggler-right" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#navbarResponsive"
+                                                            aria-controls="navbarResponsive"
+                                                            aria-expanded="false"
+                                                            aria-label="Toggle
+                                                            navigation">
+            Menu <i class="fas fi-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                                                 role="button"
+                                                                 data-toggle="dropdown"
+                                                                 aria-haspopup="true"
+                                                                 aria-expanded="false">
+                        PARTY
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item"
+                           href="/about">About</a>
+                        <a class="dropdown-item"
+                           href="/members">Members</a>
+                        <a class="dropdown-item" href="/board/">Board</a>
+
+
+                        <a class="dropdown-item" href="/statuses">Statuses</a>
+
+                        <a class="dropdown-item" href="https://wiki.ppeu.net/doku.php?id=european_pirate_party" target="_blank">Wiki</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"data-toggle="collapse" href="#collapseExample" href="#" id="navbarDropdown"
+                                                                     role="button"
+                                                                     data-toggle="dropdown"
+                                                                     aria-haspopup="true"
+                                                                     aria-expanded="false">
+                            PROGRAMME
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="collapseExample">
+                            <a class="dropdown-item" href="/programme">Preamble</a>
+                            <a class="dropdown-item" href="/programme/agriculture-fisheries/">Agriculture & Fisheries</a>
+                            <a class="dropdown-item" href="/programme/civil-society/">Civil Society</a>
+                            <a class="dropdown-item" href="/programme/education-culture-research-free-knowledge/">Education, Culture, Research & Free Knowledge</a>
+                            <a class="dropdown-item" href="/programme/environment-climate-and-energy/">Environment, Climate and Energy</a>
+                            <a class="dropdown-item" href="/programme/finances/">Finances</a>
+                            <a class="dropdown-item" href="/programme/free-software/">Free Software</a>
+                            <a class="dropdown-item" href="/programme/human-rights-in-the-digital-era/">Human Rights in the Digital Era</a>
+                            <a class="dropdown-item" href="/programme/international-affairs/">International Affairs</a>
+                            <a class="dropdown-item" href="/programme/net-policy/">Net Policy</a>
+                            <a class="dropdown-item" href="/programme/open-data/">Open Data</a>
+                            <a class="dropdown-item" href="/programme/social-affairs-healthcare/">Social Affairs & Healthcare</a>
+                            <a class="dropdown-item" href="/programme/space-programme/">Space Programme</a>
+                            <a class="dropdown-item" href="/programme/transport/">Transport</a>
+                        </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mep/">PARLIAMENT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">NEWS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/events/">EVENTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/career/">CAREER</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact-press/">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.facebook.com/europeanpirateparty"><i class="fi-social-facebook icon"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://twitter.com/EuropeanPirates"><i class="fi-social-twitter icon"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <main role="main">
+        <!-- Page Header -->
+        <header class="masthead">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-10 mx-auto">
+                        
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/pirate-party-sweden-magnus-andersson-ep2019/"><img class="thumbnail blog-posting__media" src="/img/magnusandersson.png" alt="Pirate Party Sweden - Magnus Andersson - EP2019"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/pirate-party-sweden-magnus-andersson-ep2019/" itemprop="headline">Pirate Party Sweden - Magnus Andersson - EP2019</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/pirate-party-sweden-magnus-andersson-ep2019/" />
+                    <i class="blog-posting__pubdate">2019-05-02 </i>
+                    <span itemprop="description"><p>For the upcoming EU elections we will interview Pirate Party top candidates -
+and current Pirate member of the European Parliament, Julia Reda - in short
+10-15 minute audio/video interviews (<a href="/www.youtube.com/watch?v=waNx8QXTHzQ&amp;list=PLFRKd_c5m20C6J-N0gfFTXx8SLvcFqSkQ&amp;index=2">playlist
+here</a>).
+Get to know the <a href="https://piratpartiet.se/">Pirate Party Sweden</a>#3 - Magnus
+Andersson. Magnus is the chairperson of the Swedish Pirate Party since 2016
+and number three on their candidate list. He joined the party in 2009, shortly
+after it was established. When he's not doing politics, he is working as a
+developer - process development and digitazion of
+processes.<a href="https://youtu.be/qtodY__lE5g?rel=0"><img src="https://european-pirateparty.eu/wp-
+content/uploads/2019/05/magnusandersson-300x171.png" alt=""></a></p>
+<ul>
+<li><a href="https://youtu.be/qtodY__lE5g?rel=0">YouTube</a></li>
+<li><a href="https://soundcloud.com/potkaars/20190501-magnus-andersson-pirate-party-sweden-ep2019-english">Soundcloud</a></li>
+<li><a href="https://itunes.apple.com/nl/podcast/ppu-podcast/id1436172406#">iTunes</a></li>
+<li><a href="https://open.spotify.com/episode/30TI1iCGW1LJOeAQwEtyTZ">Spotify</a></li>
+<li><a href="https://www.podcastrepublic.net/podcast/1436172406">PodcastRepublic</a></li>
+</ul>
+<hr>
+<p>Interviewers: Rico Brouwer, Raymond Johansen, Bailey Lamon <a href="/pp-international.net/">Pirate Parties
+International</a>, <a href="/potkaars.nl/">Potkaars.nl</a></p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/pirate-party-sweden-magnus-andersson-ep2019/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/czech-pirate-party-marcel-kolaja-ep2019/"><img class="thumbnail blog-posting__media" src="/img/marcel.jpg" alt="Czech Pirate Party - Marcel Kolaja - EP2019"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/czech-pirate-party-marcel-kolaja-ep2019/" itemprop="headline">Czech Pirate Party - Marcel Kolaja - EP2019</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/czech-pirate-party-marcel-kolaja-ep2019/" />
+                    <i class="blog-posting__pubdate">2019-04-27 </i>
+                    <span itemprop="description"><p>For the upcoming EU elections we will interview Pirate Party top candidates -
+and current Pirate member of the European Parliament, Julia Reda - in short
+10-15 minute audio/video interviews (<a href="/www.youtube.com/watch?v=waNx8QXTHzQ&amp;list=PLFRKd_c5m20C6J-N0gfFTXx8SLvcFqSkQ&amp;index=2">playlist
+here</a>).
+Get to know the <a href="/www.pirati.cz/">Czech Pirate Party</a>#1 - Marcel
+Kolaja.<a href="/youtu.be/HzqUBZ4y5-0"><img src="/european-pirateparty.eu/wp-
+content/uploads/2019/04/marcel-300x227.jpg" alt=""></a> Marcel
+Kolaja has been a member of the Czech Pirate Party since 2010. In 2014, he ran
+for the European Parliament in second place. In the past, he worked as co-
+chair of the international organization Pirate Parties International and vice-
+president of the Pirate Party. Marcel studied informatics at the Faculty of
+Informatics of Masaryk University in Brno. In this interview Marcel describes
+the team in the Czech republic participating in the elections, and what is
+going on in his country. He also gives his view on the Euro as the common
+European currency</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/czech-pirate-party-marcel-kolaja-ep2019/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/czech-pirate-party-mikulas-peksa-ep2019/"><img class="thumbnail blog-posting__media" src="/img/Naamloos.png" alt="Czech Pirate Party – Mikuláš Peksa – EP2019"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/czech-pirate-party-mikulas-peksa-ep2019/" itemprop="headline">Czech Pirate Party – Mikuláš Peksa – EP2019</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/czech-pirate-party-mikulas-peksa-ep2019/" />
+                    <i class="blog-posting__pubdate">2019-04-27 </i>
+                    <span itemprop="description"><p>For the upcoming EU elections we will interview Pirate Party top candidates -
+and current Pirate member of the European Parliament, Julia Reda - in short
+10-15 minute audio/video interviews (<a href="/www.youtube.com/watch?v=waNx8QXTHzQ&amp;list=PLFRKd_c5m20C6J-N0gfFTXx8SLvcFqSkQ&amp;index=2">playlist
+here</a>).
+Get to know the <a href="/www.pirati.cz/">Czech Pirate Party</a>#3 – Mikuláš
+Peksa.<a href="/european-pirateparty.eu/wp-
+content/uploads/2019/04/Naamloos-1.png"><img src="/european-pirateparty.eu/wp-
+content/uploads/2019/04/Naamloos-1-300x164.png" alt=""></a> Mikuláš is a deputy and vice-chairman
+of the Czech Pirate Party and the European Pirate Party. He also serves as
+vice-chairman of the House Affairs Committee of the European Union and the
+guarantor of the Pirates Foreign Team. In the interview they discuss the
+upcoming elections and how to proceed with EU law, such as the new copyright
+directive</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/czech-pirate-party-mikulas-peksa-ep2019/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/czech-pirate-party-marketa-gregorova-ep2019/"><img class="thumbnail blog-posting__media" src="/img/marketa-ep2019.jpg" alt="Czech Pirate Party - Markéta Gregorová - EP2019"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/czech-pirate-party-marketa-gregorova-ep2019/" itemprop="headline">Czech Pirate Party - Markéta Gregorová - EP2019</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/czech-pirate-party-marketa-gregorova-ep2019/" />
+                    <i class="blog-posting__pubdate">2019-04-10 </i>
+                    <span itemprop="description"><p>For the upcoming EU elections we will interview Pirate Party top candidates -
+and current Pirate member of the European Parliament, Julia Reda - in short
+10-15 minute audio/video interviews (<a href="/www.youtube.com/watch?v=waNx8QXTHzQ&amp;list=PLFRKd_c5m20C6J-N0gfFTXx8SLvcFqSkQ&amp;index=2">playlist
+here</a>).
+Get to know the <a href="/www.pirati.cz/">Czech Pirate Party</a> #2 - Markéta
+Gregorová.<a href="/www.youtube.com/watch?v=waNx8QXTHzQ"><img src="/european-pirateparty.eu/wp-content/uploads/2019/04/marketa-
+ep2019-300x224.jpg" alt=""></a> Markéta talks
+about what has happened in her country after Pirates had their smashing win in
+the 2017 parliamentary elections and explains what the upcoming EP2019
+elections are about in her country</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/czech-pirate-party-marketa-gregorova-ep2019/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/member-of-the-european-parliament-julia-reda-ep2019/"><img class="thumbnail blog-posting__media" src="/img/julia-reda.jpg" alt="Member of the European Parliament - Julia Reda - EP2019"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/member-of-the-european-parliament-julia-reda-ep2019/" itemprop="headline">Member of the European Parliament - Julia Reda - EP2019</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/member-of-the-european-parliament-julia-reda-ep2019/" />
+                    <i class="blog-posting__pubdate">2019-04-10 </i>
+                    <span itemprop="description"><p>For the upcoming EU elections we will interview Pirate Party top candidates -
+and current Pirate member of the European Parliament, <a href="/juliareda.eu/en/">Julia
+Reda</a> - in short 10-15 minute audio/video interviews
+(<a href="/www.youtube.com/watch?v=7FMsoZMj3_0&amp;list=PLFRKd_c5m20C6J-N0gfFTXx8SLvcFqSkQ&amp;index=3">playlist
+here</a>).
+The first interview is with <strong>Julia Reda</strong> , current member of the European
+Parliament for the Pirate Party in Germany.<a href="/youtu.be/7FMsoZMj3_0"><img src="/european-pirateparty.eu/wp-
+content/uploads/2019/04/julia-reda-276x300.jpg" alt=""></a> Julia
+looks back on her work for the digital agenda as a Member of Parliament (MEP)
+and talks about important topics still on the table. She looks ahead to the
+upcoming European elections, and her own future after Brussels</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/member-of-the-european-parliament-julia-reda-ep2019/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/pirate-party-sweden-mattias-bjarnemalm-ep2019/"><img class="thumbnail blog-posting__media" src="/img/mattias-ep2019.jpg" alt="Pirate Party Sweden - Mattias Bjärnemalm - EP2019"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/pirate-party-sweden-mattias-bjarnemalm-ep2019/" itemprop="headline">Pirate Party Sweden - Mattias Bjärnemalm - EP2019</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/pirate-party-sweden-mattias-bjarnemalm-ep2019/" />
+                    <i class="blog-posting__pubdate">2019-04-10 </i>
+                    <span itemprop="description"><p>For the upcoming EU elections we will interview Pirate Party top candidates -
+and current Pirate member of the European Parliament, Julia Reda - in short
+10-15 minute audio/video interviews (<a href="/www.youtube.com/watch?v=PHTI_Qot48A&amp;list=PLFRKd_c5m20C6J-N0gfFTXx8SLvcFqSkQ&amp;index=2&amp;t=0s">playlist
+here</a>).<a href="/www.youtube.com/watch?v=PHTI_Qot48A"><img src="/european-
+pirateparty.eu/wp-content/uploads/2019/04/mattias-
+ep2019-298x300.jpg" alt=""></a> Get to know
+<a href="/piratpartiet.se/">Pirate Party Sweden</a> #1 - Mattias Bjärnemalm: Mattias
+talks about his past years working in the European Parliament for the group of
+which the Pirate Party has been a member. Listen to him explain what the
+upcoming EP2019 elections are about in Sweden</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/pirate-party-sweden-mattias-bjarnemalm-ep2019/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/statement-of-the-ppeu-board/"><img class="thumbnail blog-posting__media" src="/img/logo_european_pirate_party.png" alt="Statement of the PPEU Board"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/statement-of-the-ppeu-board/" itemprop="headline">Statement of the PPEU Board</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/statement-of-the-ppeu-board/" />
+                    <i class="blog-posting__pubdate">2019-03-27 </i>
+                    <span itemprop="description"><p><strong>Statement</strong> : A candidate on the European Parliamentary Elections list of
+the German Pirate Party was reported for sexual harassment at his workplace.
+The PPEU condemns any form of sexism and sexual harassment. It has not been
+possible to remove the individual from the German Pirate Party's list of
+candidates due to regulatory challenges [<a href="/www.piratenpartei.de/2019/03/15/waehlerinformation-betreffend-
+unsere-liste-zur-europawahl-2019">official statement of the German
+Pirate party</a>]. Thus, for clarity of action, the PPEU with
+the lead candidates of the Pirate Parties of the Czech Republic, Germany and
+Sweden announce that in the unlikely event that he would be elected, he will
+not constitute a part of the Pirate MEPs group in the European Parliament.
+Board of the European Pirate Party therefore,</p>
+<ol>
+<li><strong>takes</strong> into account "<a href="/www.piratenpartei.de/2019/03/15/waehlerinformation-betreffend-unsere-liste-zur-europawahl-2019/">Information regarding our list for European election 2019</a>" provided by German Pirate party;</li>
+<li><strong>reminds</strong> its members and the public of the <a href="/wiki.ppeu.net/doku.php?id=4th_council_meeting_2017:other_items#resolution">Resolution</a> of the 4th meeting of the European Pirate Party Council;</li>
+<li><strong>condemns</strong> sexual harassment of any kind as an unacceptable violation of civil rights reminded by the Manifesto of European Pirate Party;</li>
+<li><strong>takes</strong> into account the initiative of the German Pirate party to expel the candidate and remove him from the candidate list for the upcoming European election;</li>
+<li><strong>excludes</strong> future cooperation with the candidate within a political group in the European parliament in the event that he would be elected as a MEP, whilst being condemned by a court. Until final ruling, the board of the PPEU suspends any cooperation with this candidate;</li>
+<li><strong>orders</strong> the chairperson to communicate this resolution on the web page of the European Pirates</li>
+</ol>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/statement-of-the-ppeu-board/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/copyright-directive-fight-continues/"><img class="thumbnail blog-posting__media" src="/img/D2lUh9eU0AA71dd-large.jpg" alt="Sad Day for the Internet: The Fight Continues"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/copyright-directive-fight-continues/" itemprop="headline">Sad Day for the Internet: The Fight Continues</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/copyright-directive-fight-continues/" />
+                    <i class="blog-posting__pubdate">2019-03-26 </i>
+                    <span itemprop="description"><p><em>Brussels/Strasbourg, March 26, 2019</em> - The European Parliament approved
+today the Directive on copyright in the Digital Single Market, so called
+Copyright Directive. It was supported by 348 Members of the European
+Parliament (MEPs), against were 274 of them. The amendments were not voted on,
+as a majority of MEPs (with only five votes to shift the vote) rejected it.
+The most controversial articles were 11 and 13, the link tax and upload
+filters. Julia Reda, Pirate MEP, has been informing about its threats for the
+past two years on <a href="https://juliareda.eu/en/">her website</a> and Pirate parties
+across Europe joined her in her efforts to stop it. As a result, some of the
+excesses have been mitigated - for example in Article 11 we managed to protect
+the hyperlink as one of the building blocks of the web. Yet, this is a major
+loss for Europe. In an effort to support publishers and limit the power of
+technology giants, MEPs voted to introduce upload filters. Not only will these
+be error-prone, they will also be the least problematic precisely for the
+biggest players that the directive tried to control. Even though it's a loss,
+we are not giving up. The European elections in May can shift the power
+towards more Pirates and the revision of this directive will be one of our
+most important requirements in the negotiations after elections. We are also
+preparing an overview of who voted - citizens are entitled to know which MEPs
+have supported the damage to the Internet. Likewise, we are now starting to
+look at the news that appeared only a few hours before the vote about alleged
+threats of publishers against some MEPs. If this were to be confirmed, the
+European Parliament should reflect this as a major problem</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/copyright-directive-fight-continues/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/the-common-european-elections-programme-is-signed/"><img class="thumbnail blog-posting__media" src="/img/DzD2HrYWsAA0GCz-large.jpg" alt="The Common European Elections Programme is Signed!"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/the-common-european-elections-programme-is-signed/" itemprop="headline">The Common European Elections Programme is Signed!</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/the-common-european-elections-programme-is-signed/" />
+                    <i class="blog-posting__pubdate">2019-03-01 </i>
+                    <span itemprop="description"><p>On 9th February, thirteen Pirate Parties from the European Union member
+countries signed what everyone worked on for the last year - our common
+European elections programme. Our Luxembourg hosts made an event and weekend
+to remember for everyone who participated. Thank you so much! You can find the
+programme (CEEP 2019) on our website: <a href="https://european-pirateparty.eu/ep-
+elections/">https://european-pirateparty.eu/ep-
+elections/</a>, together with other useful information we are adding
+continuously. There is also a list of signatories of the CEEP, but of course,
+all the Pirates in the world made this possible. &lt;3 We are looking forward to
+the EP elections on <strong>24th to 26th May</strong> and to a lot of new Pirates in the
+European Parliament! Follow us on
+<a href="https://www.facebook.com/europeanpirateparty">Facebook</a>,
+<a href="https://twitter.com/eupirates">Twitter</a> or here to receive the latest
+information - or join us and help us on our way to Brussels to make the world
+more Pirate-y</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/the-common-european-elections-programme-is-signed/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/next-board-meeting-on-17th-march-2030-cet/"><img class="thumbnail blog-posting__media" src="/img/startup-593334_1920.jpg" alt="Next board meeting on 17th March 20:30 CET"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/next-board-meeting-on-17th-march-2030-cet/" itemprop="headline">Next board meeting on 17th March 20:30 CET</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/next-board-meeting-on-17th-march-2030-cet/" />
+                    <i class="blog-posting__pubdate">2019-02-28 </i>
+                    <span itemprop="description"><p>We are kindly announcing that the next meeting of the PPEU Board will be held
+on 15th March at 20:30 CET (19:30 UTC). We will meet on Mumble NRW, room
+PPEU/Board Meeting (instructions: <a href="https://wiki.piratenpartei.de/NRW:Mumble-
+Server">https://wiki.piratenpartei.de/NRW:Mumble-
+Server</a>). The agenda for this meeting can be found here: <a href="https://etherpad.pp-
+international.net/p/board_meeting_04">https://etherpad.pp-
+international.net/p/board_meeting_04</a>. Everyone is welcome and we are looking
+forward to hear each other</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/next-board-meeting-on-17th-march-2030-cet/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+
+  
+  <div class="pagination row">
+    
+      <a class="arrow" href="/page/9/">&laquo; Previous</a>
+    
+
+    
+        <a href="/"> 1 </a>
+    
+        <a href="/page/2/"> 2 </a>
+    
+        <a href="/page/3/"> 3 </a>
+    
+        <a href="/page/4/"> 4 </a>
+    
+        <a href="/page/5/"> 5 </a>
+    
+        <a href="/page/6/"> 6 </a>
+    
+        <a href="/page/7/"> 7 </a>
+    
+        <a href="/page/8/"> 8 </a>
+    
+        <a href="/page/9/"> 9 </a>
+    
+
+    <span class="pagination__current">10</span>
+
+    
+        <a href="/page/11/"> 11 </a>
+    
+        <a href="/page/12/"> 12 </a>
+    
+        <a href="/page/13/"> 13 </a>
+    
+        <a href="/page/14/"> 14 </a>
+    
+        <a href="/page/15/"> 15 </a>
+    
+        <a href="/page/16/"> 16 </a>
+    
+        <a href="/page/17/"> 17 </a>
+    
+        <a href="/page/18/"> 18 </a>
+    
+        <a href="/page/19/"> 19 </a>
+    
+
+    
+      <a class="arrow" href="/page/11/">Next &raquo;</a>
+    
+  </div>
+
+
+        </div>
+
+        <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row footer">
+            <div class="col-sm-4">
+                <img src="/static/svg/Logo_European_Pirate_Party-inversed.svg" alt="Logo" />
+            </div>
+            <div class="col-sm-4">
+                <h5>EUROPEAN ELECTIONS</h5>
+                <hr>
+                <a href="/ep-elections/"> Overview </a><br>
+                <a href="/programme">Programme</a><br>
+                <a href="/ep-elections/interviews-candidates/"> Interviews with Candidates </a><br>
+            </div>
+            <div class="col-sm-4">
+                <h5>ABOUT</h5>
+                <hr>
+                <a href="/contact-press/">Contact / Press</a><br>
+                <a href="/meetings/">Council meetings</a><br>
+                <a href="/streaming/">Streaming</a><br>
+                <a href="/provider/">Provider</a><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <hr>
+                <p class="copyright text-muted">♡2020 by Author/Artist. Copying is an act of love. Please copy.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </main>
+
+

@@ -1,0 +1,783 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicon/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicon/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicon/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="/favicon/favicon-196x196.png" sizes="196x196">
+<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon/favicon-128.png" sizes="128x128">
+<link rel="stylesheet" type="text/css" href="/static/foundation-icons.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/unmi.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/dropdown.css" />
+<link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/custom-modifications.css" />
+
+<link rel="stylesheet" href="/static/css/jquery.cookieBar.min.css">
+
+<link rel="stylesheet" type="text/css" href="/static/foundation-icons.css" />
+<link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" type="text/css" href="/static/css/share_buttons.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.cookieBar.min.js"></script>
+
+<title>Blog</title>
+
+<body>
+
+    <!-- Navigation -->
+<script>
+    $(document).ready(function () {
+        function getCookie(cname) {
+          var name = cname + "=";
+          var ca = document.cookie.split(';');
+          for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+            }
+          }
+          return "";
+        }
+        $(function() {
+            $.cookieBar('addTranslation', 'en', {
+                        message:	"This site uses Matomo to analyze traffic and help us to improve your user experience. We process part of you IP address and your cookies, they are stored on your browser for 13 months. These data are only processed by us and our web hosting platform. Please read our Privacy Policy to learn more.",
+                        acceptText:	'OK',
+                        infoText: "Privacy Policy",
+
+            });
+            if (getCookie('cookies-state') !== 'accepted'){
+                $.cookieBar({
+                    style: 'bottom-right',
+                    language: 'en',
+                    infoLink: "/gdpr/",
+                });
+            }
+        });
+    });
+</script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v6.0"></script>
+<script>
+    window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+              t._e.push(f);
+            };
+
+      return t;
+    }(document, "script", "twitter-wjs"));
+</script>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" id="mainNav">
+    <div class="container">
+        <a href="/">
+            <img class="nav__logo" src="/static/svg/Logo_European_Pirate_Party.svg" alt="Logo" />
+        </a>
+
+        <button class="navbar-toggler navbar-toggler-right" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#navbarResponsive"
+                                                            aria-controls="navbarResponsive"
+                                                            aria-expanded="false"
+                                                            aria-label="Toggle
+                                                            navigation">
+            Menu <i class="fas fi-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                                                 role="button"
+                                                                 data-toggle="dropdown"
+                                                                 aria-haspopup="true"
+                                                                 aria-expanded="false">
+                        PARTY
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item"
+                           href="/about">About</a>
+                        <a class="dropdown-item"
+                           href="/members">Members</a>
+                        <a class="dropdown-item" href="/board/">Board</a>
+
+
+                        <a class="dropdown-item" href="/statuses">Statuses</a>
+
+                        <a class="dropdown-item" href="https://wiki.ppeu.net/doku.php?id=european_pirate_party" target="_blank">Wiki</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"data-toggle="collapse" href="#collapseExample" href="#" id="navbarDropdown"
+                                                                     role="button"
+                                                                     data-toggle="dropdown"
+                                                                     aria-haspopup="true"
+                                                                     aria-expanded="false">
+                            PROGRAMME
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="collapseExample">
+                            <a class="dropdown-item" href="/programme">Preamble</a>
+                            <a class="dropdown-item" href="/programme/agriculture-fisheries/">Agriculture & Fisheries</a>
+                            <a class="dropdown-item" href="/programme/civil-society/">Civil Society</a>
+                            <a class="dropdown-item" href="/programme/education-culture-research-free-knowledge/">Education, Culture, Research & Free Knowledge</a>
+                            <a class="dropdown-item" href="/programme/environment-climate-and-energy/">Environment, Climate and Energy</a>
+                            <a class="dropdown-item" href="/programme/finances/">Finances</a>
+                            <a class="dropdown-item" href="/programme/free-software/">Free Software</a>
+                            <a class="dropdown-item" href="/programme/human-rights-in-the-digital-era/">Human Rights in the Digital Era</a>
+                            <a class="dropdown-item" href="/programme/international-affairs/">International Affairs</a>
+                            <a class="dropdown-item" href="/programme/net-policy/">Net Policy</a>
+                            <a class="dropdown-item" href="/programme/open-data/">Open Data</a>
+                            <a class="dropdown-item" href="/programme/social-affairs-healthcare/">Social Affairs & Healthcare</a>
+                            <a class="dropdown-item" href="/programme/space-programme/">Space Programme</a>
+                            <a class="dropdown-item" href="/programme/transport/">Transport</a>
+                        </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mep/">PARLIAMENT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">NEWS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/events/">EVENTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/career/">CAREER</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact-press/">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.facebook.com/europeanpirateparty"><i class="fi-social-facebook icon"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://twitter.com/EuropeanPirates"><i class="fi-social-twitter icon"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <main role="main">
+        <!-- Page Header -->
+        <header class="masthead">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-10 mx-auto">
+                        
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/board-meeting-on-december-4th/"><img class="thumbnail blog-posting__media" src="/img/logo_european_pirate_party.png" alt="Board Meeting on December, 4th"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/board-meeting-on-december-4th/" itemprop="headline">Board Meeting on December, 4th</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/board-meeting-on-december-4th/" />
+                    <i class="blog-posting__pubdate">2017-12-01 </i>
+                    <span itemprop="description"><p>The first meeting of the new board will be held on December 4th 21.00h CET on
+Mumble mumble.piratenpartei-nrw.de, Link: <a href="mumble://mumble.piratenpartei-
+nrw.de/International/PPEU/Board%20Meeting?title=Piratenpartei%20NRW&amp;version=1.2.0">Piratenpartei
+NRW</a>
+[1]. Draft Agenda: <a href="https://ppeu.piratenpad.de/boardmeeting01">https://ppeu.piratenpad.de/boardmeeting01</a> Maybe it will
+be streamed by <a href="https://piratesonair.de/stream/">@PiratesOnAir</a> (on Board’s
+decision) also. Guests are very welcomed</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/board-meeting-on-december-4th/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/council-meeting-agenda-prague-17-19-11-2017/"><img class="thumbnail blog-posting__media" src="/img/crowd-2045498__480.jpg" alt="Council Meeting Agenda Prague 17.-19.11.2017"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/council-meeting-agenda-prague-17-19-11-2017/" itemprop="headline">Council Meeting Agenda Prague 17.-19.11.2017</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/council-meeting-agenda-prague-17-19-11-2017/" />
+                    <i class="blog-posting__pubdate">2017-11-09 </i>
+                    <span itemprop="description"><h2>Venue</h2>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/council-meeting-agenda-prague-17-19-11-2017/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/new-website/"><img class="thumbnail blog-posting__media" src="/img/logo_european_pirate_party.png" alt="New Website"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/new-website/" itemprop="headline">New Website</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/new-website/" />
+                    <i class="blog-posting__pubdate">2017-11-08 </i>
+                    <span itemprop="description"><p>For actual informations go to:<a href="/european-
+pirateparty.eu"> //european-pirateparty.eu</a> PPEU-Wiki :
+<a href="/ppeu.net/wiki/doku.php">//ppeu.net/wiki/doku.php</a></p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/new-website/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/invitation-to-the-council-meeting/"><img class="thumbnail blog-posting__media" src="/img/logo_european_pirate_party.png" alt="Invitation to the Council Meeting"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/invitation-to-the-council-meeting/" itemprop="headline">Invitation to the Council Meeting</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/invitation-to-the-council-meeting/" />
+                    <i class="blog-posting__pubdate">2017-10-24 </i>
+                    <span itemprop="description"><p>Dear council members, Respecting the article 16 (6) of the Statues, on behalf
+of the Board, I hereby invite you to a council meeting. The council meeting
+will be held on the 18th and 19th of November 2017 in Prague at Česká pirátská
+strana, Řehořova 943/19, Praha 3, Czech Republik. We, all the Board members,
+deeply regret that article 14 (7) of the Statues was violated as the Council
+meeting did not take place during 2016. Please support this very last
+opportunity to organise a meeting in 2017. Looking forward to see you in
+Prague! Best regards, Mikuláš Peksa Board member European Pirate Party (Posted
+October 15th, 2017)</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/invitation-to-the-council-meeting/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/request-for-a-council-meeting/"><img class="thumbnail blog-posting__media" src="/img/logo_european_pirate_party.png" alt="Request for a council meeting"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/request-for-a-council-meeting/" itemprop="headline">Request for a council meeting</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/request-for-a-council-meeting/" />
+                    <i class="blog-posting__pubdate">2017-10-15 </i>
+                    <span itemprop="description"><p>Dear Board of PPEU, on behalf of the following Member Parties of PPEU and its
+delegates the undersigned requests a council meeting according to <strong>article 14
+(7)</strong> of the PPEU - to be held on the <strong>18th and 19th of November 2017 in
+Prague at Česká pirátská strana, Řehořova 943/19, Praha 3</strong> , Czech Republik:
+<strong>Pirate Party of France</strong> <strong>Pirate Party of Switzerland</strong> <strong>Pirate Party of
+Czech Republik</strong> <strong>Pirate Party of Norway</strong> <strong>Pirate Party of Germany</strong>
+<strong>Pirate Party of Austria</strong> Additionally we propose the agenda provided to you
+in the annex to this letter. The mentioned place is already reserved for PPEU.
+Please send out your invitation by 15.10.2017 at the latest. For your
+information PPDE and other parties will take care for further formalities. On
+behalf of the above mentioned parties</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/request-for-a-council-meeting/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/invitation-to-the-european-pirate-party-first-council-meeting-of-2017-2/"><img class="thumbnail blog-posting__media" src="/img/logo_european_pirate_party.png" alt="Invitation to the European Pirate party first Council meeting of 2017"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/invitation-to-the-european-pirate-party-first-council-meeting-of-2017-2/" itemprop="headline">Invitation to the European Pirate party first Council meeting of 2017</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/invitation-to-the-european-pirate-party-first-council-meeting-of-2017-2/" />
+                    <i class="blog-posting__pubdate">2017-05-02 </i>
+                    <span itemprop="description"><p>The following email has been sent to all the members of the European pirate
+party, and is reposted here for convenience.   Dear Members, After more than
+one year of delay the board invites our members to participate in a Council
+Meeting. The meeting will be held online and it will take place from the 25th
+of May to the 15th of June to give all members a reasonable amount of time to
+go online and participate in the discussions and votings. Preceding the formal
+meeting there is an additional month of preparation where you will be able to
+look at and discuss the proposals and to appoint your Council delegates. What
+we need from you for you to be able to participate in the meeting? To be able
+to be represented at the Council meeting you need to send us a formal decision
+where you apoint your delegates. This should be a decision taken by your
+board, General Assembly or a body of equal relevance according to your
+statutes, and it should be documented in a way that allows us to verify the
+authenticity of the decision. The decision has to include the names of the
+delegates, in which order the delegates have voting rights, and for which time
+frame the appointment as delegate is valid. The number of delegates any member
+is entitled to is defined in the statutes, and you can find the exact numbers
+here: <a href="http://ppeu.net/wiki/doku.php?id=1st_council_meeting_2015%3Adelegates">http://ppeu.net/wiki/doku.php?id=1st_council_meeting_2015%3Adelegates</a>.
+We also need you to send us the email addresses of your delegates so that we
+can invite them to the online platform where they will be able to discuss the
+proposals before the actual meeting starts. We would encourage you to apoint
+your delegates for the duration of the full year to allow them to represent
+you for any further council meetings that might happen this year without the
+need for a new decision, but this is entirely up to you. <strong>Election of the
+Board</strong> As is it written in the statues, the Council meeting is suppossed to
+elect a new Board. All the council members are kindly invited to nominate
+candidates for the offices. All nominations must specify the particular post
+for which the candidate is being proposed (i.e. Chairperson, Vice-Chairperson,
+Treasurer or a Board Member without a special function). Each Ordinary Member
+may nominate and support several candidates. All nominations need to be sent
+in no later than one month before the meeting in accordance to the statutes.
+This means that the deadline for nominations is 25th of April 2017. <strong>The
+proposed statute changes</strong> Our working group on the statutes decided early on
+to do two versions of the new statutes; one slim version with only the minimal
+changes required to move the association to Luxembourg and one more
+comprehensive version with the purpose of streamlining the organization and
+removing defunct paragraphs or unnecessary repetitions. The Council will then
+have to decide on which one of the two versions that the board has proposed it
+will proceed with. <a href="https://github.com/PPEU/wiki/wiki/Statutes-proposal-2.1">The slim version will be found
+here</a>. <a href="https://github.com/PPEU/wiki/wiki/Statutes---proposal-3.1">The
+comprehensive version can be found
+here</a>. All the
+Council members are kindly invited to propose their own proposals for statues
+changes. <strong>This is the draft agenda for the meeting:</strong></p>
+<ul>
+<li>Deadline for nominations for the Board (25th of April)</li>
+<li>Deadline for statutes changes or other proposals (25th of April)</li>
+<li>Opening of the meeting (25th of May)</li>
+<li>Rules of procedure (25th-28th of May)</li>
+<li>Decision on changes of statutes (29th of May until 5th of June)</li>
+<li>Election of board (6th to 8th of June)</li>
+<li>Membership fee (9th-12th of June)</li>
+<li>Admission of new members (13th-14th of June) [Friuli Venezia Giulia Pirates haver resquested full membership to European Pirates, or observer member, if it does not pass.]</li>
+<li><ul>
+<li>Closing of the meeting (15th of June)</li>
+</ul>
+</li>
+</ul>
+<p>Best regards, The Board</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/invitation-to-the-european-pirate-party-first-council-meeting-of-2017-2/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/eu-proposal-on-trade-secrets-a-threat-to-whistleblowers/"><img class="thumbnail blog-posting__media" src="/img/logo_european_pirate_party.png" alt="EU proposal on trade secrets a threat to Whistleblowers"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/eu-proposal-on-trade-secrets-a-threat-to-whistleblowers/" itemprop="headline">EU proposal on trade secrets a threat to Whistleblowers</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/eu-proposal-on-trade-secrets-a-threat-to-whistleblowers/" />
+                    <i class="blog-posting__pubdate">2017-04-08 </i>
+                    <span itemprop="description"><p>In many of the biggest political scandals of the past months – Luxleaks,
+Dieselg<img src="https://juliareda.eu/wp-
+content/uploads/2016/04/03_TradeSecret_EN-1024x683.jpg" alt="Trade Secrets">ate and now the <a href="http://www.theguardian.com/news/2016/apr/03/what-you-need-to-know-
+about-the-panama-papers">Panama
+Papers</a> – we saw <strong>trade secret laws abused</strong> as a shield
+against investigation and exposure of how corporations are harming the public
+good, avoiding taxes and endangering public safety. Whistleblowers find
+themsielves fighting for their freedom in court – or in hiding. And yet, <strong>the
+European Parliament is about to expand corporate secrecy and deter
+whistleblowing by adopting the Trade Secrets Directive.</strong></p>
+<h3>Lex Wikileaks</h3>
+<blockquote><p>Just as Wikileaks made headlines, the EU began toughening trade secrets
+laws, endangering whistleblowers<a href="https://juliareda.eu/2016/04/trade-secrets-whistleblowers/#"> __Tweet
+this!</a></p>
+</blockquote>
+<p>According to <a href="http://fm4.orf.at/stories/1769150/">research conducted by Austrian investigative journalist Erich
+Moechel,</a> preparations for the Directive
+<strong>coincided with Wikileaks revelations</strong> first making international headlines.
+He points out the discrepancy between the European Parliament’s decision to
+award LuxLeaks whistleblower Antoine Deltour with the European Citizen’s Prize
+2015, after his revelations led to recovering several hundred million euro of
+tax revenue, while at the same time preparing to pass a law that will make the
+kind of <a href="https://support-
+antoine.org/en/">prosecution that Antoine Deltour now faces</a> for trade secrets disclosure in Luxembourg a norm across
+Europe. The Greens/EFA, my political group in the European Parliament, will
+<a href="http://www.greens-efa.eu/trade-secrets-15101.html"><strong>reject</strong></a> the Directive
+in the <strong>plenary vote on Thursday April 14th</strong> , echoing the concerns by over
+half a million petition signatories across Europe as well as civil society
+organisations including the Confederation of German Trade Unions, Corporate
+Europe Observatory, Syndicat National des Journalistes and Whistleblower
+Netzwerk e.V. <a href="https://juliareda.eu/wp-content/uploads/2016/04/ts-
+delay2.png"><img src="https://juliareda.eu/wp-content/uploads/2016/04/ts-
+delay2-280x300.png" alt=""></a>We proposed delaying the vote until the Directive can be paired
+with a <strong>Whistleblower Protection Directive</strong> , a draft for which our group
+will present on May 4. In rejecting this proposal, the EPP and S&amp;D groups are
+deciding to press on to broaden companies’ abilities to keep important
+information away from the public eye and deter leaks while the Panama Papers
+continue to be front-page news. <em> </em> *</p>
+<h2>Effects of adopting the Directive</h2>
+<h3>1. A right to hide wrongdoing</h3>
+<p>In many member states, the Trade Secrets Directive will <strong>broadly expand the
+definition</strong> of what kind of information may be protected. The new definition
+(Article 2) does not exclude e.g. information about illegal or harmful
+activities or pending investigations into such. <strong>It provides a floor, but not
+a ceiling</strong> for trade secret protection in the EU: Member states may have even
+further-reaching criminal law provisions. Existing criminal provisions are
+bound to be updated to cover the new broad definition, whereas the Directive’s
+exceptions will not automatically apply to them</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/eu-proposal-on-trade-secrets-a-threat-to-whistleblowers/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/elections-in-the-netherlands-the-pirates-urgently-need-your-support/"><img class="thumbnail blog-posting__media" src="/img/logo_european_pirate_party.png" alt="Elections in the Netherlands – the pirates urgently need your support!"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/elections-in-the-netherlands-the-pirates-urgently-need-your-support/" itemprop="headline">Elections in the Netherlands – the pirates urgently need your support!</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/elections-in-the-netherlands-the-pirates-urgently-need-your-support/" />
+                    <i class="blog-posting__pubdate">2017-01-21 </i>
+                    <span itemprop="description"><p><a href="https://europeanpirateparty.eu/elections-in-
+the-netherlands-the-pirates-urgently-need-your-support/" title="Elections in the
+Netherlands – the pirates urgently need your support!"> <img src="https://europeanpirateparty.eu/wp-content/uploads/2017/01/PPNL-
+Groepsfoto-2017-v2-720x243.jpg" alt=""></a> This year, on the 15th
+of March there will be <a href="http://piratetimes.net/top-candidate-for-pirate-party-
+netherlands-elected/">general elections in the
+Netherlands</a>, and the <a href="https://tk2017.piratenpartij.nl/">Dutch
+pirates</a> looks in <a href="http://www.ioresearch.nl/home/nieuws/artmid/445/articleid/828/vvd-en-
+pvv-weer-gelijk-aan-kop#.WIM6qlx7y-d">the
+polls</a> like they will get a seat. But to be
+able to run in the elections they need your help. Like most countries the
+Netherlands have created hurdles to bar new parties from political influence.
+In this case it means that they need signatures from Dutch citizens from
+<a href="https://wiki.piratenpartij.nl/tk2017:inschrijving#resultaten">every district of the
+country</a> to be
+allowed to stand on the ballots in that district. This is where you can help!
+Spread this <a href="https://piratenpartij.nl/oproep-tekenen-
+ondersteuningsverklaring/">link</a> (in dutch) to everyone you know who is a dutch
+resident living in the Netherlands and encourage them to go down to their
+local town hall and give their signature to let the Dutch pirates run in the
+elections (yes, this is how it is still done in 2017). Tell them to bring
+their families and friends to do the same! You can always remind them that the
+signature is in no way an obligation for them to vote for the pirates, it is
+just to allow the pirates to participate in the democratic process of your
+country. Deadline for signatures is <strong>end of January</strong> , so there are no time
+to waste! (if you know people in the Dutch Antilles please pass them <a href="https://tk2017.piratenpartij.nl/2017/01/16/citizens-the-dutch-antilles/">this
+link</a>
+instead)</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/elections-in-the-netherlands-the-pirates-urgently-need-your-support/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/european-pirate-party-council-meeting-2016/"><img class="thumbnail blog-posting__media" src="/img/logo_european_pirate_party.png" alt="European Pirate Party Council Meeting 2016"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/european-pirate-party-council-meeting-2016/" itemprop="headline">European Pirate Party Council Meeting 2016</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/european-pirate-party-council-meeting-2016/" />
+                    <i class="blog-posting__pubdate">2016-11-24 </i>
+                    <span itemprop="description"><p>Dear members and guests, it is an honor to invite you to the Council Meeting</p>
+<ol>
+<li><p>It is the second second council meeting for the European Pirate Party
+and the first online meeting. The meeting will take place at the <a href="http://voteit.europeanpirateparty.eu/european-pirate-party-second-
+council-meeting-2015/">VoteIT
+platform of European Pirate
+Party</a>. The meeting will run on between <strong>26th and 30th of
+December</strong>. However, all the Council members are kindly invited to a <strong>test
+session</strong> on the <strong>16th of December</strong> at 2030 CET. The Council members will
+obtain their credentials for the system by request on <a href="mailto:mattias.bjarnemalm@piratpartiet.se">Mattias
+Bjärnemalm</a>. The meeting will
+<strong>elect the new Board</strong> of European Pirate Party. Candidates are expected to
+deliver nominations from the Ordinary members of the Association including the
+position which they are running for. The candidatures will be presented
+<a href="https://github.com/PPEU/wiki/wiki/Council-Meeting-2016---Candidates-
+for-the-Board">here</a>. A report on the European Pirate Party ‘s <strong>finances</strong> can be
+found <a href="https://github.com/PPEU/wiki/wiki/Financial-report-2016">here</a>. A
+<strong>summary of the proposals</strong> can be found
+<a href="https://github.com/PPEU/wiki/wiki/Council-Meeting-2016---Proposals">here</a>.
+<strong>Road map for the meeting</strong></p>
+<ul>
+<li>26. 11. Nominations for the Board election are closed</li>
+<li>28. 11. Deadline for proposals for statue changes</li>
+<li>16. 12. 20:30 Test session on VoteIT</li>
+<li>19. 12. Deadline for proposals</li>
+<li>26. 12. 10:00 Council Meetings starts</li>
+<li>30. 12. 23:00 Council Meeting closes</li>
+</ul>
+</li>
+</ol>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/european-pirate-party-council-meeting-2016/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/smari-mccarthy-iceland-the-pirate-party-and-the-panama-papers/"><img class="thumbnail blog-posting__media" src="/img/logo_european_pirate_party.png" alt="Smári McCarthy: Iceland, the Pirate Party and the Panama Papers"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/smari-mccarthy-iceland-the-pirate-party-and-the-panama-papers/" itemprop="headline">Smári McCarthy: Iceland, the Pirate Party and the Panama Papers</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/smari-mccarthy-iceland-the-pirate-party-and-the-panama-papers/" />
+                    <i class="blog-posting__pubdate">2016-04-11 </i>
+                    <span itemprop="description"><p><a href="https://europeanpirateparty.eu/smari-mccarthy-
+iceland-the-pirate-party-and-the-panama-papers/" title="Smári McCarthy: Iceland, the
+Pirate Party and the Panama Papers"> <img src="https://europeanpirateparty.eu/wp-content/uploads/2016/04/iceland-
+pirate-party-702x243.jpg" alt=""></a></p>
+<blockquote><p>The release of the Panama Papers – 11.5 million documents leaked from the
+database of Panama-based law firm Mossack Fonseca – has resulted in waves of
+stories exposing the hidden wealth of politicians, celebrities and other
+influential figures. Three Icelandic ministers are listed as owners of
+offshore companies registered in tax havens</p>
+</blockquote>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/smari-mccarthy-iceland-the-pirate-party-and-the-panama-papers/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+
+  
+  <div class="pagination row">
+    
+      <a class="arrow" href="/page/13/">&laquo; Previous</a>
+    
+
+    
+        <a href="/"> 1 </a>
+    
+        <a href="/page/2/"> 2 </a>
+    
+        <a href="/page/3/"> 3 </a>
+    
+        <a href="/page/4/"> 4 </a>
+    
+        <a href="/page/5/"> 5 </a>
+    
+        <a href="/page/6/"> 6 </a>
+    
+        <a href="/page/7/"> 7 </a>
+    
+        <a href="/page/8/"> 8 </a>
+    
+        <a href="/page/9/"> 9 </a>
+    
+        <a href="/page/10/"> 10 </a>
+    
+        <a href="/page/11/"> 11 </a>
+    
+        <a href="/page/12/"> 12 </a>
+    
+        <a href="/page/13/"> 13 </a>
+    
+
+    <span class="pagination__current">14</span>
+
+    
+        <a href="/page/15/"> 15 </a>
+    
+        <a href="/page/16/"> 16 </a>
+    
+        <a href="/page/17/"> 17 </a>
+    
+        <a href="/page/18/"> 18 </a>
+    
+        <a href="/page/19/"> 19 </a>
+    
+
+    
+      <a class="arrow" href="/page/15/">Next &raquo;</a>
+    
+  </div>
+
+
+        </div>
+
+        <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row footer">
+            <div class="col-sm-4">
+                <img src="/static/svg/Logo_European_Pirate_Party-inversed.svg" alt="Logo" />
+            </div>
+            <div class="col-sm-4">
+                <h5>EUROPEAN ELECTIONS</h5>
+                <hr>
+                <a href="/ep-elections/"> Overview </a><br>
+                <a href="/programme">Programme</a><br>
+                <a href="/ep-elections/interviews-candidates/"> Interviews with Candidates </a><br>
+            </div>
+            <div class="col-sm-4">
+                <h5>ABOUT</h5>
+                <hr>
+                <a href="/contact-press/">Contact / Press</a><br>
+                <a href="/meetings/">Council meetings</a><br>
+                <a href="/streaming/">Streaming</a><br>
+                <a href="/provider/">Provider</a><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <hr>
+                <p class="copyright text-muted">♡2020 by Author/Artist. Copying is an act of love. Please copy.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </main>
+
+

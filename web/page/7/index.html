@@ -1,0 +1,802 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicon/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicon/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicon/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="/favicon/favicon-196x196.png" sizes="196x196">
+<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon/favicon-128.png" sizes="128x128">
+<link rel="stylesheet" type="text/css" href="/static/foundation-icons.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/unmi.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/dropdown.css" />
+<link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/custom-modifications.css" />
+
+<link rel="stylesheet" href="/static/css/jquery.cookieBar.min.css">
+
+<link rel="stylesheet" type="text/css" href="/static/foundation-icons.css" />
+<link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" type="text/css" href="/static/css/share_buttons.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.cookieBar.min.js"></script>
+
+<title>Blog</title>
+
+<body>
+
+    <!-- Navigation -->
+<script>
+    $(document).ready(function () {
+        function getCookie(cname) {
+          var name = cname + "=";
+          var ca = document.cookie.split(';');
+          for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+            }
+          }
+          return "";
+        }
+        $(function() {
+            $.cookieBar('addTranslation', 'en', {
+                        message:	"This site uses Matomo to analyze traffic and help us to improve your user experience. We process part of you IP address and your cookies, they are stored on your browser for 13 months. These data are only processed by us and our web hosting platform. Please read our Privacy Policy to learn more.",
+                        acceptText:	'OK',
+                        infoText: "Privacy Policy",
+
+            });
+            if (getCookie('cookies-state') !== 'accepted'){
+                $.cookieBar({
+                    style: 'bottom-right',
+                    language: 'en',
+                    infoLink: "/gdpr/",
+                });
+            }
+        });
+    });
+</script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v6.0"></script>
+<script>
+    window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+              t._e.push(f);
+            };
+
+      return t;
+    }(document, "script", "twitter-wjs"));
+</script>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" id="mainNav">
+    <div class="container">
+        <a href="/">
+            <img class="nav__logo" src="/static/svg/Logo_European_Pirate_Party.svg" alt="Logo" />
+        </a>
+
+        <button class="navbar-toggler navbar-toggler-right" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#navbarResponsive"
+                                                            aria-controls="navbarResponsive"
+                                                            aria-expanded="false"
+                                                            aria-label="Toggle
+                                                            navigation">
+            Menu <i class="fas fi-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                                                 role="button"
+                                                                 data-toggle="dropdown"
+                                                                 aria-haspopup="true"
+                                                                 aria-expanded="false">
+                        PARTY
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item"
+                           href="/about">About</a>
+                        <a class="dropdown-item"
+                           href="/members">Members</a>
+                        <a class="dropdown-item" href="/board/">Board</a>
+
+
+                        <a class="dropdown-item" href="/statuses">Statuses</a>
+
+                        <a class="dropdown-item" href="https://wiki.ppeu.net/doku.php?id=european_pirate_party" target="_blank">Wiki</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"data-toggle="collapse" href="#collapseExample" href="#" id="navbarDropdown"
+                                                                     role="button"
+                                                                     data-toggle="dropdown"
+                                                                     aria-haspopup="true"
+                                                                     aria-expanded="false">
+                            PROGRAMME
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="collapseExample">
+                            <a class="dropdown-item" href="/programme">Preamble</a>
+                            <a class="dropdown-item" href="/programme/agriculture-fisheries/">Agriculture & Fisheries</a>
+                            <a class="dropdown-item" href="/programme/civil-society/">Civil Society</a>
+                            <a class="dropdown-item" href="/programme/education-culture-research-free-knowledge/">Education, Culture, Research & Free Knowledge</a>
+                            <a class="dropdown-item" href="/programme/environment-climate-and-energy/">Environment, Climate and Energy</a>
+                            <a class="dropdown-item" href="/programme/finances/">Finances</a>
+                            <a class="dropdown-item" href="/programme/free-software/">Free Software</a>
+                            <a class="dropdown-item" href="/programme/human-rights-in-the-digital-era/">Human Rights in the Digital Era</a>
+                            <a class="dropdown-item" href="/programme/international-affairs/">International Affairs</a>
+                            <a class="dropdown-item" href="/programme/net-policy/">Net Policy</a>
+                            <a class="dropdown-item" href="/programme/open-data/">Open Data</a>
+                            <a class="dropdown-item" href="/programme/social-affairs-healthcare/">Social Affairs & Healthcare</a>
+                            <a class="dropdown-item" href="/programme/space-programme/">Space Programme</a>
+                            <a class="dropdown-item" href="/programme/transport/">Transport</a>
+                        </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mep/">PARLIAMENT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">NEWS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/events/">EVENTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/career/">CAREER</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact-press/">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.facebook.com/europeanpirateparty"><i class="fi-social-facebook icon"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://twitter.com/EuropeanPirates"><i class="fi-social-twitter icon"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <main role="main">
+        <!-- Page Header -->
+        <header class="masthead">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-10 mx-auto">
+                        
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/the-eu-is-not-a-cash-machine-for-oligarchs-and-politicians/"><img class="thumbnail blog-posting__media" src="/img/money-euro-security-protection.jpg" alt="The EU is not a cash machine for oligarchs and politicians"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/the-eu-is-not-a-cash-machine-for-oligarchs-and-politicians/" itemprop="headline">The EU is not a cash machine for oligarchs and politicians</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/the-eu-is-not-a-cash-machine-for-oligarchs-and-politicians/" />
+                    <i class="blog-posting__pubdate">2019-12-11 </i>
+                    <span itemprop="description"><h2><strong>Proposals to end fraud in farm subsidies</strong></h2>
+<p>Farm subsidies make up the biggest portion of EU spending and are an
+indispensable measure to protect European farmers, ensure food sovereignty,
+and promote healthy and sustainable food production in Europe. However, the
+lack of controls on the way EU funding is disbursed by European governments
+means that in some cases, unscrupulous politicians and people in positions of
+power are able to abuse the EU funding system for their own personal gain. One
+of the most flagrant recent examples is that of the Czech Prime Minister from
+the liberal ‘ANO Movement’, who controls a huge company called Agrofert that
+has received millions in EU funding in a fraudulent manner, prompting huge
+protests and ever-louder calls for him to step down. In Hungary, Conservative
+Prime Minister Viktor Orban also takes advantage of EU subsidies to enrich his
+friends and family, and channels money to reward those who are loyal to his
+government. In Slovakia, where the Socialists are in power, a young journalist
+named Jan Kuciak was murdered in his home together with his fiancée, while he
+was investigating the role of the Italian mafia in threatening local farmers
+in order to access EU farm subsidies. This has to stop. On the occasion of the
+International Day Against Corruption, the Greens/EFA Group is publishing a
+series of recommendations on how to end the abuse of EU farm subsidies. Some
+measures require changes to the way farm subsidies are disbursed, while others
+relate to the need for better oversight mechanisms for how EU funding is
+actually spent in practice. By implementing these measures across the European
+Union, we can ensure that oligarchs and politicians are not able to abuse EU
+taxpayers’ money in order to accumulate power, wealth and land in the hands of
+a few - at the expense of citizens across the continent. <strong>Farm subsidies
+should not reward land-grabbing</strong> One of the fundamental problems with farm
+subsidies is that the more land you have, the more money you get. Not only
+does this harm small farmers and mean that we are massively industrialising
+Europe’s food production, but it encourages land-grabbing as there is an
+economic incentive to take over as many hectares as possible. Those with more
+money to buy more land then also get more money to farm that land, creating a
+vicious cycle of land and wealth concentration. The solution to this is to
+impose an effective cap on the amount of money that can be given to the huge
+farms. Ideally, we would move towards a system in which the amount of money
+given to farms depends on the benefits they provide to society, such as
+whether or not they take care of the land and provide quality jobs to members
+of the local community. This is something we would like to achieve by
+reforming in the EU’s Common Agricultural Policy. <strong>Land ownership should be
+transparent</strong> One of the tactics used by those who want to accumulate wealth
+and land is to hide behind opaque ownership structures and to artificially
+divide up huge farms into smaller pieces of land in order to maximise the
+amount of farm subsidies you can get. We therefore need transparency on who
+are the real (or ‘beneficial’) owners of the farm land and on whether or not
+smaller farms are in fact linked to a much larger owner. The new Anti-Money
+Laundering Directive will - as of the 20th January 2020 - oblige those who own
+more than 20% of the shares of a company to declare themselves as the ultimate
+beneficial owners. This new rule will apply to farms that are registered as
+legal entity. But we still need to put in place measures to trace the
+connections between different plots of farmland to make sure that they are not
+all being bought up by one mega-owner. The solution for this would be to set
+up a unique identifier number in order to trace when a smaller farm is
+actually part of a much larger structure. In the case of individual farmers
+who are not registered as a legal entity, the solution is to require farmers
+applying for CAP funds to declare if the land they are working on is part of a
+larger corporate structure, and to list the unique identifier of this company
+in their application form. We also call on the European Commission to propose
+legislation that would allow for public access to land registers across the
+Union. And for measures to be taken to link up the national databases on
+company ownership to databases on land ownership and also with the data on EU
+farm subsidies. This way, it will be much easier to uncover any fraudulent
+claims based on the exploitation of the accumulation of land, including
+accumulation across different EU borders. <strong>Conflicts of interest should be
+eliminated - at both national and EU level</strong> The EU’s financial regulation
+contains provisions that prohibit those working on the implementation of EU
+funding from benefitting personally (or via their family members) from the
+allocation of those funds. However, these rules need to be properly applied,
+and in case of violations there should be swift and appropriate sanctions put
+in place. Rules on conflicts of interest at EU level should also be improved
+for those who have a decision-making responsibility over the funding policies
+themselves. Commissioners, MEPs and government representatives in the Council
+should recuse themselves from working on EU farm subsidies if they are also
+receiving EU funding under that the Common Agricultural Policy at the same
+time. Currently this is not effectively policed and there are no effective
+sanctions being put in place. The solution for this would be to establish an
+independent ethics body at EU level that would proactively monitor potential
+conflicts of interest, undertake examinations of specific cases, and impose
+sanctions where rules on ethics and conflicts of interest are broken by
+Commissioners, EU officials or MEPs. <strong>There should be stronger controls over
+the spending of EU funds</strong> To begin with, EU subsidies should only be
+accessible in Member States that have joined the European Public Prosecutor’s
+Office. This would ensure direct accountability over the way EU funds are
+spent at the national level, which is particularly important in the cases in
+which the national authorities cannot be trusted to properly investigate fraud
+and recover the funds. The European Commission’s capacities to undertake
+audits should also be strengthened, with audit teams being sent on the ground
+to inspect all relevant documents where necessary. The European Court of
+Auditors should also take on a more proactive role, and the European Anti-
+Fraud Office should be given a stronger mandate and more resources - plus,
+their findings should be made public in order to dissuade potential fraudsters
+in the future and push national authorities to follow up on their
+recommendations. If people think they can easily get away with abusing EU
+funds, then they are more likely to do it. We therefore need to work to
+increase the risks and lower the potential gains of corruption and fraud with
+EU money.   The EU institutions urgently need to step up their ambition in the
+fight against corruption. The public is getting tired of <a href="https://www.nytimes.com/2019/11/03/world/europe/eu-farm-subsidy-
+hungary.html?smid=nytcore-ios-share">hearing endless
+stories of fraud and abuse of EU
+funds</a>, and we cannot be complacent and look the
+other way while oligarchs and unscrupulous politicians slowly consolidate
+their grip on power and undermine the rule of law in their countries.
+Otherwise, citizens will start to think that the EU is part of the problem,
+rather than part of the solution. We have the power to act. All we need is the
+political courage to call out fraud and corruption even when it happens at the
+highest levels of government in the different countries of Europe. We just
+hope that the rest of the political groups represented in the EU institutions</p>
+<ul>
+<li>and in the governments of Europe - agree.   <em>The proposals were prepared in
+cooperation between Pirates in the European Parliament and our partners in
+GREENS/EFA group. The original version can be found<a href="https://www.greens-
+efa.eu/en/article/news/the-eu-is-not-a-cash-machine-for-oligarchs-and-
+politicians/">here</a>. We especially thank to campaigner Pam Bartlett Quintanilla for
+her contribution. </em></li>
+</ul>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/the-eu-is-not-a-cash-machine-for-oligarchs-and-politicians/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/kolaja-the-french-implementation-of-the-copyright-directive-counter-the-conclusions-of-the-european-commission/"><img class="thumbnail blog-posting__media" src="/img/DSC0563-kopie.jpg" alt="Kolaja: the French implementation of the Copyright Directive counter the conclusions of the European Commission"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/kolaja-the-french-implementation-of-the-copyright-directive-counter-the-conclusions-of-the-european-commission/" itemprop="headline">Kolaja: the French implementation of the Copyright Directive counter the conclusions of the European Commission</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/kolaja-the-french-implementation-of-the-copyright-directive-counter-the-conclusions-of-the-european-commission/" />
+                    <i class="blog-posting__pubdate">2019-12-09 </i>
+                    <span itemprop="description"><p><em>Brussels, 9/12/2019 -</em> <strong>France started the implementation process of the
+copyright directive; however, the proposal as it stands currently goes against
+the original intentions of EU legislators, and would have a negative impact on
+current popular practices of users, such as sharing memes on-line. In
+September, Vice-President of the European Parliament Marcel Kolaja, member of
+the Czech Pirate Party, interpellated the European Commission regarding the
+rules about the exceptions in the copyright directive. In its reply (see
+below), the European Commission confirmed his views.</strong></p>
+<blockquote><p><em>"France has made a mistake in implementing the problematic copyright
+directive and will now have to correct its draft of the law. I encourage
+Member States to be more careful in protecting the rights of users on the
+Internet and discuss the proposals more thoroughly with the nonprofit
+organizations concerned, which have been raising similar issues for years,"</em>
+said Marcel Kolaja</p>
+</blockquote>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/kolaja-the-french-implementation-of-the-copyright-directive-counter-the-conclusions-of-the-european-commission/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/pirate-party-of-finland-elected-a-new-board/"><img class="thumbnail blog-posting__media" src="/img/79827365_1028525964175530_8173537753170968576_n.jpg" alt="Pirate Party of Finland elected a new Board"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/pirate-party-of-finland-elected-a-new-board/" itemprop="headline">Pirate Party of Finland elected a new Board</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/pirate-party-of-finland-elected-a-new-board/" />
+                    <i class="blog-posting__pubdate">2019-12-02 </i>
+                    <span itemprop="description"><p><strong>Pirate Party of Finland **</strong>gathered for extra party congress in Töölö,
+Helsinki 30.11.2019. In gathering Pekka Mustonen from Joensuu was elected as a
+chairperson. Rauol Plommer from Helsinki, Riikka Nieminen from Espoo and Marek
+Nečada from Helsinki were elected as vice chairpersons.<strong> Extra party congress
+was gathered to form a position on project driven by previous chairperson
+Petrus Pennanen. Project was to remove The Pirate Party from register of
+political parties in Finland and join it to the Liberal Party as a membership
+organization. This "fusion project" didn't get support from party congress.
+Proposition to remove The Pirate Party from party register was rejected by
+votes 1 in favor 32 against. So roughly 97% of participants wanted The Pirate
+Party to continue as an independent political party under the name Pirate
+Party.  Chairperson of European Pirates and member of European parliament
+Mikuláš Peksa visited the congress and presented news from delegation of
+Pirates of European parliament and european Pirate movement.   </strong>More
+information** : Pekka Mustonen Chairperson of The Pirate Party of Finland +358
+50 322 1071 Pekka.Mustonen@piraattipuolue.fi</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/pirate-party-of-finland-elected-a-new-board/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/2nd-board-meeting/"><img class="thumbnail blog-posting__media" src="/img/IMG_0939.png" alt="2nd Board meeting"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/2nd-board-meeting/" itemprop="headline">2nd Board meeting</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/2nd-board-meeting/" />
+                    <i class="blog-posting__pubdate">2019-11-29 </i>
+                    <span itemprop="description"><p>We are kindly announcing that the second meeting of the newly elected PPEU
+Board will be held on mumble on 1st December at <a href="/time.is/">15:00 CET</a>. It is
+time to move forward! The minutes for this meeting can be found
+<a href="/etherpad.pp-international.net/p/board_meeting_1920_02">here</a>. We will meet
+on Mumble NRW, room PPEU/Board Meeting (<a href="https://wiki.piratenpartei.de/NRW:Mumble-Server">see
+instructions</a>)</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/2nd-board-meeting/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/european-pirates-voted-against-the-new-european-commission/"><img class="thumbnail blog-posting__media" src="/img/bf15e82560d1cbee297d83d1eec37e35.png" alt="European Pirates voted against the new European Commission"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/european-pirates-voted-against-the-new-european-commission/" itemprop="headline">European Pirates voted against the new European Commission</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/european-pirates-voted-against-the-new-european-commission/" />
+                    <i class="blog-posting__pubdate">2019-11-27 </i>
+                    <span itemprop="description"><p><strong>In today's vote, Pirates MEPs voted against the new European Commission
+under the leadership of Ursula von der Leyen. Neither the digital policy, nor
+the personal composition, nor the process of Commission setup are
+satisfactory.</strong> Pirates disagree on the program, which is often in direct
+contradiction with the principles of free internet and respect for fundamental
+human rights and freedoms, such as the right to privacy. <em>“Ursula von der
+Leyen advocates upload filters, and even on such a simple matter as promising
+not to deepen the interference with the privacy of Europe's citizens
+(surveillance moratorium), she failed to make a clear commitment,”</em> said
+Marcel Kolaja, head of the Pirates' delegation. <em>“Freedom of the Internet and
+digital rights are key issues for our voters and us, which we have come to
+defend in the European Parliament, and this Commission does not have our
+confidence,”</em> said Pirate MEP Patrick Breyer. The newly elected Commission
+shall act as defender of the Treaties in the member states. “ <em>Commissioners
+nominated by Hungary, Poland or Czechia remain in close contact with the
+ruling nationalistic parties of the countries. Such a conflict of interests
+effectively prevents independent actions on behalf of Commission to protect
+the Rule of law in the countries,”</em> comments Mikuláš Peksa, chairperson of the
+European Pirate party. <em>“French commissioner Breton responsible for IT
+industry is close to the board of a major digital company thus establishing a
+danger for data protection of European citizens. ”</em> adds Peksa. The nomination
+of Ursula von der Leyen to the position of Commission President is a major
+problem. We support direct involvement of citizens in European affairs. The
+Councils decision to appoint a person who was not participating in the
+European election is not acceptable. <em>“The citizens of Europe did not have
+enough opportunities to form and express their opinion on von der Leyen
+because she was not a Spitzenkandidat. It is an arrogance of the Council to
+withdraw your Spitzenkandidat and nominate someone else. That is why I say
+that Ursula von der Leyen's nomination has a democratic deficit,”</em> said
+Markéta Gregorová, vice-chairperson of the European Pirate Party</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/european-pirates-voted-against-the-new-european-commission/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/initial-board-meeting/"><img class="thumbnail blog-posting__media" src="/img/online-3286012_1280.jpg" alt="Initial Board meeting"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/initial-board-meeting/" itemprop="headline">Initial Board meeting</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/initial-board-meeting/" />
+                    <i class="blog-posting__pubdate">2019-11-14 </i>
+                    <span itemprop="description"><p>We are kindly announcing that the first meeting of the newly elected PPEU
+Board will be held on mumble on 17th November at <a href="/time.is/">19:00 CEST</a>. It
+is time to get organized and start doing our job! The minutes for this meeting
+can be found <a href="/etherpad.pp-international.net/p/board_meeting_1920_01">here</a>.
+We will meet on Mumble NRW, room PPEU/Board Meeting (<a href="https://wiki.piratenpartei.de/NRW:Mumble-Server">see
+instructions</a>)</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/initial-board-meeting/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/annual-council-meeting-decided-2nd-3rd-november-in-milan-italy/"><img class="thumbnail blog-posting__media" src="/img/IMG_3784.jpg" alt="Annual Council Meeting Decided: 2nd-3rd November in Milan (Italy)!"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/annual-council-meeting-decided-2nd-3rd-november-in-milan-italy/" itemprop="headline">Annual Council Meeting Decided: 2nd-3rd November in Milan (Italy)!</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/annual-council-meeting-decided-2nd-3rd-november-in-milan-italy/" />
+                    <i class="blog-posting__pubdate">2019-09-25 </i>
+                    <span itemprop="description"><p>Dear Pirates, supporters, readers, The date and place of the next annual
+Council Meeting (General Assembly) of the European Pirate Party has been
+decided. We are looking to see you at the beginning of November in Italy!
+When: 2nd and 3rd November 2019 Where: Milan, Italy Spazio MIL - via Granelli
+1, Sesto San Giovanni - Milano | Sala Sacchi + Soppalco Website:
+<a href="/www.spaziomil.org/">www.spaziomil.org</a> Remote participation will be of
+course secured. Please in any case register yourself (and your other
+delegates) via this form:
+<a href="https://forms.gle/f4WLFVmUjGPuQSei8">//forms.gle/f4WLFVmUjGPuQSei8</a>. The
+first overview of the agenda</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/annual-council-meeting-decided-2nd-3rd-november-in-milan-italy/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/next-board-meeting-on-october-13th-at-2100-cest/"><img class="thumbnail blog-posting__media" src="/img/logo_european_pirate_party.png" alt="Next board meeting on October 13th at 21:00 CEST"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/next-board-meeting-on-october-13th-at-2100-cest/" itemprop="headline">Next board meeting on October 13th at 21:00 CEST</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/next-board-meeting-on-october-13th-at-2100-cest/" />
+                    <i class="blog-posting__pubdate">2019-09-25 </i>
+                    <span itemprop="description"><p>We are kindly announcing that the next meeting of the PPEU Board will be held
+on 13th of October at <a href="/time.is/">21:00 CEST</a>. We will meet on Mumble NRW,
+room PPEU/Board Meeting (instructions: <a href="/next-board-meeting-on-october-13th-at-2100-cest/Mumble-Server">//wiki.piratenpartei.de/NRW:Mumble-
+Server</a>). The agenda for this meeting can be found here:
+<a href="/etherpad.pp-
+international.net/p/board_meeting_11">//etherpad.pp-international.net/p/board_meeting_11</a></p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/next-board-meeting-on-october-13th-at-2100-cest/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/eu-terror-filter-negotiations-to-begin-heres-where-we-stand/"><img class="thumbnail blog-posting__media" src="/img/terreg.png" alt="EU terror filter negotiations to begin: Here’s where we stand"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/eu-terror-filter-negotiations-to-begin-heres-where-we-stand/" itemprop="headline">EU terror filter negotiations to begin: Here’s where we stand</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/eu-terror-filter-negotiations-to-begin-heres-where-we-stand/" />
+                    <i class="blog-posting__pubdate">2019-09-24 </i>
+                    <span itemprop="description"><p><strong>Today, the European Parliament’s civil liberties committee has recommended
+“Trilogue” negotiations on the EU scheme to “prevent the dissemination of
+terrorist content online” which may make, inter alia, upload filters
+mandatory.</strong> In a series of closed-door meetings, the European Parliament and
+the Council (representing the member state governments) will hammer out a
+<strong>final text</strong> acceptable to both institutions. It’s the <strong>last chance to make
+changes</strong> before the Regulation gets adopted. Meetings are to start in
+October</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/eu-terror-filter-negotiations-to-begin-heres-where-we-stand/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/it-would-be-a-negligence-to-support-christine-lagarde-as-head-of-ecb/"><img class="thumbnail blog-posting__media" src="/img/1c5aad844cd502aefa61bdad1896815f.png" alt="It would be a negligence to support Christine Lagarde as head of ECB"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/it-would-be-a-negligence-to-support-christine-lagarde-as-head-of-ecb/" itemprop="headline">It would be a negligence to support Christine Lagarde as head of ECB</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/it-would-be-a-negligence-to-support-christine-lagarde-as-head-of-ecb/" />
+                    <i class="blog-posting__pubdate">2019-09-17 </i>
+                    <span itemprop="description"><p>The European Pirates will oppose Christine Lagarde becoming the new head of
+the European Central Bank. The reason is simple - In December 2016, she was
+found guilty for negligence in protecting public funds. <em>"President of the ECB
+is the most important office for protecting our currency. In order to earn
+trust for Euro as such, the person shall strictly avoid any misconduct,"</em> said
+Mikuláš Peksa, Pirate member of Economic and monetary affairs committee in the
+Europen Parliament. Lagarde was convicted of negligence by the Cour de justice
+de la République for not protecting public funds sufficiently. As the previous
+Minister of Economy, she accepted an arbitrary proceeding in litigation
+opposing the French State and its public Bank Crédit Lyonnais to the famous
+French businessman Bernard Tapie. When the arbitration decided that the French
+State should compensate Tapie with a substantial amount of money, 404 million
+euros, Lagarde did not appeal that arbitration. It was later found out that
+the arbitration proceeding lacked neutrality as one of the arbitrators had a
+special relationship with Tapie, and the arbitration was cancelled</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/it-would-be-a-negligence-to-support-christine-lagarde-as-head-of-ecb/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+
+  
+  <div class="pagination row">
+    
+      <a class="arrow" href="/page/6/">&laquo; Previous</a>
+    
+
+    
+        <a href="/"> 1 </a>
+    
+        <a href="/page/2/"> 2 </a>
+    
+        <a href="/page/3/"> 3 </a>
+    
+        <a href="/page/4/"> 4 </a>
+    
+        <a href="/page/5/"> 5 </a>
+    
+        <a href="/page/6/"> 6 </a>
+    
+
+    <span class="pagination__current">7</span>
+
+    
+        <a href="/page/8/"> 8 </a>
+    
+        <a href="/page/9/"> 9 </a>
+    
+        <a href="/page/10/"> 10 </a>
+    
+        <a href="/page/11/"> 11 </a>
+    
+        <a href="/page/12/"> 12 </a>
+    
+        <a href="/page/13/"> 13 </a>
+    
+        <a href="/page/14/"> 14 </a>
+    
+        <a href="/page/15/"> 15 </a>
+    
+        <a href="/page/16/"> 16 </a>
+    
+        <a href="/page/17/"> 17 </a>
+    
+        <a href="/page/18/"> 18 </a>
+    
+        <a href="/page/19/"> 19 </a>
+    
+
+    
+      <a class="arrow" href="/page/8/">Next &raquo;</a>
+    
+  </div>
+
+
+        </div>
+
+        <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row footer">
+            <div class="col-sm-4">
+                <img src="/static/svg/Logo_European_Pirate_Party-inversed.svg" alt="Logo" />
+            </div>
+            <div class="col-sm-4">
+                <h5>EUROPEAN ELECTIONS</h5>
+                <hr>
+                <a href="/ep-elections/"> Overview </a><br>
+                <a href="/programme">Programme</a><br>
+                <a href="/ep-elections/interviews-candidates/"> Interviews with Candidates </a><br>
+            </div>
+            <div class="col-sm-4">
+                <h5>ABOUT</h5>
+                <hr>
+                <a href="/contact-press/">Contact / Press</a><br>
+                <a href="/meetings/">Council meetings</a><br>
+                <a href="/streaming/">Streaming</a><br>
+                <a href="/provider/">Provider</a><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <hr>
+                <p class="copyright text-muted">♡2020 by Author/Artist. Copying is an act of love. Please copy.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </main>
+
+

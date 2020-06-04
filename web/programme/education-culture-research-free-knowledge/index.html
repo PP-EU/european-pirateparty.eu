@@ -1,0 +1,397 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicon/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicon/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicon/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="/favicon/favicon-196x196.png" sizes="196x196">
+<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon/favicon-128.png" sizes="128x128">
+<link rel="stylesheet" type="text/css" href="/static/foundation-icons.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/unmi.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/dropdown.css" />
+<link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/custom-modifications.css" />
+
+<link rel="stylesheet" href="/static/css/jquery.cookieBar.min.css">
+
+<link rel="stylesheet" type="text/css" href="/static/foundation-icons.css" />
+<link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" type="text/css" href="/static/css/share_buttons.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.cookieBar.min.js"></script>
+
+<title>EDUCATION, CULTURE, RESEARCH &amp; FREE KNOWLEDGE</title>
+
+<body>
+
+    <!-- Navigation -->
+<script>
+    $(document).ready(function () {
+        function getCookie(cname) {
+          var name = cname + "=";
+          var ca = document.cookie.split(';');
+          for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+            }
+          }
+          return "";
+        }
+        $(function() {
+            $.cookieBar('addTranslation', 'en', {
+                        message:	"This site uses Matomo to analyze traffic and help us to improve your user experience. We process part of you IP address and your cookies, they are stored on your browser for 13 months. These data are only processed by us and our web hosting platform. Please read our Privacy Policy to learn more.",
+                        acceptText:	'OK',
+                        infoText: "Privacy Policy",
+
+            });
+            if (getCookie('cookies-state') !== 'accepted'){
+                $.cookieBar({
+                    style: 'bottom-right',
+                    language: 'en',
+                    infoLink: "/gdpr/",
+                });
+            }
+        });
+    });
+</script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v6.0"></script>
+<script>
+    window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+              t._e.push(f);
+            };
+
+      return t;
+    }(document, "script", "twitter-wjs"));
+</script>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" id="mainNav">
+    <div class="container">
+        <a href="/">
+            <img class="nav__logo" src="/static/svg/Logo_European_Pirate_Party.svg" alt="Logo" />
+        </a>
+
+        <button class="navbar-toggler navbar-toggler-right" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#navbarResponsive"
+                                                            aria-controls="navbarResponsive"
+                                                            aria-expanded="false"
+                                                            aria-label="Toggle
+                                                            navigation">
+            Menu <i class="fas fi-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                                                 role="button"
+                                                                 data-toggle="dropdown"
+                                                                 aria-haspopup="true"
+                                                                 aria-expanded="false">
+                        PARTY
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item"
+                           href="/about">About</a>
+                        <a class="dropdown-item"
+                           href="/members">Members</a>
+                        <a class="dropdown-item" href="/board/">Board</a>
+
+
+                        <a class="dropdown-item" href="/statuses">Statuses</a>
+
+                        <a class="dropdown-item" href="https://wiki.ppeu.net/doku.php?id=european_pirate_party" target="_blank">Wiki</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"data-toggle="collapse" href="#collapseExample" href="#" id="navbarDropdown"
+                                                                     role="button"
+                                                                     data-toggle="dropdown"
+                                                                     aria-haspopup="true"
+                                                                     aria-expanded="false">
+                            PROGRAMME
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="collapseExample">
+                            <a class="dropdown-item" href="/programme">Preamble</a>
+                            <a class="dropdown-item" href="/programme/agriculture-fisheries/">Agriculture & Fisheries</a>
+                            <a class="dropdown-item" href="/programme/civil-society/">Civil Society</a>
+                            <a class="dropdown-item" href="/programme/education-culture-research-free-knowledge/">Education, Culture, Research & Free Knowledge</a>
+                            <a class="dropdown-item" href="/programme/environment-climate-and-energy/">Environment, Climate and Energy</a>
+                            <a class="dropdown-item" href="/programme/finances/">Finances</a>
+                            <a class="dropdown-item" href="/programme/free-software/">Free Software</a>
+                            <a class="dropdown-item" href="/programme/human-rights-in-the-digital-era/">Human Rights in the Digital Era</a>
+                            <a class="dropdown-item" href="/programme/international-affairs/">International Affairs</a>
+                            <a class="dropdown-item" href="/programme/net-policy/">Net Policy</a>
+                            <a class="dropdown-item" href="/programme/open-data/">Open Data</a>
+                            <a class="dropdown-item" href="/programme/social-affairs-healthcare/">Social Affairs & Healthcare</a>
+                            <a class="dropdown-item" href="/programme/space-programme/">Space Programme</a>
+                            <a class="dropdown-item" href="/programme/transport/">Transport</a>
+                        </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mep/">PARLIAMENT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">NEWS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/events/">EVENTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/career/">CAREER</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact-press/">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.facebook.com/europeanpirateparty"><i class="fi-social-facebook icon"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://twitter.com/EuropeanPirates"><i class="fi-social-twitter icon"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <main role="main">
+        <!-- Page Header -->
+        <header class="masthead">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-10 mx-auto">
+                        
+<h1>EDUCATION, CULTURE, RESEARCH &amp; FREE KNOWLEDGE</h1>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            
+  <div class="row content">
+      <div class="col-md-10 col-lg-12 mx-auto">
+          <p>Improved public availability of information, knowledge and culture is a prerequisite for the social,
+technological and economic development of our society. However, it has been hindered by artificial
+information monopolies which are supposedly designed to motivate creators and inventors to produce
+more works, while in reality the only beneficiaries of the monopolies are huge corporations, and the
+system as a whole is failing to meet the claimed objectives. This failure manifests itself in many
+forms, including the frequent bullying of individuals and SMEs by collecting societies,
+privatisation of profits from publicly funded works, or the loss of orphan works to society. Our
+goal is to create an environment where the motivation to create goes hand in hand with freedom of
+information. This requires a thorough copyright reform and also systemic changes in public sector.</p>
+<h3>Culture</h3>
+<h4>Promotion of the Commons and Free Culture</h4>
+<p>We will work towards adopting provisions in trade agreements which support the use and development
+of open formats and Free/Libre Open Source Software and promote the mutual recognition of licence
+models like Creative Commons.</p>
+<p>The creation of commons, such as Free Software, free cultural goods, open patent pools and free and
+open educational material, must be promoted and legally protected.</p>
+<p>Existing cultural heritage shall be to the largest possible extent digitised and made freely
+available to the public.</p>
+<p>Free culture is an important resource for the education and creativity of society. We strive to
+promote artistic activity and cultural diversity to ensure a rich educational and artistic
+environment for current and future generations.</p>
+<p>In order to foster the spread of culture and knowledge that is the basis for all cultural creation,
+we want to limit the commercial copyright monopoly period to last between five and twenty years.
+Free non-commercial file sharing should be allowed.</p>
+<h4>Copyright Reform</h4>
+<p>We want a fair and balanced copyright based on the interests of society as a whole. We strive for
+the abolition of information monopolies, which were supposedly designed to motivate authors to
+produce more works. In reality, only a handful of privileged benefit while the market as a whole is
+failing. This market failure is apparent by the frequent bullying of individuals and SMEs by
+collecting societies and the loss of orphan works and out-of-commerce works to society. Our goal is
+to create an environment where the motivation to create goes hand in hand with freedom of
+information.</p>
+<p>Improved public availability of information, knowledge, and culture is a prerequisite for the
+social, technological and economic development of our society. Copying, storing, using, and
+providing access to literary and artistic works for non-commercial purposes must not only be
+legalized but protected by law and actively promoted. For this purpose, copyright exceptions must
+constitute users’ rights and legal protections for digital locks on cultural goods such as digital
+restrictions management (DRM) must be abolished. Everyone shall be able to enjoy and share our
+cultural heritage free from the threat of legal action or censorship.</p>
+<p>The commercial monopoly given by copyright should be shortened to a reasonable term. Derivative
+works shall always be permitted, with exceptions that are very specifically enumerated in law with
+minimal room for interpretation.</p>
+<p>The Internet as a medium should know no borders. We consider artificial national barriers for
+cultural goods a hindrance to the European internal market and in contradiction with European
+values. We need to unify European copyright laws and make exceptions to the copyright monopoly
+mandatory across the EU. “This video is not available in your country” should be a thing of the
+past.</p>
+<p>Introducing new monopolies in the sectors of information and culture has to be prevented. By law,
+the state should only allow or maintain exclusive rights for intangible goods if these are in the
+public interest. Any exclusive rights must be temporally limited, neither their time-span nor their
+scope may be expanded retrospectively.</p>
+<p>Social life, increasingly taking place in digital spaces, must not be restricted by exclusive rights
+over intangible goods. The introduction of “fair use“ regulations will ensure that social
+interactions remain unencumbered. Freedom of information must be safeguarded by safeguarding the
+right to link: Hyperlinks are a fundamental building block of the world wide web and must never
+constitute a copyright infringement. Remixing, parodies, quotes, and sampling shall be exempt from
+the exclusive right of commercial copyright monopoly.</p>
+<p>European collecting societies must ensure comprehensive transparency, fair participatory rights for
+their members, and fair contract terms for artists.</p>
+<h3>Free Knowledge and Education</h3>
+<p>Educated and critically thinking population is a necessary condition for sustaining functional
+democracy, welfare, social cohesion, and the very success of the European integration. We strive for
+universal access to high quality education across the EU that enables people’s personal development,
+unhindered by their social background.</p>
+<p>The education system must provide citizens all the basic skills for independent life in the
+information society, including functional literacy, legal minimum, network privacy, basic financial
+literacy, and media education. Through education we shall improve people’s resistance to propaganda
+and psychological manipulation.</p>
+<p>We shall spread successful educational models (such as media education in Finland) from local level
+to all member countries.</p>
+<p>We consider teachers mobility as an extremely useful way to spread the educational know-how across
+Europe and to fight the underdevelopment of national education systems. It shall become common for
+teachers at all education levels to have experienced at least a semester teaching abroad.</p>
+<p>Free flow of knowledge and information is essential and must be promoted and guaranteed in
+education. Educational institutions should increasingly use learning resources available under free
+licenses without any restrictions on copying. The availability of educational media under free
+licenses to all is essential for barrier-free access to education, both within and beyond the
+borders of the EU. Borderless education is an important part of any European welfare programme that
+won’t leave parts of Europe behind.</p>
+<p>We support the digitisation and publication of documents stored in public libraries and archives
+across the EU.</p>
+<p>We see innovation as the key to the development of our cultural and intellectual wealth. We support
+educating citizens and students about their right to information and about free formats and Free
+Software in all types of educational facilities.</p>
+<h3>Science</h3>
+<p>We strive for efficient and transparent creation of knowledge without artificial barriers to its
+dissemination. Therefore, we fully support transition to open science in all branches of research.</p>
+<p>Taxpayer-funded scientific results shall be published in open-access academic journals. The status
+quo of commercial publishers appropriating work created by public institutions has to end and the
+results shall be accessible for everyone.</p>
+<p>The excessive focus on bibliometrics has led to a situation when it is hard to follow current
+development in one’s own field due to the necessity of filtering out useful information from huge
+quantity of publications, often filled with bombastic claims or even irreproducible results.
+Therefore, public funding shall be allocated not only on production of original scientific results,
+but also on their verification and aggregation in an easily accessible way (e.g. maintaining a wiki
+for a given scientific branch, cf. ).</p>
+<p>We shall introduce hard funding for development of free (open source) scientific software.</p>
+<h3>Patents</h3>
+<h4>Patents in the Information Age</h4>
+<p>Patents mostly function as a deterrent to innovation rather than as an incentive. The patenting of
+knowledge in areas like genetics and biotechnology, as well as software, renders it a tangible
+threat to the future of our society.</p>
+<p>Monopolies on plants and seeds and costly legal disputes about often trivial patents already
+demonstrate how it is both innovators and consumers who have to pay the price. Patent law needs to
+be reformed or replaced with an approach that enables freer and fairer markets instead of continuing
+to further stifle innovation.</p>
+<h4>Rebalancing Patents with the Common Good</h4>
+<p>Pirates believe that patents do not exist to allow big businesses to stifle competition with an
+ever-growing tide of trivial and overreaching patents. We therefore want to halt the continued and
+increasing abuse of patents.</p>
+<h4>Patents in the Information Society</h4>
+<p>Economic success in the information society is no longer just dependent on technological inventions,
+but on the development of knowledge and sharing of information. The effort to regulate these
+factors, now, via the patent system is diametrically opposed to our demand for freedom of knowledge
+and human culture.</p>
+<p>Patents should never be granted for “inventions” that are trivial, non-substantial, computer
+programs, business models or works of nature. These types of patent impede the development of an
+information society and result in the privatisation of the commons. Small and medium IT companies
+throughout Europe prove that patents on software are no prerequisite to economic success. Innovation
+must be fairly rewarded, but this does not necessarily require the granting of monopolistic
+privileges that stifle innovation and negatively affect the access to essential goods.</p>
+<p>The EU, its member states and other industrialised countries should not force less developed
+countries to accept patent provisions that are likely to be detrimental to their essential needs,
+health, education or development opportunities.</p>
+<h4>Patents, Medicines and Health</h4>
+<p>Pirates oppose the frequent abuses of patent privileges, such as introducing spurious changes to
+medicines with expiring patent protection. Uncompetitive practices such as paying competitors in
+order to delay the marketing of generics should be actively prevented.</p>
+<p>We support the establishment and funding of alternative methods to incentivise pharmaceutical
+innovation, to progressively replace patents in this area. It is our aim to break the direct link
+between the reward for advances and the price of the end product to ensure medicines are affordable
+for all.</p>
+<p>Universities and research institutes should be able to carry out scientific research for health and
+medicine without being encumbered by patents.</p>
+<h4>International Regulation of Intellectual Monopolies</h4>
+<p>Pirates strive for a revision of the TRIPS Agreement in favour of restricting exclusive rights on
+intangible goods. We would aim for similar restrictions to apply to all trade agreements which may
+include similar or even more far-reaching regulations on patents and copyright.</p>
+
+      </div>
+  </div>
+
+        </div>
+
+        <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row footer">
+            <div class="col-sm-4">
+                <img src="/static/svg/Logo_European_Pirate_Party-inversed.svg" alt="Logo" />
+            </div>
+            <div class="col-sm-4">
+                <h5>EUROPEAN ELECTIONS</h5>
+                <hr>
+                <a href="/ep-elections/"> Overview </a><br>
+                <a href="/programme">Programme</a><br>
+                <a href="/ep-elections/interviews-candidates/"> Interviews with Candidates </a><br>
+            </div>
+            <div class="col-sm-4">
+                <h5>ABOUT</h5>
+                <hr>
+                <a href="/contact-press/">Contact / Press</a><br>
+                <a href="/meetings/">Council meetings</a><br>
+                <a href="/streaming/">Streaming</a><br>
+                <a href="/provider/">Provider</a><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <hr>
+                <p class="copyright text-muted">♡2020 by Author/Artist. Copying is an act of love. Please copy.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </main>
+
+

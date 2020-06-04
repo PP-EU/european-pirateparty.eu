@@ -1,0 +1,718 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicon/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicon/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicon/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="/favicon/favicon-196x196.png" sizes="196x196">
+<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon/favicon-128.png" sizes="128x128">
+<link rel="stylesheet" type="text/css" href="/static/foundation-icons.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/unmi.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/dropdown.css" />
+<link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/custom-modifications.css" />
+
+<link rel="stylesheet" href="/static/css/jquery.cookieBar.min.css">
+
+<link rel="stylesheet" type="text/css" href="/static/foundation-icons.css" />
+<link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" type="text/css" href="/static/css/share_buttons.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.cookieBar.min.js"></script>
+
+<title>Blog</title>
+
+<body>
+
+    <!-- Navigation -->
+<script>
+    $(document).ready(function () {
+        function getCookie(cname) {
+          var name = cname + "=";
+          var ca = document.cookie.split(';');
+          for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+            }
+          }
+          return "";
+        }
+        $(function() {
+            $.cookieBar('addTranslation', 'en', {
+                        message:	"This site uses Matomo to analyze traffic and help us to improve your user experience. We process part of you IP address and your cookies, they are stored on your browser for 13 months. These data are only processed by us and our web hosting platform. Please read our Privacy Policy to learn more.",
+                        acceptText:	'OK',
+                        infoText: "Privacy Policy",
+
+            });
+            if (getCookie('cookies-state') !== 'accepted'){
+                $.cookieBar({
+                    style: 'bottom-right',
+                    language: 'en',
+                    infoLink: "/gdpr/",
+                });
+            }
+        });
+    });
+</script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v6.0"></script>
+<script>
+    window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+              t._e.push(f);
+            };
+
+      return t;
+    }(document, "script", "twitter-wjs"));
+</script>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" id="mainNav">
+    <div class="container">
+        <a href="/">
+            <img class="nav__logo" src="/static/svg/Logo_European_Pirate_Party.svg" alt="Logo" />
+        </a>
+
+        <button class="navbar-toggler navbar-toggler-right" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#navbarResponsive"
+                                                            aria-controls="navbarResponsive"
+                                                            aria-expanded="false"
+                                                            aria-label="Toggle
+                                                            navigation">
+            Menu <i class="fas fi-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                                                 role="button"
+                                                                 data-toggle="dropdown"
+                                                                 aria-haspopup="true"
+                                                                 aria-expanded="false">
+                        PARTY
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item"
+                           href="/about">About</a>
+                        <a class="dropdown-item"
+                           href="/members">Members</a>
+                        <a class="dropdown-item" href="/board/">Board</a>
+
+
+                        <a class="dropdown-item" href="/statuses">Statuses</a>
+
+                        <a class="dropdown-item" href="https://wiki.ppeu.net/doku.php?id=european_pirate_party" target="_blank">Wiki</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"data-toggle="collapse" href="#collapseExample" href="#" id="navbarDropdown"
+                                                                     role="button"
+                                                                     data-toggle="dropdown"
+                                                                     aria-haspopup="true"
+                                                                     aria-expanded="false">
+                            PROGRAMME
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="collapseExample">
+                            <a class="dropdown-item" href="/programme">Preamble</a>
+                            <a class="dropdown-item" href="/programme/agriculture-fisheries/">Agriculture & Fisheries</a>
+                            <a class="dropdown-item" href="/programme/civil-society/">Civil Society</a>
+                            <a class="dropdown-item" href="/programme/education-culture-research-free-knowledge/">Education, Culture, Research & Free Knowledge</a>
+                            <a class="dropdown-item" href="/programme/environment-climate-and-energy/">Environment, Climate and Energy</a>
+                            <a class="dropdown-item" href="/programme/finances/">Finances</a>
+                            <a class="dropdown-item" href="/programme/free-software/">Free Software</a>
+                            <a class="dropdown-item" href="/programme/human-rights-in-the-digital-era/">Human Rights in the Digital Era</a>
+                            <a class="dropdown-item" href="/programme/international-affairs/">International Affairs</a>
+                            <a class="dropdown-item" href="/programme/net-policy/">Net Policy</a>
+                            <a class="dropdown-item" href="/programme/open-data/">Open Data</a>
+                            <a class="dropdown-item" href="/programme/social-affairs-healthcare/">Social Affairs & Healthcare</a>
+                            <a class="dropdown-item" href="/programme/space-programme/">Space Programme</a>
+                            <a class="dropdown-item" href="/programme/transport/">Transport</a>
+                        </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mep/">PARLIAMENT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">NEWS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/events/">EVENTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/career/">CAREER</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact-press/">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.facebook.com/europeanpirateparty"><i class="fi-social-facebook icon"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://twitter.com/EuropeanPirates"><i class="fi-social-twitter icon"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <main role="main">
+        <!-- Page Header -->
+        <header class="masthead">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-10 mx-auto">
+                        
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/what-will-the-new-commission-bring/"><img class="thumbnail blog-posting__media" src="/img/ca-times.brightspotcdn.com_.jpg" alt="What will the new Commission bring?"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/what-will-the-new-commission-bring/" itemprop="headline">What will the new Commission bring?</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/what-will-the-new-commission-bring/" />
+                    <i class="blog-posting__pubdate">2019-09-13 </i>
+                    <span itemprop="description"><p>This week, the President of the European Commission, Ursula von der Leyen, has
+not only published the competences of the individual Commissioners but has
+also presented a completely new structure in which the Commission will work.
+Three new "Executive Vice-Presidents" will oversee the Commission's
+priorities. <em>„It's great that there are two key Pirate portfolios under the
+responsibility of Executive Vice-Presidents. Digitization will be primarily
+given to Margrethe Vestager, a well-known warrior against the oligopoly of
+digital giants such as Google or Facebook. Vestager will also be in charge of
+free competition, which is perfectly matched with digitization. The European
+Green Deal will be in the portfolio of Frans Timmermans. It is a sign that the
+new Commission attaches crucial importance to these issues, which is
+undoubtedly good news,“</em> says MEP Markéta Gregorová. Slight scepticism occurs
+when reading the specific agenda of individual Commissioners. <em>„There are many
+potential frictions in the division of responsibilities. The question is, how
+do Executive Vice-Presidents and other Vice-Presidents divide the agenda. For
+example, digitization also appears in portfolios of Commissioners Sylvie
+Goulard and Maryi Gabriel. Ursula von der Leyen has promised everyone an
+interesting agenda in order to gain the support of the Parliament. However,
+the plan how concrete the work of the individual Commissioners will be divided
+between them is missing,“</em> says MEP Mikuláš Peksa. <em>„Another critical aspect
+is in which direction will each Commissioner push their agenda. We have to,
+and we will work on protecting fundamental rights and freedoms in an online
+environment in legislation related to Digital Single Market, such as the
+Digital Services Act,“</em> says MEP and Vice-President of the European Parliament
+Marcel Kolaja</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/what-will-the-new-commission-bring/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/german-copyright-public-consultation-is-open-now-make-your-voice-heard/"><img class="thumbnail blog-posting__media" src="/img/Header_Digital-1500x500px6.jpg" alt="German copyright public consultation is open now: make your voice heard!"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/german-copyright-public-consultation-is-open-now-make-your-voice-heard/" itemprop="headline">German copyright public consultation is open now: make your voice heard!</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/german-copyright-public-consultation-is-open-now-make-your-voice-heard/" />
+                    <i class="blog-posting__pubdate">2019-08-28 </i>
+                    <span itemprop="description"><h3>Where we are in the process</h3>
+<p>Despite the <a href="https://juliareda.eu/eu-copyright-
+reform/">many controversial issues</a> surrounding the Copyright in the Digital Single Market Directive, the
+<a href="https://eur-lex.europa.eu/legal-
+content/DE/TXT/PDF/?uri=CELEX:32019L0790&amp;from=EN">legislation</a> got adopted by the European
+Parliament on 26th March 2019. One of the most controversial issues was
+article 13 on upload filters (final number article 17- Use of protected
+content by online content-sharing service providers). In the end, the European
+Parliament opposition to the directive was only a few votes short thanks to
+the massive street protests in Germany and petitions signed across Europe. The
+protests were so effective that it compelled the parties in the German
+government to publicly
+<a href="https://twitter.com/NadineSchoen/status/1106662762091085824?s=20">promise</a>
+that they would mitigate some of the problems at national level when it comes
+to implementation of the law</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/german-copyright-public-consultation-is-open-now-make-your-voice-heard/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/new-open-positions-for-the-pirate-meps/"><img class="thumbnail blog-posting__media" src="/img/people-4009327_1280.png" alt="New open positions for the Pirate MEPs!"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/new-open-positions-for-the-pirate-meps/" itemprop="headline">New open positions for the Pirate MEPs!</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/new-open-positions-for-the-pirate-meps/" />
+                    <i class="blog-posting__pubdate">2019-07-30 </i>
+                    <span itemprop="description"><p>As was promised, the Pirate MEPs are opening procurements for more positions
+in their team - both local and based in Brussels. So have a look - it is the
+best way to gain valuable experience and insight into real (and Pirate)
+politics. Positions</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/new-open-positions-for-the-pirate-meps/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/board-meeting-21st-july-2100-cet/"><img class="thumbnail blog-posting__media" src="/img/logo_european_pirate_party.png" alt="Board meeting 21st July - 21:00 CET"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/board-meeting-21st-july-2100-cet/" itemprop="headline">Board meeting 21st July - 21:00 CET</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/board-meeting-21st-july-2100-cet/" />
+                    <i class="blog-posting__pubdate">2019-07-21 </i>
+                    <span itemprop="description"><p>We are kindly announcing that the meeting of the PPEU Board tonight on 21st of
+July was held on mumble at <a href="/time.is/">21:00 CEST</a>. The minutes for this
+meeting can be found here: <a href="/etherpad.pp-
+international.net/p/board_meeting_07">//etherpad.pp-
+international.net/p/board_meeting_08</a>. The recording of the meeting is here:
+<a href="https://owncloud.ag-technik.de/s/Gg3HLP5xH2SNMCD">https://owncloud.ag-technik.de/s/Gg3HLP5xH2SNMCD</a></p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/board-meeting-21st-july-2100-cet/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/board-meeting-august/"><img class="thumbnail blog-posting__media" src="/img/adventure-2345835_1920-1024x683.jpg" alt="Next board meeting on August 7th at 21:00 CEST"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/board-meeting-august/" itemprop="headline">Next board meeting on August 7th at 21:00 CEST</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/board-meeting-august/" />
+                    <i class="blog-posting__pubdate">2019-07-21 </i>
+                    <span itemprop="description"><p>We are kindly announcing that the next meeting of the PPEU Board will be held
+on 7th of August at <a href="/time.is/">21:00 CEST</a>. We will meet on Mumble NRW, room
+PPEU/Board Meeting (instructions: <a href="/board-meeting-august/Mumble-Server">//wiki.piratenpartei.de/NRW:Mumble-
+Server</a>). The agenda for this meeting can be found here:
+<a href="/etherpad.pp-
+international.net/p/board_meeting_07">//etherpad.pp-international.net/p/board_meeting_09</a>. Everyone is welcome and we are looking
+forward to hear each other</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/board-meeting-august/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/pirate-marcel-kolaja-elected-vice-president-of-the-european-parliament/"><img class="thumbnail blog-posting__media" src="/img/ima_29f755f.png" alt="Pirate Marcel Kolaja elected Vice-President of the European Parliament"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/pirate-marcel-kolaja-elected-vice-president-of-the-european-parliament/" itemprop="headline">Pirate Marcel Kolaja elected Vice-President of the European Parliament</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/pirate-marcel-kolaja-elected-vice-president-of-the-european-parliament/" />
+                    <i class="blog-posting__pubdate">2019-07-03 </i>
+                    <span itemprop="description"><p><em>Strasbourg, 3/7/2019</em> – <strong>The European Parliament just elected European
+Pirate Marcel Kolaja as its Vice-President.</strong></p>
+<p>“As a newly elected Member of the European Parliament and an experienced
+manager in the area of information technologies, I would like to promote
+transparency and digitization in the European Parliament. My role of a Vice-
+President would be to make the European Parliament more open and transparent,
+to help ensure that the rules of the Parliament are applied equally to all
+Members and to work on improvements of the rules where they are currently
+lacking. Furthermore, information technologies and digitization—the areas of
+my professional focus—are becoming increasingly important in the European
+Parliament. It is my hope that my expertise and insights in these fields will
+be a valuable contribution in the future Bureau’s discussions on improvement
+of the work in the European Parliament <em>” vowed Kolaja.</em></p>
+<p><strong>Marcel Kolaja</strong> (39) is a manager in area of information technologies and a
+Czech Pirate Party politician, elected Member of the European Parliament (MEP)
+in the 2019 election. He is a member of the Greens/European Free Alliance
+parliamentary group. His political agenda focuses on removing the barriers to
+the Digital Single Market, consumer protection and protecting fundamental
+rights in the digital era. Earlier he has also promoted Open Source Software
+and campaigned on copyright reform</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/pirate-marcel-kolaja-elected-vice-president-of-the-european-parliament/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/pirate-meps-are-looking-for-their-team/"><img class="thumbnail blog-posting__media" src="/img/451px-Unclesamwantyou.jpg" alt="Pirate MEPs are looking for their team!"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/pirate-meps-are-looking-for-their-team/" itemprop="headline">Pirate MEPs are looking for their team!</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/pirate-meps-are-looking-for-their-team/" />
+                    <i class="blog-posting__pubdate">2019-07-01 </i>
+                    <span itemprop="description"><p>Join the Pirates in the European Parliament! They are opening several
+positions and more are to come. For now there are four positions opened - and
+feel free to contact the MEPs in case you feel like you can contribute them in
+their tasks, even if you don't see a position relevant to you opened yet. Also
+be prepared for internships: the best way to gain valuable experience and
+insight into real (and Pirate) politics. Positions</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/pirate-meps-are-looking-for-their-team/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/meps-puigdemond-shall-not-be-prevented-from-the-right-to-exercise-his-mandate/"><img class="thumbnail blog-posting__media" src="/img/62654777_442752692955992_5147614966789963776_n.jpg" alt="MEPs: Puigdemont shall not be prevented from the right to exercise his mandate"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/meps-puigdemond-shall-not-be-prevented-from-the-right-to-exercise-his-mandate/" itemprop="headline">MEPs: Puigdemont shall not be prevented from the right to exercise his mandate</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/meps-puigdemond-shall-not-be-prevented-from-the-right-to-exercise-his-mandate/" />
+                    <i class="blog-posting__pubdate">2019-06-14 </i>
+                    <span itemprop="description"><p><em>Brussels, 14/6/2019</em> – <strong>After the newly elected Pirate MEPs established
+their delegation of European Pirates on Wednesday, 12th July, they met the
+newly elected spanish MEP Carles Puigdemont. He announced his intention to
+join The Greens/EFA, but also reported Spanish authorities are refusing to
+recognise his mandate unless he takes an oath in Madrid (where he would
+immediately be arrested).</strong> <em>"Even if we do not have to agree with all the
+political activities of Carles Puigdemond, duly elected MEPs must not be
+prevented from the right to exercise their mandate as representatives serving
+European citizens,"</em> said European Pirate leader Marcel Kolaja. Pirates also
+discussed and agreed with Puigdemont on a program they would like to address
+in the upcoming period. <em>"It will be about defense against censorship,
+surveillance, support for online participation and transparency,"</em> Kolaja
+said</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/meps-puigdemond-shall-not-be-prevented-from-the-right-to-exercise-his-mandate/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/european-pirates-participated-in-the-greens-european-free-alliance-group-meeting/"><img class="thumbnail blog-posting__media" src="/img/61562778_2345868212142194_5354222603332485120_n.jpg" alt="European Pirates participated in the Greens/European Free Alliance group meeting"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/european-pirates-participated-in-the-greens-european-free-alliance-group-meeting/" itemprop="headline">European Pirates participated in the Greens/European Free Alliance group meeting</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/european-pirates-participated-in-the-greens-european-free-alliance-group-meeting/" />
+                    <i class="blog-posting__pubdate">2019-05-29 </i>
+                    <span itemprop="description"><p><strong>29/5/2019, Brussels – Newly elected Pirate Members of the European
+Parliament (MEPs) started to negotiate joining one of the European political
+groups. “We made significant progress in negotiations with the Greens/European
+Free Alliance group which is the most willing to incorporate our agenda into
+its priorities for the next five years,” comments Pirate MEP Marcel Kolaja.</strong>
+The talks included, among other things, the political requests that the group
+would raise in negotiations about the future President of the European
+Commission. <em>“Specifically, we want an explicit moratorium on new surveillance
+laws”</em> , explains German Pirate MEP Patrick Breyer. <em>“We are sleepwalking into
+a society of permanent surveillance and mutual distrust unless we stand up for
+our fundamental rights and liberties and stop this trend. This includes
+freedom of speech online and preventing upload filters as well as other forms
+of Internet censorship.”</em> Another demand is the immediate publication of the
+Commission’s findings on the Czech PM Andrej Babiš‘ conflict of interest and
+an audit in Agrofert company. <em>“It is not only about Andrej Babiš as he
+himself thinks all the time, it is about all the similar cases in the future.
+European Commision needs to publish the results of its findings immediately
+after they are sent to the national government, there is no reason to postpone
+it at all,”</em> says MEP Mikuláš Peksa. Apart from the program compatibility, the
+core of negotiations lies also in the parliamentary committees in which Pirate
+members can pursue various topics and their priorities. <em>“We requested seats
+in all our main areas of expertise. That means Internal Market and Consumer
+Protection Committee (IMCO), Industry, Research and Energy Committee (ITRE),
+International Trade Committee (INTA) and Civil Liberties, Justice and Home
+Affairs (LIBE). Participation in these committees enables us to fulfill the
+goals from the program with which we succeeded in the elections,”</em> says MEP
+and the chairperson of the European Pirate Party, Markéta Gregorová. One of
+the Pirates will also run for the vice-president of the Greens/European Free
+Alliance group. <em>“It is very important for us to be a real, authentic and
+recognizable part of the group with our own identity. We believe – and in
+negotiations we could see that – Greens/Eropean Free Alliance is really open
+and inclusive European group where our approach is strongly reflected and we
+feel that we can enrich the expertise of our MEP colleagues and add Pirate
+perspective to the group,”</em> adds Marcel Kolaja. “The ALDE group did not take a
+single step to withdraw their support for the Czech prime minister Andrej
+Babiš and his party,” Marcel Kolaja adds. “We will not join the same group as
+the party whose chairperson is criminally prosecuted and in a major conflict
+of interest.”</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/european-pirates-participated-in-the-greens-european-free-alliance-group-meeting/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/next-board-meeting-on-june-5th-at-2100-cest/"><img class="thumbnail blog-posting__media" src="/img/logo_european_pirate_party.png" alt="Next board meeting on June 5th at 21:00 CEST"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/next-board-meeting-on-june-5th-at-2100-cest/" itemprop="headline">Next board meeting on June 5th at 21:00 CEST</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/next-board-meeting-on-june-5th-at-2100-cest/" />
+                    <i class="blog-posting__pubdate">2019-05-18 </i>
+                    <span itemprop="description"><p>We are kindly announcing that the next meeting of the PPEU Board will be held
+on 15th May at <a href="/time.is/">21:00 CEST</a>. We will meet on Mumble NRW, room
+PPEU/Board Meeting (instructions: <a href="/next-board-meeting-on-june-5th-at-2100-cest/Mumble-Server">//wiki.piratenpartei.de/NRW:Mumble-
+Server</a>). The agenda for this meeting can be found here:
+<a href="/etherpad.pp-
+international.net/p/board_meeting_07">//etherpad.pp-international.net/p/board_meeting_06</a>. Everyone is welcome and we are looking
+forward to hear each other</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/next-board-meeting-on-june-5th-at-2100-cest/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+
+  
+  <div class="pagination row">
+    
+      <a class="arrow" href="/page/7/">&laquo; Previous</a>
+    
+
+    
+        <a href="/"> 1 </a>
+    
+        <a href="/page/2/"> 2 </a>
+    
+        <a href="/page/3/"> 3 </a>
+    
+        <a href="/page/4/"> 4 </a>
+    
+        <a href="/page/5/"> 5 </a>
+    
+        <a href="/page/6/"> 6 </a>
+    
+        <a href="/page/7/"> 7 </a>
+    
+
+    <span class="pagination__current">8</span>
+
+    
+        <a href="/page/9/"> 9 </a>
+    
+        <a href="/page/10/"> 10 </a>
+    
+        <a href="/page/11/"> 11 </a>
+    
+        <a href="/page/12/"> 12 </a>
+    
+        <a href="/page/13/"> 13 </a>
+    
+        <a href="/page/14/"> 14 </a>
+    
+        <a href="/page/15/"> 15 </a>
+    
+        <a href="/page/16/"> 16 </a>
+    
+        <a href="/page/17/"> 17 </a>
+    
+        <a href="/page/18/"> 18 </a>
+    
+        <a href="/page/19/"> 19 </a>
+    
+
+    
+      <a class="arrow" href="/page/9/">Next &raquo;</a>
+    
+  </div>
+
+
+        </div>
+
+        <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row footer">
+            <div class="col-sm-4">
+                <img src="/static/svg/Logo_European_Pirate_Party-inversed.svg" alt="Logo" />
+            </div>
+            <div class="col-sm-4">
+                <h5>EUROPEAN ELECTIONS</h5>
+                <hr>
+                <a href="/ep-elections/"> Overview </a><br>
+                <a href="/programme">Programme</a><br>
+                <a href="/ep-elections/interviews-candidates/"> Interviews with Candidates </a><br>
+            </div>
+            <div class="col-sm-4">
+                <h5>ABOUT</h5>
+                <hr>
+                <a href="/contact-press/">Contact / Press</a><br>
+                <a href="/meetings/">Council meetings</a><br>
+                <a href="/streaming/">Streaming</a><br>
+                <a href="/provider/">Provider</a><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <hr>
+                <p class="copyright text-muted">♡2020 by Author/Artist. Copying is an act of love. Please copy.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </main>
+
+

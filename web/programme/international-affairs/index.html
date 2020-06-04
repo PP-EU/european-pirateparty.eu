@@ -1,0 +1,387 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicon/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicon/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicon/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="/favicon/favicon-196x196.png" sizes="196x196">
+<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon/favicon-128.png" sizes="128x128">
+<link rel="stylesheet" type="text/css" href="/static/foundation-icons.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/unmi.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/dropdown.css" />
+<link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/custom-modifications.css" />
+
+<link rel="stylesheet" href="/static/css/jquery.cookieBar.min.css">
+
+<link rel="stylesheet" type="text/css" href="/static/foundation-icons.css" />
+<link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" type="text/css" href="/static/css/share_buttons.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.cookieBar.min.js"></script>
+
+<title>INTERNATIONAL AFFAIRS</title>
+
+<body>
+
+    <!-- Navigation -->
+<script>
+    $(document).ready(function () {
+        function getCookie(cname) {
+          var name = cname + "=";
+          var ca = document.cookie.split(';');
+          for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+            }
+          }
+          return "";
+        }
+        $(function() {
+            $.cookieBar('addTranslation', 'en', {
+                        message:	"This site uses Matomo to analyze traffic and help us to improve your user experience. We process part of you IP address and your cookies, they are stored on your browser for 13 months. These data are only processed by us and our web hosting platform. Please read our Privacy Policy to learn more.",
+                        acceptText:	'OK',
+                        infoText: "Privacy Policy",
+
+            });
+            if (getCookie('cookies-state') !== 'accepted'){
+                $.cookieBar({
+                    style: 'bottom-right',
+                    language: 'en',
+                    infoLink: "/gdpr/",
+                });
+            }
+        });
+    });
+</script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v6.0"></script>
+<script>
+    window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+              t._e.push(f);
+            };
+
+      return t;
+    }(document, "script", "twitter-wjs"));
+</script>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" id="mainNav">
+    <div class="container">
+        <a href="/">
+            <img class="nav__logo" src="/static/svg/Logo_European_Pirate_Party.svg" alt="Logo" />
+        </a>
+
+        <button class="navbar-toggler navbar-toggler-right" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#navbarResponsive"
+                                                            aria-controls="navbarResponsive"
+                                                            aria-expanded="false"
+                                                            aria-label="Toggle
+                                                            navigation">
+            Menu <i class="fas fi-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                                                 role="button"
+                                                                 data-toggle="dropdown"
+                                                                 aria-haspopup="true"
+                                                                 aria-expanded="false">
+                        PARTY
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item"
+                           href="/about">About</a>
+                        <a class="dropdown-item"
+                           href="/members">Members</a>
+                        <a class="dropdown-item" href="/board/">Board</a>
+
+
+                        <a class="dropdown-item" href="/statuses">Statuses</a>
+
+                        <a class="dropdown-item" href="https://wiki.ppeu.net/doku.php?id=european_pirate_party" target="_blank">Wiki</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"data-toggle="collapse" href="#collapseExample" href="#" id="navbarDropdown"
+                                                                     role="button"
+                                                                     data-toggle="dropdown"
+                                                                     aria-haspopup="true"
+                                                                     aria-expanded="false">
+                            PROGRAMME
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="collapseExample">
+                            <a class="dropdown-item" href="/programme">Preamble</a>
+                            <a class="dropdown-item" href="/programme/agriculture-fisheries/">Agriculture & Fisheries</a>
+                            <a class="dropdown-item" href="/programme/civil-society/">Civil Society</a>
+                            <a class="dropdown-item" href="/programme/education-culture-research-free-knowledge/">Education, Culture, Research & Free Knowledge</a>
+                            <a class="dropdown-item" href="/programme/environment-climate-and-energy/">Environment, Climate and Energy</a>
+                            <a class="dropdown-item" href="/programme/finances/">Finances</a>
+                            <a class="dropdown-item" href="/programme/free-software/">Free Software</a>
+                            <a class="dropdown-item" href="/programme/human-rights-in-the-digital-era/">Human Rights in the Digital Era</a>
+                            <a class="dropdown-item" href="/programme/international-affairs/">International Affairs</a>
+                            <a class="dropdown-item" href="/programme/net-policy/">Net Policy</a>
+                            <a class="dropdown-item" href="/programme/open-data/">Open Data</a>
+                            <a class="dropdown-item" href="/programme/social-affairs-healthcare/">Social Affairs & Healthcare</a>
+                            <a class="dropdown-item" href="/programme/space-programme/">Space Programme</a>
+                            <a class="dropdown-item" href="/programme/transport/">Transport</a>
+                        </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mep/">PARLIAMENT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">NEWS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/events/">EVENTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/career/">CAREER</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact-press/">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.facebook.com/europeanpirateparty"><i class="fi-social-facebook icon"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://twitter.com/EuropeanPirates"><i class="fi-social-twitter icon"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <main role="main">
+        <!-- Page Header -->
+        <header class="masthead">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-10 mx-auto">
+                        
+<h1>INTERNATIONAL AFFAIRS</h1>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            
+  <div class="row content">
+      <div class="col-md-10 col-lg-12 mx-auto">
+          <h3>Foreign Affairs Policy</h3>
+<p>The goal of the European Foreign Affairs policies is to build durable diplomatic relations between
+the European Union and other states. These bilateral relations can be based on cultural, economic or
+technological exchanges.</p>
+<p>The building of the European diplomacy has to respect the freedom of the Internet, the protection of
+human rights and sustainable development.</p>
+<h4>Development Cooperation and Humanitarian Aid Policy</h4>
+<p>The European Pirates are committed to implement United Nations’ “Agenda 2030” and significantly
+advance on implementation of Sustainable Development Goals both inside, as well as outside, the EU.</p>
+<p>The Development Cooperation needs to continue to play a vital role in the Common Foreign and
+Security Policy of the EU.Pirates advocate for strengthening the ties with the Global South
+countries and use the development cooperation instruments in the benefit of those countries. We
+consider the 0.33% of Development Aid to Gross National Income for the “new EU member states” as a
+realistic amount corresponding with global responsibility these countries should play, and we will
+encourage these countries to increase their funding until this target is achieved.</p>
+<p>We strongly discourage to use development aid as a mean to prevent short-term goals like limitation
+of economic migration, due to the fact that development cooperation programmes and partnerships are
+based on predictability and long-term effect. In that regards, we support revision of EU’s New
+Consensus on Development adopted in 2017.</p>
+<p>Pirates are committed to implementation of Agenda for Humanity as outcome of the 2016 World
+Humanitarian Summit. Even though Pirates consider the Cluster Approach to humanitarian aid as
+important means for coordination of all humanitarian stakeholders involved in response, we advocate
+for Cash-based Approach in provision of humanitarian aid to people in need.</p>
+<h4>International Protection of Fundamental Rights</h4>
+<p>The European Union should be a political actor protecting European and international whistleblowers.
+They should be able to benefit from the right to political asylum in the EU.</p>
+<p>The European Union must integrate the protection of human rights without making any difference
+attributable to sexual orientation or gender.</p>
+<h4>Conflicts Resolution</h4>
+<p>Pirates want to pay special attention to the stabilization of conflict outbreaks and fragile states,
+as their instability is a source of problems for the entire international community. Conflict
+resolution has to be based on respect for International Law which is the base for a peaceful
+international community.</p>
+<h4>Armed forces</h4>
+<p>Pirates support joint efforts to protect nations of the European Union. Any European Armed forces
+(existing or newly created) must be put under supervision and/or control of the European Parliament
+through the parliamentary reservation. It is necessary to ensure that they will not be used against
+the Parliament’s will.</p>
+<h4>Use of Weapons</h4>
+<p>Pirates are striving for more stringent regulation of the world arms trade and banning arms exports
+to conflict areas.</p>
+<p>The Pirates seek a more peaceful world, and support more stringent regulation in arms trade. The
+Pirates will therefore strive for better information sharing on arms export licence decisions and
+denials, to ensure a coherent EU arms export policy. The EU should further increase its support for
+Arms Trade Treaty implementation and universalisation to reduce the possibility of export of arms
+into areas of conflict via countries with loose arms trade regulation.</p>
+<h4>Tamper-proof Marking of Military Weapons</h4>
+<p>The Pirates demand the application of the UN tool for marking and tracking of military weapons
+(small arms). All small arms for military use produced in the EU or outside the EU under license of
+an EU manufacturer have to be marked with a tamper-proof method to ensure that each weapon can be
+uniquely identified.</p>
+<p>The tamper-proof marking will make it possible to transparently track how weapons are illegally
+exported into critical regions. With the ability to actually track the weapons to their origin
+countries, exporters, and manufacturers who participate in illegal sales into banned regions will be
+identified.</p>
+<h3>Defense and Technology</h3>
+<h4>Artificial Intelligence</h4>
+<p>The Pirates support starting negotiations in the framework of the United Nations Convention on
+Certain Conventional Weapons on a regulatory instrument to ban “Lethal Autonomous Weapon Systems”,
+or weapons that can select and engage targets without human supervision.</p>
+<h4>Cyber Defense</h4>
+<p>Cyberwar is a threat to international peace and stability especially due to the lack of transparency
+and the difficulties of attributing responsibility.</p>
+<p>In accordance with our principles of technical development and transparent conduct of power, the
+Pirates support an international treaty on cyber warfare. The treaty will bind signatories to
+declare any use of cyber weapons. Under cyber weapons falls all software and IT systems that,
+through ICT networks, monitor, manipulate, deny, disrupt, degrade or destroy targeted information
+systems or networks of both foreign governments and individuals. Additionally, signatories will
+commit themselves to not actively undermine the security of civilian systems.</p>
+<h3>Migration</h3>
+<p>Policies dealing with migration and asylum have to respect the human dignity of migrants and asylum
+seekers.</p>
+<p>European Pirates demand a common European immigration policy that:</p>
+<ul>
+<li><div class="li">enables ways of legal migration to the european labour market,</div></li>
+<li><div class="li">values language skills and other given skills of the applicants positively in the process,</div></li>
+<li><div class="li">recognizes given certificates and professional qualifications in a simplified way,</div></li>
+<li><div class="li">enables member states to adjust their requirements according to their situation and needs.</div></li>
+</ul>
+<h4>Asylum</h4>
+<p>European Pirates demand a common European Asylum Policy that implements the following:</p>
+<ul>
+<li><div class="li">ensures freedom of establishment in Europe for those whose application was approved;</div></li>
+<li><div class="li">promotes the possibility of family reunification first for those whose application was approved;</div></li>
+<li><div class="li">possibilities for applications on asylum should be introduced even outside of Europe and if accepted help ought to be offered.</div></li>
+</ul>
+<h3>International Trade Policy</h3>
+<p>We reject multilateral international agreements that entrench dysfunctional monopolies and
+patents to the detriment of civil rights and human freedoms.</p>
+<p>The Pirates require all trade agreements to respect the protection of personal data of consumers
+and firms.</p>
+<h4>Principles for Trade Agreements</h4>
+<p>Pirates stipulate that in all negotiations of the European Union on trade agreements the
+following conditions must be met:</p>
+<ul>
+<li><div class="li">The European Parliament must ratify the treaty and the treaty must be negotiated upholding the principles listed below;</div></li>
+<li><div class="li">There is comprehensive access to information and public hearings during the negotiating process;</div></li>
+<li><div class="li">The proposed treaty includes respect for freedom of the Internet, social and civil rights, and sustainable development;</div></li>
+<li><div class="li">The interests of small and medium-sized enterprises are taken into account.</div></li>
+</ul>
+<p>Those conditions are expanded below.</p>
+<h5>Participation of the European Parliament</h5>
+<p>Trade agreements contain political decisions that are important to society and difficult to
+change after their adoption. Therefore the European Parliament, the only body in the EU that has
+a direct democratic mandate, should have relevant position when dealing with trade policies.</p>
+<p>The European Parliament should have access to all the negotiation material via its Committee on
+International Trade (INTA) and have the right to be an observer to negotiations, and the right
+to make binding remarks to the European Commission.</p>
+<h5>Comprehensive access to information and public hearings</h5>
+<p>The Pirates are against secret negotiations. Documents concerning the negotiations of trade
+agreements should be made available to the European Parliament as well as to the public. We
+demand that all results of consultations must be published promptly and in full.</p>
+<h5>Respect for freedom of the Internet, social and civil rights, and sustainable development</h5>
+<p>Pirates consider the people’s right to privacy and self-determination as self-evident. Therefore
+they also need to be respected and promoted in the context of trade agreements.</p>
+<p>As these principles apply to all people, the EU has to make sure that trade agreements will not
+allow their trading partners to breach them.</p>
+<p>All future European trade agreements should be based on the principle of sustainable
+development. The agreement cannot be ratified if it has a negative impact on the environment.</p>
+<h5>The interests of small and medium-sized enterprises must be taken into account</h5>
+<p>At the moment trade agreements mainly take into account the interests of global enterprises,
+while small and medium-sized companies rarely benefit; SMEs are increasingly ousted from the
+market. We want to change that.</p>
+<h4>The responsibility of international corporations</h4>
+<p>The European Union must make it possible to engage the legal responsibility of companies in the
+event of infringement of European environmental law for their actions on the territory of the
+Union but also for their actions outside the territory of the EU if in the latter case the seat
+of their parent company is in the territory of the European Union.</p>
+
+      </div>
+  </div>
+
+        </div>
+
+        <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row footer">
+            <div class="col-sm-4">
+                <img src="/static/svg/Logo_European_Pirate_Party-inversed.svg" alt="Logo" />
+            </div>
+            <div class="col-sm-4">
+                <h5>EUROPEAN ELECTIONS</h5>
+                <hr>
+                <a href="/ep-elections/"> Overview </a><br>
+                <a href="/programme">Programme</a><br>
+                <a href="/ep-elections/interviews-candidates/"> Interviews with Candidates </a><br>
+            </div>
+            <div class="col-sm-4">
+                <h5>ABOUT</h5>
+                <hr>
+                <a href="/contact-press/">Contact / Press</a><br>
+                <a href="/meetings/">Council meetings</a><br>
+                <a href="/streaming/">Streaming</a><br>
+                <a href="/provider/">Provider</a><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <hr>
+                <p class="copyright text-muted">♡2020 by Author/Artist. Copying is an act of love. Please copy.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </main>
+
+

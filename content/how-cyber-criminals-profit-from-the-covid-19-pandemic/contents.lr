@@ -1,0 +1,92 @@
+title: How Cyber-criminals profit from the COVID-19 pandemic? 
+---
+type: post
+---
+tags: 
+ 
+articles
+default
+
+---
+pub_date: 2020-04-08
+---
+img: /philipp-katzenberger-iIJrUoeRoCQ-unsplash.jpg
+---
+description: The global pandemic of COVID-19 is not only a serious health issue but also a
+huge cyber-security risk. Cyber-criminals took advantage of the virus
+proliferation by abusing people’s fear and demand for information and
+supplies.  The number of cyber-attacks against organizations and individuals
+is on the rise and, [_according to
+Europol_](https://www.europol.europa.eu/newsroom/news/catching-virus) (EU
+Agency for Law Enforcement Cooperation) is expected to increase even further.
+Criminals use the current crisis to carry out social engineering attacks, such
+as various malware and ransomware packages, themed around the pandemic. In
+Romania, for instance, online attacks linked to COVID-19 have risen by 475 %
+in March 2020, as compared to the previous month.  The main reasons are that
+citizens remain at home and are increasingly teleworking, relying on digital
+solutions. The limitations to public life also make some criminal activities
+less visible and displace them to online settings. Overall, the increased
+anxiety and fear of the current situation make people more vulnerable and easy
+to exploit.  Europol is observing a high increase of cyber-attacks, primarily
+through massive email phishing campaigns, which distribute malware and
+ransomware via malicious links and attachments to infect computers to steal
+passwords and personal data.  Attackers tend to infect computers, usually via
+email, by fooling medical institutions’ personnel with information about
+medical procedures and therapies to treat COVID-19 infections. Such messages
+are mostly sent in the name of institutions such as the World Health
+Organisation (WHO). Once the computer is infected, they ask for a ransom to
+give back access to the data, including patients’ medical records necessary
+for treatment, while threatening to sell this data on the deep web.  We are
+also witnessing an increase in attacks on critical health infrastructures. For
+instance, cyber-criminals carried out cyber-attacks amid the COVID-19 outbreak
+on several Spanish hospitals, the Paris hospital authority, and on the Brno
+University Hospital.  In Czechia, the incident at the Brno University Hospital
+prompted the hospital to postpone urgent surgeries and reroute patients to a
+nearby hospital. The hospital was forced to shut down its entire IT network
+during the incident and two of the hospital’s other branches, the Children’s
+Hospital and the Maternity Hospital, were also affected. These types of attack
+during a public health crisis are particularly threatening and carry genuine
+risks to human lives.  Moreover, law enforcement in the EU Member States saw
+an increase in online activity by offenders seeking child abuse material.
+Paedophiles use opportunities to engage with children, usually through social
+media, whom they expect to be more vulnerable due to isolation, less
+supervision and greater online exposure. Finally, the pandemic also has an
+impact on the increased trade of illicit and fake goods on the on Darkweb, as
+certain anti-corona related products have become unavailable and therefore
+more expensive
+---
+body: .
+
+* * *
+
+## [**_Tips on teleworking from the EU Agency for
+Cybersecurity:_**](https://www.enisa.europa.eu/tips-for-cybersecurity-when-
+working-from-home)
+
+### _Recommendations for employers:_
+
+  * Ensure that the corporate VPN solution scales and can sustain **a large number of simultaneous connections**.
+  * Provide **secure video conferencing** for corporate clients (both audio/video capabilities).
+  * All the corporate business applications must be accessible only via **encrypted communication channels** (SSL VPN, IPSec VPN).
+  * Access to application portals should be safeguarded using **multifactor authentication mechanisms**.
+  * **Prevent the direct Internet exposure** of remote system access interfaces (e.g. RDP).
+  * **Mutual authentication** is preferred when accessing corporate systems (e.g. client to server and server to client).
+  * Provide where possible c **orporate computers/devices to staff** while on teleworking; ensure that these computers/devices have up-to-date security software and security patch levels and that users are regularly reminded to check patch levels. It is advisable that a replacement scheme for failing devices is also in place.
+  * BYOD (Bring your own device) such as personal laptops or mobile devices must be vetted from the security standpoint using NAC, NAP platforms. (e.g. patch check, configuration check, AV check etc.).
+  * Ensure that adequate IT resources are in place to **support staff in case of technical issues** while teleworking; provide relevant information, e.g. on contact points, to staff.
+  * Ensure **policies for responding to security incidents** and personal data breaches are in place and that staff is appropriately informed of them.
+  * Ensure that any processing of staff data by the employer in the context of teleworking (e.g. timekeeping) is **in compliance with the EU legal framework** on data protection.
+
+### _Recommendations for staff:_
+
+  * Use **corporate (rather than personal) computers** where possible. As far as possible, do not mix work and leisure activities on the same device and be particularly careful with any emails referencing the coronavirus.
+  * Connect to the internet **via secure networks** ; avoid open/free networks. Most WiFi systems at home these days are correctly secured, but some older installations might not be. The solution is to activate the encryption and/or to adopt a recent implementation. 
+  * **Avoid the exchange of sensitive corporate information** (e.g. via email) through possibly insecure connections.
+  * As far as possible **use corporate Intranet** resources to share working files. On the one hand, this ensures that working data are up-to-date and at the same time, sharing of sensitive information across local devices is avoided.
+  * **Be particularly careful with any emails referencing the coronavirus** , as these may be phishing attempts or scams. In case of doubt regarding the legitimacy of an email, contact the institution’s security officer.
+  * Data at rest, e.g. local drives, **should be encrypted** (this will protect against theft/loss of the device).
+  * **Antivirus/Antimalware must be installed** and be fully updated.
+  * The system (operating system and applications used, as well as anti-virus system) needs to be **up to date**.
+  * **Lock your screen** if you work in a shared space.
+  * Do **not share the virtual meeting URLs** on social media or other public channels. Unauthorized 3rd parties could access private meetings in this way.
+

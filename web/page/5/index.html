@@ -1,0 +1,670 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicon/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicon/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicon/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="/favicon/favicon-196x196.png" sizes="196x196">
+<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon/favicon-128.png" sizes="128x128">
+<link rel="stylesheet" type="text/css" href="/static/foundation-icons.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/unmi.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/dropdown.css" />
+<link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/custom-modifications.css" />
+
+<link rel="stylesheet" href="/static/css/jquery.cookieBar.min.css">
+
+<link rel="stylesheet" type="text/css" href="/static/foundation-icons.css" />
+<link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" type="text/css" href="/static/css/share_buttons.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.cookieBar.min.js"></script>
+
+<title>Blog</title>
+
+<body>
+
+    <!-- Navigation -->
+<script>
+    $(document).ready(function () {
+        function getCookie(cname) {
+          var name = cname + "=";
+          var ca = document.cookie.split(';');
+          for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+            }
+          }
+          return "";
+        }
+        $(function() {
+            $.cookieBar('addTranslation', 'en', {
+                        message:	"This site uses Matomo to analyze traffic and help us to improve your user experience. We process part of you IP address and your cookies, they are stored on your browser for 13 months. These data are only processed by us and our web hosting platform. Please read our Privacy Policy to learn more.",
+                        acceptText:	'OK',
+                        infoText: "Privacy Policy",
+
+            });
+            if (getCookie('cookies-state') !== 'accepted'){
+                $.cookieBar({
+                    style: 'bottom-right',
+                    language: 'en',
+                    infoLink: "/gdpr/",
+                });
+            }
+        });
+    });
+</script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v6.0"></script>
+<script>
+    window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+              t._e.push(f);
+            };
+
+      return t;
+    }(document, "script", "twitter-wjs"));
+</script>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" id="mainNav">
+    <div class="container">
+        <a href="/">
+            <img class="nav__logo" src="/static/svg/Logo_European_Pirate_Party.svg" alt="Logo" />
+        </a>
+
+        <button class="navbar-toggler navbar-toggler-right" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#navbarResponsive"
+                                                            aria-controls="navbarResponsive"
+                                                            aria-expanded="false"
+                                                            aria-label="Toggle
+                                                            navigation">
+            Menu <i class="fas fi-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                                                 role="button"
+                                                                 data-toggle="dropdown"
+                                                                 aria-haspopup="true"
+                                                                 aria-expanded="false">
+                        PARTY
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item"
+                           href="/about">About</a>
+                        <a class="dropdown-item"
+                           href="/members">Members</a>
+                        <a class="dropdown-item" href="/board/">Board</a>
+
+
+                        <a class="dropdown-item" href="/statuses">Statuses</a>
+
+                        <a class="dropdown-item" href="https://wiki.ppeu.net/doku.php?id=european_pirate_party" target="_blank">Wiki</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"data-toggle="collapse" href="#collapseExample" href="#" id="navbarDropdown"
+                                                                     role="button"
+                                                                     data-toggle="dropdown"
+                                                                     aria-haspopup="true"
+                                                                     aria-expanded="false">
+                            PROGRAMME
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="collapseExample">
+                            <a class="dropdown-item" href="/programme">Preamble</a>
+                            <a class="dropdown-item" href="/programme/agriculture-fisheries/">Agriculture & Fisheries</a>
+                            <a class="dropdown-item" href="/programme/civil-society/">Civil Society</a>
+                            <a class="dropdown-item" href="/programme/education-culture-research-free-knowledge/">Education, Culture, Research & Free Knowledge</a>
+                            <a class="dropdown-item" href="/programme/environment-climate-and-energy/">Environment, Climate and Energy</a>
+                            <a class="dropdown-item" href="/programme/finances/">Finances</a>
+                            <a class="dropdown-item" href="/programme/free-software/">Free Software</a>
+                            <a class="dropdown-item" href="/programme/human-rights-in-the-digital-era/">Human Rights in the Digital Era</a>
+                            <a class="dropdown-item" href="/programme/international-affairs/">International Affairs</a>
+                            <a class="dropdown-item" href="/programme/net-policy/">Net Policy</a>
+                            <a class="dropdown-item" href="/programme/open-data/">Open Data</a>
+                            <a class="dropdown-item" href="/programme/social-affairs-healthcare/">Social Affairs & Healthcare</a>
+                            <a class="dropdown-item" href="/programme/space-programme/">Space Programme</a>
+                            <a class="dropdown-item" href="/programme/transport/">Transport</a>
+                        </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mep/">PARLIAMENT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">NEWS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/events/">EVENTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/career/">CAREER</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact-press/">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.facebook.com/europeanpirateparty"><i class="fi-social-facebook icon"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://twitter.com/EuropeanPirates"><i class="fi-social-twitter icon"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <main role="main">
+        <!-- Page Header -->
+        <header class="masthead">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-10 mx-auto">
+                        
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/wanted-administrative-assistant-in-brussels-2/"><img class="thumbnail blog-posting__media" src="/img/tyler-franta-iusJ25iYu1c-unsplash.jpg" alt="WANTED: Administrative assistant in Brussels"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/wanted-administrative-assistant-in-brussels-2/" itemprop="headline">WANTED: Administrative assistant in Brussels</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/wanted-administrative-assistant-in-brussels-2/" />
+                    <i class="blog-posting__pubdate">2020-03-05 </i>
+                    <span itemprop="description"><p>Mikuláš Peksa, Pirate Member of the European Parliament, is <strong>looking for a
+reliable assistant in his Brussels office</strong> <strong>who can help with administrative
+tasks</strong>. As an Administrative assistant you will be called upon to perform a
+multitude of tasks including</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/wanted-administrative-assistant-in-brussels-2/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/wanted-administrative-assistant-in-brussels/"><img class="thumbnail blog-posting__media" src="/img/bruce-mars-FWVMhUa_wbY-unsplash.jpg" alt="WANTED: Administrative assistant in Brussels"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/wanted-administrative-assistant-in-brussels/" itemprop="headline">WANTED: Administrative assistant in Brussels</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/wanted-administrative-assistant-in-brussels/" />
+                    <i class="blog-posting__pubdate">2020-02-27 </i>
+                    <span itemprop="description"><p>Marcel Kolaja, Pirate MEP and Vice-President of the European Parliament, is
+looking for a reliable assistant in his Brussels office who can help with
+administrative tasks. As an Administrative assistant you will be called upon
+to perform a multitude of tasks including</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/wanted-administrative-assistant-in-brussels/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/pirate-mep-gregorova-is-going-to-observe-the-court-with-julian-assange/"><img class="thumbnail blog-posting__media" src="/img/48864499301_96e9602658_k.jpg" alt="Pirate MEP Gregorová is going to observe the court with Julian Assange"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/pirate-mep-gregorova-is-going-to-observe-the-court-with-julian-assange/" itemprop="headline">Pirate MEP Gregorová is going to observe the court with Julian Assange</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/pirate-mep-gregorova-is-going-to-observe-the-court-with-julian-assange/" />
+                    <i class="blog-posting__pubdate">2020-02-24 </i>
+                    <span itemprop="description"><p>London, 23 February 2020 - <strong>Pirate MEP Markéta Gregorová will take part in an
+open court hearing tomorrow on the extradition of Wikileaks founder Julian
+Assange to the US in London.</strong> In the US, Assange should face charges of
+nearly two dozen crimes, including the unlawful disclosure of secret
+documents, for which he faces a collective sentence of up to 175 years.
+According to Gregorová, there are at least two reasons for observing the
+court. “First, I want to see his health by myself. Irrespective of the nature
+of this hearing, we still live in countries with the rule of law and in a
+democratic system where prisoners have their rights. I do not want to rely on
+incomplete and often contradictory information from various sources, I want to
+see everything with my own eyes,” says Gregorová, who in the same spirit last
+summer took a footage of Russian soldiers as they were moving Georgian state
+borders. According to several sources, Julian Assange might be even in danger
+for life. The second fundamental reason for Gregorová is the independence of
+the whole process. “I want to see how the court proceeds so that I can
+disprove any misinformation that will surely spread - not only - in the Czech
+Republic. At the same time, preserving the objectivity of the court is
+important in such a controversial and politicized case. This is also the
+reason for the presence of external observers,” explains Gregorová. “I realize
+why the potential US lawsuit is so controversial. And Assange should not be a
+model or an idol. At the same time, he should not be a model case of how
+whistleblowers are treated either. Precisely because this case is being
+massively watched, it is important to set a precedent for when the public
+interest in having information about government activities outweighs the
+danger of having them - a danger that governments themselves have exposed
+their citizens to,” adds Gregorová</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/pirate-mep-gregorova-is-going-to-observe-the-court-with-julian-assange/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/thoughts-on-the-european-digital-strategy/"><img class="thumbnail blog-posting__media" src="/img/patrick-freyer-qHTBlOyMljs-unsplash.jpg" alt="Thoughts on the European Digital Strategy"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/thoughts-on-the-european-digital-strategy/" itemprop="headline">Thoughts on the European Digital Strategy</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/thoughts-on-the-european-digital-strategy/" />
+                    <i class="blog-posting__pubdate">2020-02-22 </i>
+                    <span itemprop="description"><h1>PIRATE MEP MARCEL KOLAJA</h1>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/thoughts-on-the-european-digital-strategy/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/artificial-intelligence-the-future-european-approach/"><img class="thumbnail blog-posting__media" src="/img/franck-v-jIBMSMs4_kA-unsplash.jpg" alt="Artificial Intelligence: the future European approach"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/artificial-intelligence-the-future-european-approach/" itemprop="headline">Artificial Intelligence: the future European approach</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/artificial-intelligence-the-future-european-approach/" />
+                    <i class="blog-posting__pubdate">2020-02-20 </i>
+                    <span itemprop="description"><h1>PIRATE MEP MARCEL KOLAJA</h1>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/artificial-intelligence-the-future-european-approach/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/report-from-the-budgetary-control-committee-open-source-conflict-of-interest-by-czech-pm-or-misuse-of-eu-funds-for-agriculture/"><img class="thumbnail blog-posting__media" src="/img/572086cd0ea9ba4be1121d41def95e39.jpg" alt="REPORT from the Budgetary Control Committee: open-source, conflict of interest by Czech PM or misuse of EU funds for agriculture"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/report-from-the-budgetary-control-committee-open-source-conflict-of-interest-by-czech-pm-or-misuse-of-eu-funds-for-agriculture/" itemprop="headline">REPORT from the Budgetary Control Committee: open-source, conflict of interest by Czech PM or misuse of EU funds for agriculture</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/report-from-the-budgetary-control-committee-open-source-conflict-of-interest-by-czech-pm-or-misuse-of-eu-funds-for-agriculture/" />
+                    <i class="blog-posting__pubdate">2020-02-20 </i>
+                    <span itemprop="description"><p>As a member of the Budgetary Control Committee of the European Parliament,
+<strong>MEP Mikuláš Peksa is actively scrutinising how the EU institutions spend
+citizens’ money</strong>. He voted on 1738 amendments tabled to 52 draft reports,
+which advises the EU on its budget implementation, based on the
+recommendations of the European Court of Auditors.  In most cases, he approved
+good budgetary management. However, in some cases, such as the Council, the
+Committee of the Regions and the Economic and Social Committee, there was
+proof of serious mismanagement, so he rejected the political discharges. This
+means that these institutions will have to follow sticker rules on the
+implementation of the EU budget and report on the recommendations from the
+Parliament</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/report-from-the-budgetary-control-committee-open-source-conflict-of-interest-by-czech-pm-or-misuse-of-eu-funds-for-agriculture/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/7th-board-meeting-of-ppeu/"><img class="thumbnail blog-posting__media" src="/img/Screenshot-2020-02-15-at-13.16.17.png" alt="7th Board meeting of PPEU"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/7th-board-meeting-of-ppeu/" itemprop="headline">7th Board meeting of PPEU</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/7th-board-meeting-of-ppeu/" />
+                    <i class="blog-posting__pubdate">2020-02-15 </i>
+                    <span itemprop="description"><p>Hola amigos,</p>
+<p>we hereby thrillingly invite you to the next board meeting of the PPEU on
+February 23rd 2020 at 20:00 CET. This next meeting will be the 7th meeting of
+the board and will be held on Mumble. We will meet on Mumble NRW, room
+PPEU/Board Meeting (see instructions:
+<a href="https://wiki.piratenpartei.de/NRW:Mumble-
+Server?fbclid=IwAR3cxqALFjFH4Ax77dgouCt_hkxakVShRsNHz0YZI9d77gBWdR4lU46nlR4">https://wiki.piratenpartei.de/NRW:Mumble-
+Server</a>).
+The minutes for this meeting can be found on <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fetherpad.pp-
+international.net%2Fp%2Fboard_meeting_1920_07%3Ffbclid%3DIwAR0_D46FdgCPl8YcoXk_ZjTE-0LskFaz1QE9OgCMwQ9POIKFoB2BhGpMiTI&amp;h=AT1VC2YVRyV7RgW4w6GDOxu92ZbWiGmyssohcUf_FK3EZpAijhK060milzEyX7GxPunxGOopD18MLxJH6tFOvg9NQ0Pep33XNnsB53aKiJugLh7wuGxH93n3Yz074ZPyd19IqmiAxw">https://etherpad.pp-
+international.net/p/board_meeting_1920_07</a></p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/7th-board-meeting-of-ppeu/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/european-pirates-against-eu-vietnam-trade-agreement/"><img class="thumbnail blog-posting__media" src="/img/4d939f0f97ddc5899456389f38f1ae6f.jpg" alt="European Pirates against EU - Vietnam trade agreement"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/european-pirates-against-eu-vietnam-trade-agreement/" itemprop="headline">European Pirates against EU - Vietnam trade agreement</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/european-pirates-against-eu-vietnam-trade-agreement/" />
+                    <i class="blog-posting__pubdate">2020-02-13 </i>
+                    <span itemprop="description"><p><em>Brussels, 12 February 2020 –</em> <strong>The Pirates delegation to the European
+Parliament today voted against the trade agreement between Vietnam and the
+European Union. This was mainly due to human rights, which have been
+deteriorating throughout the negotiations and there is no prospect of
+improvement.</strong></p>
+<blockquote><p>“ <em>We are giving the Vietnamese authoritarian regime a blank check for trade
+with the largest economic bloc in the world without enforceable conditions. By
+ratifying the agreement, we are saying to the Communist Party of Vietnam that
+the European Union supports a surveillance state with a monopoly of one party
+that oppresses and monitors its people,</em> ” said pirate MEP Markéta Gregorová</p>
+</blockquote>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/european-pirates-against-eu-vietnam-trade-agreement/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/european-pirates-voted-against-the-recycling-of-toxic-pvc-objection-passed/"><img class="thumbnail blog-posting__media" src="/img/yellow-excavator-in-garbage-mountain-3186574.jpg" alt="European Pirates voted against the recycling of toxic PVC, objection passed"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/european-pirates-voted-against-the-recycling-of-toxic-pvc-objection-passed/" itemprop="headline">European Pirates voted against the recycling of toxic PVC, objection passed</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/european-pirates-voted-against-the-recycling-of-toxic-pvc-objection-passed/" />
+                    <i class="blog-posting__pubdate">2020-02-12 </i>
+                    <span itemprop="description"><p><em>Brussels, 12 February 2020 -</em> <strong>The European Pirates' delegation voted today
+against the recycling of toxic PVC (containing lead) and its return to the
+circulation of goods. This supports an objection to the Commission's approach,
+which imposes a ban on imports of toxic PVC from abroad but leaves a 15-year
+period for its recycling.</strong></p>
+<blockquote><p>“ <em>It is absolutely nonsense to recycle and revive toxic material. We want
+only pure lead-free PVC to be recycled. The health of the population and the
+protection of the environment are our top priority,</em> ” said Pirate MEP Mikuláš
+Peksa</p>
+</blockquote>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/european-pirates-voted-against-the-recycling-of-toxic-pvc-objection-passed/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/wanted-delegation-policy-trainee-in-brussels/"><img class="thumbnail blog-posting__media" src="/img/european-parliament-2224221_1920.jpg" alt="WANTED: Delegation policy trainee in Brussels"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/wanted-delegation-policy-trainee-in-brussels/" itemprop="headline">WANTED: Delegation policy trainee in Brussels</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/wanted-delegation-policy-trainee-in-brussels/" />
+                    <i class="blog-posting__pubdate">2020-02-12 </i>
+                    <span itemprop="description"><h1>Trainee - <strong>Delegation policy trainee in Brussels</strong></h1>
+<p><strong>The Delegation of European Pirates in the European Parliament is looking for
+a trainee based in Brussels, who can help with multitude of tasks,
+including:</strong></p>
+<ul>
+<li>assisting with research on policy-related topics;</li>
+<li>writing briefings summarizing complex information in a concise manner;</li>
+<li>participating in committee meetings and taking notes;</li>
+<li>assisting with preparation of documents in support of the Plenary votes;</li>
+<li>providing administrative support as necessary;</li>
+<li>assisting the Delegation Policy Coordinator and other members of the team;</li>
+<li>participating in relevant policy-related events;</li>
+<li>helping with events organization</li>
+</ul>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/wanted-delegation-policy-trainee-in-brussels/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+
+  
+  <div class="pagination row">
+    
+      <a class="arrow" href="/page/4/">&laquo; Previous</a>
+    
+
+    
+        <a href="/"> 1 </a>
+    
+        <a href="/page/2/"> 2 </a>
+    
+        <a href="/page/3/"> 3 </a>
+    
+        <a href="/page/4/"> 4 </a>
+    
+
+    <span class="pagination__current">5</span>
+
+    
+        <a href="/page/6/"> 6 </a>
+    
+        <a href="/page/7/"> 7 </a>
+    
+        <a href="/page/8/"> 8 </a>
+    
+        <a href="/page/9/"> 9 </a>
+    
+        <a href="/page/10/"> 10 </a>
+    
+        <a href="/page/11/"> 11 </a>
+    
+        <a href="/page/12/"> 12 </a>
+    
+        <a href="/page/13/"> 13 </a>
+    
+        <a href="/page/14/"> 14 </a>
+    
+        <a href="/page/15/"> 15 </a>
+    
+        <a href="/page/16/"> 16 </a>
+    
+        <a href="/page/17/"> 17 </a>
+    
+        <a href="/page/18/"> 18 </a>
+    
+        <a href="/page/19/"> 19 </a>
+    
+
+    
+      <a class="arrow" href="/page/6/">Next &raquo;</a>
+    
+  </div>
+
+
+        </div>
+
+        <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row footer">
+            <div class="col-sm-4">
+                <img src="/static/svg/Logo_European_Pirate_Party-inversed.svg" alt="Logo" />
+            </div>
+            <div class="col-sm-4">
+                <h5>EUROPEAN ELECTIONS</h5>
+                <hr>
+                <a href="/ep-elections/"> Overview </a><br>
+                <a href="/programme">Programme</a><br>
+                <a href="/ep-elections/interviews-candidates/"> Interviews with Candidates </a><br>
+            </div>
+            <div class="col-sm-4">
+                <h5>ABOUT</h5>
+                <hr>
+                <a href="/contact-press/">Contact / Press</a><br>
+                <a href="/meetings/">Council meetings</a><br>
+                <a href="/streaming/">Streaming</a><br>
+                <a href="/provider/">Provider</a><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <hr>
+                <p class="copyright text-muted">♡2020 by Author/Artist. Copying is an act of love. Please copy.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </main>
+
+

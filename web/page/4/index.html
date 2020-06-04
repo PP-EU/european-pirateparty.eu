@@ -1,0 +1,645 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicon/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicon/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicon/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="/favicon/favicon-196x196.png" sizes="196x196">
+<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon/favicon-128.png" sizes="128x128">
+<link rel="stylesheet" type="text/css" href="/static/foundation-icons.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/unmi.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/dropdown.css" />
+<link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/custom-modifications.css" />
+
+<link rel="stylesheet" href="/static/css/jquery.cookieBar.min.css">
+
+<link rel="stylesheet" type="text/css" href="/static/foundation-icons.css" />
+<link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" type="text/css" href="/static/css/share_buttons.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.cookieBar.min.js"></script>
+
+<title>Blog</title>
+
+<body>
+
+    <!-- Navigation -->
+<script>
+    $(document).ready(function () {
+        function getCookie(cname) {
+          var name = cname + "=";
+          var ca = document.cookie.split(';');
+          for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+            }
+          }
+          return "";
+        }
+        $(function() {
+            $.cookieBar('addTranslation', 'en', {
+                        message:	"This site uses Matomo to analyze traffic and help us to improve your user experience. We process part of you IP address and your cookies, they are stored on your browser for 13 months. These data are only processed by us and our web hosting platform. Please read our Privacy Policy to learn more.",
+                        acceptText:	'OK',
+                        infoText: "Privacy Policy",
+
+            });
+            if (getCookie('cookies-state') !== 'accepted'){
+                $.cookieBar({
+                    style: 'bottom-right',
+                    language: 'en',
+                    infoLink: "/gdpr/",
+                });
+            }
+        });
+    });
+</script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v6.0"></script>
+<script>
+    window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+              t._e.push(f);
+            };
+
+      return t;
+    }(document, "script", "twitter-wjs"));
+</script>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" id="mainNav">
+    <div class="container">
+        <a href="/">
+            <img class="nav__logo" src="/static/svg/Logo_European_Pirate_Party.svg" alt="Logo" />
+        </a>
+
+        <button class="navbar-toggler navbar-toggler-right" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#navbarResponsive"
+                                                            aria-controls="navbarResponsive"
+                                                            aria-expanded="false"
+                                                            aria-label="Toggle
+                                                            navigation">
+            Menu <i class="fas fi-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                                                 role="button"
+                                                                 data-toggle="dropdown"
+                                                                 aria-haspopup="true"
+                                                                 aria-expanded="false">
+                        PARTY
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item"
+                           href="/about">About</a>
+                        <a class="dropdown-item"
+                           href="/members">Members</a>
+                        <a class="dropdown-item" href="/board/">Board</a>
+
+
+                        <a class="dropdown-item" href="/statuses">Statuses</a>
+
+                        <a class="dropdown-item" href="https://wiki.ppeu.net/doku.php?id=european_pirate_party" target="_blank">Wiki</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"data-toggle="collapse" href="#collapseExample" href="#" id="navbarDropdown"
+                                                                     role="button"
+                                                                     data-toggle="dropdown"
+                                                                     aria-haspopup="true"
+                                                                     aria-expanded="false">
+                            PROGRAMME
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="collapseExample">
+                            <a class="dropdown-item" href="/programme">Preamble</a>
+                            <a class="dropdown-item" href="/programme/agriculture-fisheries/">Agriculture & Fisheries</a>
+                            <a class="dropdown-item" href="/programme/civil-society/">Civil Society</a>
+                            <a class="dropdown-item" href="/programme/education-culture-research-free-knowledge/">Education, Culture, Research & Free Knowledge</a>
+                            <a class="dropdown-item" href="/programme/environment-climate-and-energy/">Environment, Climate and Energy</a>
+                            <a class="dropdown-item" href="/programme/finances/">Finances</a>
+                            <a class="dropdown-item" href="/programme/free-software/">Free Software</a>
+                            <a class="dropdown-item" href="/programme/human-rights-in-the-digital-era/">Human Rights in the Digital Era</a>
+                            <a class="dropdown-item" href="/programme/international-affairs/">International Affairs</a>
+                            <a class="dropdown-item" href="/programme/net-policy/">Net Policy</a>
+                            <a class="dropdown-item" href="/programme/open-data/">Open Data</a>
+                            <a class="dropdown-item" href="/programme/social-affairs-healthcare/">Social Affairs & Healthcare</a>
+                            <a class="dropdown-item" href="/programme/space-programme/">Space Programme</a>
+                            <a class="dropdown-item" href="/programme/transport/">Transport</a>
+                        </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mep/">PARLIAMENT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">NEWS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/events/">EVENTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/career/">CAREER</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact-press/">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.facebook.com/europeanpirateparty"><i class="fi-social-facebook icon"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://twitter.com/EuropeanPirates"><i class="fi-social-twitter icon"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <main role="main">
+        <!-- Page Header -->
+        <header class="masthead">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-10 mx-auto">
+                        
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/terrorist-content-online-regulation-a-boost-to-safety-or-a-threat-to-free-speech-online/"><img class="thumbnail blog-posting__media" src="/img/pix_bxl_1.jpg" alt="Terrorist content online regulation: a boost to safety or a threat to free speech online?"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/terrorist-content-online-regulation-a-boost-to-safety-or-a-threat-to-free-speech-online/" itemprop="headline">Terrorist content online regulation: a boost to safety or a threat to free speech online?</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/terrorist-content-online-regulation-a-boost-to-safety-or-a-threat-to-free-speech-online/" />
+                    <i class="blog-posting__pubdate">2020-03-30 </i>
+                    <span itemprop="description"><h1>Terrorist content online regulation: a boost to safety or a threat to free</h1>
+<p>speech online</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/terrorist-content-online-regulation-a-boost-to-safety-or-a-threat-to-free-speech-online/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/censorship-machine-in-action-again/"><img class="thumbnail blog-posting__media" src="/img/20200318-Facebook-info.jpeg" alt="Censorship machine in action again!"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/censorship-machine-in-action-again/" itemprop="headline">Censorship machine in action again!</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/censorship-machine-in-action-again/" />
+                    <i class="blog-posting__pubdate">2020-03-28 </i>
+                    <span itemprop="description"><h1>Pirate MEP Marcel Kolaja</h1>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/censorship-machine-in-action-again/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/european-pirates-supported-the-proposal-for-immediate-financial-aid-against-the-coronavirus-pandemic/"><img class="thumbnail blog-posting__media" src="/img/fusion-medical-animation-npjP0dCtoxo-unsplash.jpg" alt="European Pirates supported the proposal for immediate financial aid against the coronavirus pandemic"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/european-pirates-supported-the-proposal-for-immediate-financial-aid-against-the-coronavirus-pandemic/" itemprop="headline">European Pirates supported the proposal for immediate financial aid against the coronavirus pandemic</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/european-pirates-supported-the-proposal-for-immediate-financial-aid-against-the-coronavirus-pandemic/" />
+                    <i class="blog-posting__pubdate">2020-03-27 </i>
+                    <span itemprop="description"><p>Brussels, March 27, 2020 – Pirate MEPs supported three proposals of the
+European Commission concerning a change of the rules for allocating flight
+slots and financial aid for countries and regions to mitigate the economic
+impact of the crisis. <strong>The creation of a EUR 37 billion emergency fund to
+combat coronavirus was approved</strong>. First time in the history, members of the
+European Parliament were able to vote distantly as a response to the current
+coronavirus pandemic crisis. MEPs voted on Commission proposals that will help
+financially and will speed up investments for the benefit of the health
+sector, SMEs and other vulnerable parts of the Member States' economies. And
+because time is of the essence now, all political groups agreed to adopt the
+Commission proposal without amendments, which would otherwise delay the
+process for a few more weeks. The only political group that actively
+jeopardized this rapid advance was the ID group. By the approval of the
+European Commission’s emergency investment fund, <strong>Member States will now be
+able to receive financial support totalling up to EUR 37 billion</strong> , both to
+combat the spread of the coronavirus and to mitigate its impact. Pirates
+welcome the Union's action to help; however, they draw attention to the need
+for control and appropriate distribution of support from the Fund at national
+level to get money where they are really needed</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/european-pirates-supported-the-proposal-for-immediate-financial-aid-against-the-coronavirus-pandemic/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/9th-board-meeting/"><img class="thumbnail blog-posting__media" src="/img/pxfuel.com_.jpg" alt="9th Board Meeting"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/9th-board-meeting/" itemprop="headline">9th Board Meeting</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/9th-board-meeting/" />
+                    <i class="blog-posting__pubdate">2020-03-26 </i>
+                    <span itemprop="description"><p>Ahoi Pirates,</p>
+<p>we hereby thrillingly invite you to the next board meeting of the PPEU on
+March 29th 2020 at 20:00 CET. This next meeting will be the 9th meeting of the
+board and will be held on Mumble. We will meet on Mumble NRW, room PPEU/Board
+Meeting (see <a href="https://wiki.piratenpartei.de/NRW:Mumble-
+Server?fbclid=IwAR3cxqALFjFH4Ax77dgouCt_hkxakVShRsNHz0YZI9d77gBWdR4lU46nlR4">instructions</a>).
+The minutes for this meeting can be found <a href="https://etherpad.pp-
+international.net/p/board_meeting_1920_09">here</a></p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/9th-board-meeting/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/europes-role-in-fighting-covid-19/"><img class="thumbnail blog-posting__media" src="/img/tai-s-captures-Lhb-zwQ-QGI-unsplash.jpg" alt="Europe&#39;s role in fighting COVID-19"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/europes-role-in-fighting-covid-19/" itemprop="headline">Europe&#39;s role in fighting COVID-19</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/europes-role-in-fighting-covid-19/" />
+                    <i class="blog-posting__pubdate">2020-03-26 </i>
+                    <span itemprop="description"><h1>Pirate MEP Marcel Kolaja</h1>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/europes-role-in-fighting-covid-19/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/one-year-after-copyright-censorship-law/"><img class="thumbnail blog-posting__media" src="/img/logo_european_pirate_party.png" alt="One year after copyright-censorship law"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/one-year-after-copyright-censorship-law/" itemprop="headline">One year after copyright-censorship law</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/one-year-after-copyright-censorship-law/" />
+                    <i class="blog-posting__pubdate">2020-03-26 </i>
+                    <span itemprop="description"><p>Exactly one year ago, the EU Parliament adopted the controversial copyright
+reform, including mandatory upload filters – in spite of massive criticism
+from experts, more than 150,000 demonstrators on 23 March 2019 and over 5
+million petition supporters. <strong>The greatest protests which ever took place for
+a free Internet were simply ignored by the European Parliament and most
+national governments</strong>. "The decision of the European Court of Justice on
+Poland's complaint about Article 17 of the copyright reform will crucial. The
+court could overturn the obligation to use error-prone upload filters. We,
+PIRATES, will monitor the implementation process very closely and will push
+for the best possible solution for Internet users," comments Sebastian
+Alscher, chairman of the Pirate Party Germany. <strong>Patrick Breyer</strong> , civil
+liberties activist and MEP of the Pirate Party Germany, adds</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/one-year-after-copyright-censorship-law/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/corona-pandemic-pirates-call-for-protection-measures-and-neighbourly-solidarity/"><img class="thumbnail blog-posting__media" src="/img/2019-nCoV-CDC-23312.jpg" alt="Corona Pandemic: Pirates Call For Protection Measures and Neighbourly Solidarity"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/corona-pandemic-pirates-call-for-protection-measures-and-neighbourly-solidarity/" itemprop="headline">Corona Pandemic: Pirates Call For Protection Measures and Neighbourly Solidarity</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/corona-pandemic-pirates-call-for-protection-measures-and-neighbourly-solidarity/" />
+                    <i class="blog-posting__pubdate">2020-03-24 </i>
+                    <span itemprop="description"><p>The corona pandemic is also spreading in Europe. Despite the numerous measures
+that have been taken in the meantime, the number of infected people continues
+to rise. The European Pirates call on everyone to follow the recommendations
+and to avoid large crowds and unnecessary social contacts. Only if we succeed
+in limiting the spread of the virus, we will be able to prevent our health
+system from becoming overloaded and protect in particular risk groups such as
+the elderly and people with pre-existing conditions. We welcome the numerous
+private initiatives for mutual help. In order to further expand this form of
+neighbourly help, <strong>we are now offering a small online generator that can be
+used to generate posters for hallways. In this way, neighbours can provide
+each other mutual help in everyday life and do their bit to contain the
+further spread of the virus.</strong> Our thanks go to all helpers who risk their own
+health every day for the benefit of the general public</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/corona-pandemic-pirates-call-for-protection-measures-and-neighbourly-solidarity/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/terrorism-regulation-update-from-secret-negotiations/"><img class="thumbnail blog-posting__media" src="/img/freestocks-I_pOqP6kCOI-unsplash.jpg" alt="Terrorism regulation: Update from secret negotiations"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/terrorism-regulation-update-from-secret-negotiations/" itemprop="headline">Terrorism regulation: Update from secret negotiations</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/terrorism-regulation-update-from-secret-negotiations/" />
+                    <i class="blog-posting__pubdate">2020-03-16 </i>
+                    <span itemprop="description"><h2>MEP MARCEL KOLAJA</h2>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/terrorism-regulation-update-from-secret-negotiations/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/8th-board-meeting/"><img class="thumbnail blog-posting__media" src="/img/pirates-1709961_1920.jpg" alt="8th Board meeting"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/8th-board-meeting/" itemprop="headline">8th Board meeting</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/8th-board-meeting/" />
+                    <i class="blog-posting__pubdate">2020-03-10 </i>
+                    <span itemprop="description"><p>Ahoi Pirates,</p>
+<p>we hereby thrillingly invite you to the next board meeting of the PPEU on
+March 15th 2020 at 20:00 CET. This next meeting will be the 8th meeting of the
+board and will be held on Mumble. We will meet on Mumble NRW, room PPEU/Board
+Meeting (see instructions: <a href="https://wiki.piratenpartei.de/NRW:Mumble-
+Server?fbclid=IwAR3cxqALFjFH4Ax77dgouCt_hkxakVShRsNHz0YZI9d77gBWdR4lU46nlR4">https://wiki.piratenpartei.de/NRW:Mumble-
+Server</a>).
+The minutes for this meeting can be found on <a href="https://etherpad.pp-
+international.net/p/board_meeting_1920_08">https://etherpad.pp-
+international.net/p/board_meeting_1920_08</a></p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/8th-board-meeting/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/short-term-rental-services-in-big-cities/"><img class="thumbnail blog-posting__media" src="/img/tim-gouw-qO3oSfaWUps-unsplash.jpg" alt="Short-term rental services in big cities"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/short-term-rental-services-in-big-cities/" itemprop="headline">Short-term rental services in big cities</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/short-term-rental-services-in-big-cities/" />
+                    <i class="blog-posting__pubdate">2020-03-08 </i>
+                    <span itemprop="description"><h1>PIRATE MEP MARCEL KOLAJA</h1>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/short-term-rental-services-in-big-cities/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+
+  
+  <div class="pagination row">
+    
+      <a class="arrow" href="/page/3/">&laquo; Previous</a>
+    
+
+    
+        <a href="/"> 1 </a>
+    
+        <a href="/page/2/"> 2 </a>
+    
+        <a href="/page/3/"> 3 </a>
+    
+
+    <span class="pagination__current">4</span>
+
+    
+        <a href="/page/5/"> 5 </a>
+    
+        <a href="/page/6/"> 6 </a>
+    
+        <a href="/page/7/"> 7 </a>
+    
+        <a href="/page/8/"> 8 </a>
+    
+        <a href="/page/9/"> 9 </a>
+    
+        <a href="/page/10/"> 10 </a>
+    
+        <a href="/page/11/"> 11 </a>
+    
+        <a href="/page/12/"> 12 </a>
+    
+        <a href="/page/13/"> 13 </a>
+    
+        <a href="/page/14/"> 14 </a>
+    
+        <a href="/page/15/"> 15 </a>
+    
+        <a href="/page/16/"> 16 </a>
+    
+        <a href="/page/17/"> 17 </a>
+    
+        <a href="/page/18/"> 18 </a>
+    
+        <a href="/page/19/"> 19 </a>
+    
+
+    
+      <a class="arrow" href="/page/5/">Next &raquo;</a>
+    
+  </div>
+
+
+        </div>
+
+        <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row footer">
+            <div class="col-sm-4">
+                <img src="/static/svg/Logo_European_Pirate_Party-inversed.svg" alt="Logo" />
+            </div>
+            <div class="col-sm-4">
+                <h5>EUROPEAN ELECTIONS</h5>
+                <hr>
+                <a href="/ep-elections/"> Overview </a><br>
+                <a href="/programme">Programme</a><br>
+                <a href="/ep-elections/interviews-candidates/"> Interviews with Candidates </a><br>
+            </div>
+            <div class="col-sm-4">
+                <h5>ABOUT</h5>
+                <hr>
+                <a href="/contact-press/">Contact / Press</a><br>
+                <a href="/meetings/">Council meetings</a><br>
+                <a href="/streaming/">Streaming</a><br>
+                <a href="/provider/">Provider</a><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <hr>
+                <p class="copyright text-muted">♡2020 by Author/Artist. Copying is an act of love. Please copy.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </main>
+
+

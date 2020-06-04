@@ -1,0 +1,28 @@
+{% extends "header.html" %}
+{% block page_content %}
+    {% include "navigate.html" %}
+    {% include "banner.html" %}
+
+        <div class="page">
+          <div class="row" id="content">
+                {% block body %}
+                  <div class="row">
+                    <div class="small-8 medium-8 columns">
+                      <p class="post__excerpt content-block">
+                          <meta itemprop="datePublished" content="{{ this.pub_date }}" />
+                          <i>{{ this.pub_date }}</i>
+                      </p>
+
+                      <div id="content" class="post__content content-block">
+                        <b>{{ this.description }}</b>
+
+                         {{ this.body }}
+                      </div>
+                    </div>
+                  {% endblock %}
+    {% include "twitter.html" %}
+                  </div>
+          </div>
+
+    {% include "footer.html" %}
+{% endblock %}

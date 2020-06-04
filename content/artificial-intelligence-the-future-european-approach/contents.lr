@@ -1,0 +1,127 @@
+title: Artificial Intelligence: the future European approach
+---
+type: post
+---
+tags: 
+ 
+articles
+default
+
+---
+pub_date: 2020-02-20
+---
+img: /franck-v-jIBMSMs4_kA-unsplash.jpg
+---
+description: # PIRATE MEP MARCEL KOLAJA
+---
+body: :
+
+On February 19, the Commission
+[presented](https://ec.europa.eu/commission/presscorner/detail/en/ip_20_273)
+its [white paper](https://eur-lex.europa.eu/summary/glossary/white_paper.html)
+on Artificial Intelligence (AI): [a European approach to excellence and
+trust](https://ec.europa.eu/info/files/white-paper-artificial-intelligence-
+european-approach-excellence-and-trust_en). As [previously explained on my
+blog](https://www.kolaja.eu/en/post/20200215-automated_decision_making/), the
+topic is not merely a techy issue, but already impacts the life of many of us,
+be it applying for a job, ordering food, or content moderation software, etc.
+The proposal is open for consultation for any interested stakeholder or
+individual. The deadline for your remarks is May 19, 2020, in case you’d like
+to comment on it.
+
+## AI what?
+
+It is difficult to define what Artificial Intelligence is; however, given that
+the paper will also be subject to public consultation, it would be important
+to have a clear definition of AI, so that at least everyone is on the same
+page what we understand by the term. The paper, however, suggests flexibility
+of the definition in light of future technological change and gives a long
+description:
+
+> “[…] main elements that compose AI[, which] are ‘data’ and ‘algorithms’. AI
+can be integrated in hardware. In case of machine learning techniques, which
+constitute a subset of AI, algorithms are trained to infer certain patterns
+based on a set of data in order to determine the actions needed to achieve a
+given goal. Algorithms may continue to learn when in use. While AI-based
+products can act autonomously by perceiving their environment and without
+following a pre-determined set of instructions, their behaviour is largely
+defined and constrained by its developers. Humans determine and programme the
+goals, which an AI system should optimise for.”
+
+## Promoting innovation is important; however,…
+
+The objective of the paper is to promote the update of AI in Europe, while
+addressing the risk associated with it and defending the core European
+values—equality, non-discrimination, and high level of privacy. This is
+already a step in the right direction from previous drafts, which aimed only
+at the promotion of such technologies. As Pirates, naturally we support small
+and medium-sized businesses and the development of modern technologies. For
+instance AI driven algorithm can have crucial role for instance in
+[identifying potential risks to public health](https://www.wired.com/story/ai-
+epidemiologist-wuhan-public-health-warnings/). At the same time, there are
+certain risks that need to be addressed as well.
+
+## No to censorship
+
+Given this objective, the draft still focuses on “high-risk applications” and
+“high risk sectors”. It is understandable that not all sectors and
+applications are impacted the same way. For instance, the approach regarding
+chatbots solving customer complaints, wouldn’t necessarily be the same as the
+approach used for health applications, that treat patient data. At the same
+time, we need to make sure we define high risk applications in a balanced way.
+The proposal defines “high risk” in a more limited manner than [previous
+leaks](https://www.politico.eu/wp-
+content/uploads/2020/01/SKM_C45820012915530.pdf) suggested and focuses on
+cases where both the sector and the application constitute high risk. The
+criteria about exceptional instances where mandatory rules would apply
+regardless of the sector are unclear. For instance, in previous drafts,
+besides high risk sectors and uses, the Commission suggested criteria such as
+irreversible impact on individual, or unavoidable affect on individual. For
+instance, AI is equally used by companies to moderate content on their
+platform—e.g. hash-matching, keyword filters, natural language processing—in
+order to remove content that goes against their terms and conditions or that
+is illegal. As a side effect, this often results in such technologies
+discriminating against vulnerable groups in a way that their content gets
+deprioritized or omitted. This can be due to the challenge of assessing
+context by algorithms or use of data sets that incorporate discriminatory
+assumptions.
+
+## Accessibility requirements for all
+
+Data quality obligations for training data, transparency, and human oversight
+requirements are vital to address some of these issues. The Commission
+unfortunately only suggests keepings records, documents, and data sets during
+limited and “reasonable time period” and make them available to authorities
+upon request. Due to the scale of use of such applications it’s questionable
+that only competent authorities would be able to verify such compliance.
+Therefore, companies should be encouraged to release the training code and
+data sets under an open licence, as well as design such systems in transparent
+manner. This would allow more insight into how the system works and help with
+addressing many of the problems.
+
+## No to surveillance
+
+[Earlier leaks](https://www.euractiv.com/wp-
+content/uploads/sites/2/2020/01/AI-white-paper-EURACTIV.pdf) from the
+Commission demonstrate that there was a clear intention from the Commission to
+ban facial recognition technologies. However, during the internal consultation
+process of the Commission, this ban disappeared. This is a clear step back
+from fundamental rights point of view. The European Agency for Fundamental
+Rights issued a
+[report](https://fra.europa.eu/sites/default/files/fra_uploads/fra-2019-facial-
+recognition-technology-focus-paper.pdf) recently that warned against the lack
+of accuracy of such technologies and stated that “several fundamental rights
+concerns remain even if there were a complete absence of errors.” The broad
+European debate suggested by the Commission needs to include all players,
+including civil society and academia, not just law enforcement from Member
+States.
+
+## Next steps
+
+In the upcoming months, I will work on this subject, representing our group in
+the European Parliament’s opinion in the Internal Market and Consumer
+Protection (IMCO) committee, on the report addressing the civil liability
+regime for Artificial Intelligence, and on the report on Artificial
+Intelligence in criminal law and its use by the police and judicial
+authorities in criminal matters.
+

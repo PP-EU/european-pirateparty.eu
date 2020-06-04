@@ -1,0 +1,443 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicon/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicon/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicon/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="/favicon/favicon-196x196.png" sizes="196x196">
+<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon/favicon-128.png" sizes="128x128">
+<link rel="stylesheet" type="text/css" href="/static/foundation-icons.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/unmi.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/dropdown.css" />
+<link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/custom-modifications.css" />
+
+<link rel="stylesheet" href="/static/css/jquery.cookieBar.min.css">
+
+<link rel="stylesheet" type="text/css" href="/static/foundation-icons.css" />
+<link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" type="text/css" href="/static/css/share_buttons.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.cookieBar.min.js"></script>
+
+<title>Interviews with Candidates</title>
+
+<body>
+
+    <!-- Navigation -->
+<script>
+    $(document).ready(function () {
+        function getCookie(cname) {
+          var name = cname + "=";
+          var ca = document.cookie.split(';');
+          for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+            }
+          }
+          return "";
+        }
+        $(function() {
+            $.cookieBar('addTranslation', 'en', {
+                        message:	"This site uses Matomo to analyze traffic and help us to improve your user experience. We process part of you IP address and your cookies, they are stored on your browser for 13 months. These data are only processed by us and our web hosting platform. Please read our Privacy Policy to learn more.",
+                        acceptText:	'OK',
+                        infoText: "Privacy Policy",
+
+            });
+            if (getCookie('cookies-state') !== 'accepted'){
+                $.cookieBar({
+                    style: 'bottom-right',
+                    language: 'en',
+                    infoLink: "/gdpr/",
+                });
+            }
+        });
+    });
+</script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v6.0"></script>
+<script>
+    window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+              t._e.push(f);
+            };
+
+      return t;
+    }(document, "script", "twitter-wjs"));
+</script>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" id="mainNav">
+    <div class="container">
+        <a href="/">
+            <img class="nav__logo" src="/static/svg/Logo_European_Pirate_Party.svg" alt="Logo" />
+        </a>
+
+        <button class="navbar-toggler navbar-toggler-right" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#navbarResponsive"
+                                                            aria-controls="navbarResponsive"
+                                                            aria-expanded="false"
+                                                            aria-label="Toggle
+                                                            navigation">
+            Menu <i class="fas fi-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                                                 role="button"
+                                                                 data-toggle="dropdown"
+                                                                 aria-haspopup="true"
+                                                                 aria-expanded="false">
+                        PARTY
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item"
+                           href="/about">About</a>
+                        <a class="dropdown-item"
+                           href="/members">Members</a>
+                        <a class="dropdown-item" href="/board/">Board</a>
+
+
+                        <a class="dropdown-item" href="/statuses">Statuses</a>
+
+                        <a class="dropdown-item" href="https://wiki.ppeu.net/doku.php?id=european_pirate_party" target="_blank">Wiki</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"data-toggle="collapse" href="#collapseExample" href="#" id="navbarDropdown"
+                                                                     role="button"
+                                                                     data-toggle="dropdown"
+                                                                     aria-haspopup="true"
+                                                                     aria-expanded="false">
+                            PROGRAMME
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="collapseExample">
+                            <a class="dropdown-item" href="/programme">Preamble</a>
+                            <a class="dropdown-item" href="/programme/agriculture-fisheries/">Agriculture & Fisheries</a>
+                            <a class="dropdown-item" href="/programme/civil-society/">Civil Society</a>
+                            <a class="dropdown-item" href="/programme/education-culture-research-free-knowledge/">Education, Culture, Research & Free Knowledge</a>
+                            <a class="dropdown-item" href="/programme/environment-climate-and-energy/">Environment, Climate and Energy</a>
+                            <a class="dropdown-item" href="/programme/finances/">Finances</a>
+                            <a class="dropdown-item" href="/programme/free-software/">Free Software</a>
+                            <a class="dropdown-item" href="/programme/human-rights-in-the-digital-era/">Human Rights in the Digital Era</a>
+                            <a class="dropdown-item" href="/programme/international-affairs/">International Affairs</a>
+                            <a class="dropdown-item" href="/programme/net-policy/">Net Policy</a>
+                            <a class="dropdown-item" href="/programme/open-data/">Open Data</a>
+                            <a class="dropdown-item" href="/programme/social-affairs-healthcare/">Social Affairs & Healthcare</a>
+                            <a class="dropdown-item" href="/programme/space-programme/">Space Programme</a>
+                            <a class="dropdown-item" href="/programme/transport/">Transport</a>
+                        </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mep/">PARLIAMENT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">NEWS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/events/">EVENTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/career/">CAREER</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact-press/">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.facebook.com/europeanpirateparty"><i class="fi-social-facebook icon"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://twitter.com/EuropeanPirates"><i class="fi-social-twitter icon"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <main role="main">
+        <!-- Page Header -->
+        <header class="masthead">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-10 mx-auto">
+                        
+<h1>Interviews with Candidates</h1>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            
+  <div class="row content">
+      <div class="col-md-10 col-lg-12 mx-auto">
+          <p>For the upcoming EU elections several Pirates are interviewing other Pirates –
+top candidates for the EP elections and current Pirate member of the European
+Parliament, <a href="/juliareda.eu/en/">Julia Reda</a> – in short 10-15 minute
+audio/video interviews. The whole playlist can be also found
+<a href="/www.youtube.com/watch?v=7FMsoZMj3_0&amp;list=PLFRKd_c5m20C6J-N0gfFTXx8SLvcFqSkQ&amp;index=3">here</a>.</p>
+<hr>
+<p>Watch the first interview with <strong>Julia Reda</strong> , current member of the European
+Parliament for the Pirate Party in Germany:</p>
+<p><a href="https://youtube.com/watch?v=7FMsoZMj3_0"><img src="/img/julia-reda.jpg" alt=""></a></p>
+<ul>
+<li><a href="/youtu.be/7FMsoZMj3_0">yOuTube</a></li>
+<li><a href="/soundcloud.com/potkaars/ep2019-julia-reda-pirate-party-mep/">Soundcloud</a></li>
+<li><a href="/itunes.apple.com/nl/podcast/ppu-podcast/id1436172406">iTunes</a></li>
+<li><a href="/open.spotify.com/episode/4U6Zjfjy0FAZaArAceKAcV">Spotify</a></li>
+<li><a href="/www.podcastrepublic.net/podcast/1436172406">PodcastRepublic</a></li>
+</ul>
+<hr>
+<p>Get to know <a href="/piratpartiet.se/">Pirate Party Sweden</a> #1 – Mattias Bjärnemalm:
+<a href="/www.youtube.com/watch?v=PHTI_Qot48A"><img src="/european-pirateparty.eu/wp-content/uploads/2019/04/mattias-
+ep2019-298x300.jpg" alt=""></a></p>
+<ul>
+<li><a href="/youtu.be/PHTI_Qot48A?rel=0">YouTube</a></li>
+<li><a href="/soundcloud.com/potkaars/ep2019-mattias-bjarnemalm-pirate-party-sweden">Soundcloud</a></li>
+<li><a href="/itunes.apple.com/nl/podcast/ppu-podcast/id1436172406">iTunes</a></li>
+<li><a href="/open.spotify.com/episode/3mAEzjOa8AMhVariJgFqTh">Spotify</a></li>
+<li><a href="/www.podcastrepublic.net/podcast/1436172406">PodcastRepublic</a></li>
+</ul>
+<hr>
+<p>What is thinking the <a href="/www.pirati.cz/">Czech Pirate Party</a> #2 and the
+chairperson of the PPEU, Markéta Gregorová? <a href="/www.youtube.com/watch?v=waNx8QXTHzQ"><img src="/european-pirateparty.eu/wp-
+content/uploads/2019/04/marketa-
+ep2019-300x224.jpg" alt=""></a></p>
+<ul>
+<li><a href="/youtu.be/waNx8QXTHzQ">YouTube</a></li>
+<li><a href="/soundcloud.com/potkaars/ep2019-marketa-gregorova-czech-pirate-party">Soundcloud</a></li>
+<li><a href="/itunes.apple.com/nl/podcast/ppu-podcast/id1436172406">iTunes</a></li>
+<li><a href="/open.spotify.com/episode/67Hu4bz02phntR6iZ5lstF">Spotify</a></li>
+<li><a href="/www.podcastrepublic.net/podcast/1436172406">PodcastRepublic</a></li>
+</ul>
+<hr>
+<p>Get to know the <a href="/www.pirati.cz/">Czech Pirate Party</a>#1 – Marcel Kolaja.
+<a href="/european-pirateparty.eu/wp-
+content/uploads/2019/04/marcel.jpg"><img src="/european-pirateparty.eu/wp-
+content/uploads/2019/04/marcel-300x227.jpg" alt=""></a></p>
+<ul>
+<li><a href="/youtu.be/HzqUBZ4y5-0">YouTube</a></li>
+<li><a href="/soundcloud.com/potkaars/20190426-marcel-kolaja-czech-republic-ep2019">Soundcloud</a></li>
+<li><a href="/itunes.apple.com/nl/podcast/ppu-podcast/id1436172406">iTunes</a></li>
+<li><a href="/open.spotify.com/episode/4xVCc2caWDIIdXgRrUSyW2">Spotify</a></li>
+<li><a href="/www.podcastrepublic.net/podcast/1436172406">PodcastRepublic</a></li>
+</ul>
+<hr>
+<p><a href="/www.pirati.cz/">Czech Pirate Party</a>#3 Mikuláš Peksa is a member of the
+Czech parliament and a vice-chairperson of the Czech Pirate Party and the
+European Pirate Party. <a href="/european-
+pirateparty.eu/wp-content/uploads/2019/04/Naamloos-e1556349987419.png"><img src="/european-pirateparty.eu/wp-
+content/uploads/2019/04/Naamloos-e1556349987419-285x300.png" alt=""></a></p>
+<ul>
+<li><a href="/youtu.be/ShX0oZJZi7A?rel=0">YouTube</a></li>
+<li><a href="/soundcloud.com/potkaars/20190426-mikulas-paksa">Soundcloud</a></li>
+<li><a href="/itunes.apple.com/nl/podcast/ppu-podcast/id1436172406">iTunes</a></li>
+<li><a href="/open.spotify.com/episode/1uu5wlKxTAxDOfEiC0ppl8">Spotify</a></li>
+<li><a href="/www.podcastrepublic.net/podcast/1436172406">PodcastRepublic</a></li>
+</ul>
+<hr>
+<p><a href="/piratpartiet.se/">Pirate Party Sweden</a>#2 – Katarina Stensson is a vice-
+chairperson of the oldest Pirate party, founder and CEO of a start-up with
+digital education focused on developing countries. <a href="/european-
+pirateparty.eu/wp-content/uploads/2019/05/katarinastensson.png"><img src="/european-
+pirateparty.eu/wp-
+content/uploads/2019/05/katarinastensson-300x169.png" alt=""></a></p>
+<ul>
+<li><a href="/youtu.be/VhDRy-3oHDM?rel=0">YouTube</a></li>
+<li><a href="/soundcloud.com/potkaars/20190501-katarina-stensson-ep2019">Soundcloud</a></li>
+<li><a href="/itunes.apple.com/nl/podcast/ppu-podcast/id1436172406">iTunes</a></li>
+<li><a href="/open.spotify.com/episode/16qTtfSUtUsIAxMJ69ho7x">Spotify</a></li>
+<li><a href="/www.podcastrepublic.net/podcast/1436172406">PodcastRepublic</a></li>
+</ul>
+<hr>
+<p><a href="/piratpartiet.se/">Pirate Party Sweden</a>#3 – Magnus Andersson is the
+chairperson of the Swedish Pirate Party since 2016 and number three on their
+candidate list. <a href="/european-
+pirateparty.eu/wp-content/uploads/2019/05/magnusandersson.png"><img src="/european-pirateparty.eu/wp-
+content/uploads/2019/05/magnusandersson-300x171.png" alt=""></a></p>
+<ul>
+<li><a href="/youtu.be/qtodY__lE5g?rel=0">YouTube</a></li>
+<li><a href="/soundcloud.com/potkaars/20190501-magnus-andersson-pirate-party-sweden-ep2019-english">Soundcloud</a></li>
+<li><a href="/itunes.apple.com/nl/podcast/ppu-podcast/id1436172406">iTunes</a></li>
+<li><a href="/open.spotify.com/episode/30TI1iCGW1LJOeAQwEtyTZ">Spotify</a></li>
+<li><a href="/www.podcastrepublic.net/podcast/1436172406">PodcastRepublic</a></li>
+</ul>
+<hr>
+<p>Get to know <a href="/partipirate.org/">Pirate Party France</a>#1 Florie Marie:
+<a href="/european-pirateparty.eu/wp-
+content/uploads/2019/05/Naamloos.png"><img src="/european-pirateparty.eu/wp-
+content/uploads/2019/05/Naamloos-300x170.png" alt=""></a></p>
+<ul>
+<li><a href="/youtu.be/mTOHwAmFbqA">YouTube</a></li>
+<li><a href="/soundcloud.com/potkaars/20190509-florie-marie-france">Soundcloud</a></li>
+<li><a href="/itunes.apple.com/nl/podcast/ppu-podcast/id1436172406">iTunes</a></li>
+<li><a href="/open.spotify.com/episode/5A5QPQc0NLnIk4dGB0EpyU">Spotify</a></li>
+<li><a href="/www.podcastrepublic.net/podcast/1436172406">PodcastRepublic</a></li>
+</ul>
+<hr>
+<p><a href="/www.piratenpartei.de/">Pirate Party Germany</a>#1 – Patrick Breyer, an IT
+specialist and a fighter for our online irghts talks about the Copyright
+Directive and EP elections. <a href="/european-
+pirateparty.eu/wp-content/uploads/2019/05/patrick-breyer.png"><img src="/european-pirateparty.eu/wp-
+content/uploads/2019/05/patrick-breyer-300x167.png" alt=""></a></p>
+<ul>
+<li><a href="/youtu.be/qvHU3lglwTs?rel=0">YouTube</a></li>
+<li><a href="/soundcloud.com/potkaars/20190510-patrick-breyer-ep2019-english">Soundcloud</a></li>
+<li><a href="/itunes.apple.com/nl/podcast/ppu-podcast/id1436172406">iTunes</a></li>
+<li><a href="/open.spotify.com/episode/3mAEzjOa8AMhVariJgFqTh">Spotify</a></li>
+<li><a href="/www.podcastrepublic.net/podcast/1436172406">PodcastRepublic</a></li>
+</ul>
+<hr>
+<p>Who is <a href="/partipirate.org/">Pirate Party France</a>#2? Cédric Levieux, alternate
+board member of the Pirate Parties International, software architect and
+author of <em>Congressus</em> , democracy on construction and meeting web
+application. <a href="/european-pirateparty.eu/wp-
+content/uploads/2019/05/photo_2.jpg"><img src="/european-pirateparty.eu/wp-
+content/uploads/2019/05/photo_2-300x290.jpg" alt=""></a></p>
+<ul>
+<li><a href="/youtu.be/vu77PO31EEY?rel=0">YouTube</a></li>
+<li><a href="/soundcloud.com/potkaars/20190510-cedric-levieux-ep2019">Soundcloud</a></li>
+<li><a href="/itunes.apple.com/nl/podcast/ppu-podcast/id1436172406">iTunes</a></li>
+<li><a href="/open.spotify.com/episode/3mAEzjOa8AMhVariJgFqTh">Spotify</a></li>
+<li><a href="/www.podcastrepublic.net/podcast/1436172406">PodcastRepublic</a></li>
+</ul>
+<hr>
+<p>Get to know <a href="/partipirate.org/">Pirate Party France's two candidates</a> –
+Sabrina Grimaldi (#3) &amp; Pierre Beyssac (#4) <a href="/european-
+pirateparty.eu/wp-content/uploads/2019/05/SabrinaGrimaldi_photo.jpg"><img src="/european-pirateparty.eu/wp-
+content/uploads/2019/05/SabrinaGrimaldi_photo-200x300.jpg" alt=""></a></p>
+<ul>
+<li><a href="/youtu.be/UmyWxEckwgw?rel=0">YouTube</a></li>
+<li><a href="/soundcloud.com/potkaars/20190510-sabrina-grimaldi-ep2019-english">Soundcloud</a></li>
+<li><a href="/itunes.apple.com/nl/podcast/ppu-podcast/id1436172406">iTunes</a></li>
+<li><a href="/open.spotify.com/episode/3mAEzjOa8AMhVariJgFqTh">Spotify</a></li>
+<li><a href="/www.podcastrepublic.net/podcast/1436172406">PodcastRepublic</a></li>
+</ul>
+<p>Do you know <a href="https://pirates.cat/ca/">Pirate Party Catalonia</a>'s candidate number #2, Muriel Rovira Esteva? One of the founding forces behind the European Pirate Party and its vice-chairperson in 2015 to 2017, experimental physicist and activist. Listen to know more! <a href="https://european-pirateparty.eu/wp-content/uploads/2019/05/muriel.jpg"><img src="https://european-pirateparty.eu/wp-content/uploads/2019/05/muriel-300x168.jpg" alt=""></a></p>
+<ul>
+<li><a href="https://youtu.be/azx2c5mmBg0?rel=0">YouTube</a></li>
+<li><a href="https://soundcloud.com/potkaars/20190512-muriel-rovira-esteva-pirate-party-catalonia-ep2019-english">Soundcloud</a></li>
+<li><a href="https://itunes.apple.com/nl/podcast/ppu-podcast/id1436172406#">iTunes</a></li>
+<li><a href="https://open.spotify.com/episode/4Ne3wbcIezcdX6dNPaeV2J">Spotify</a></li>
+<li><a href="https://www.podcastrepublic.net/podcast/1436172406">PodcastRepublic</a></li>
+</ul>
+<hr>
+<p><a href="https://www.partito-pirata.it/">Pirate Party Italy</a>'s #2 – Cristina Diana
+Bergu dreams of creating networks and bridges between information bubbles and
+challenging artificial contradictions with the creativity of fluid
+alternatives. Hear more on the podcast! <a href="https://european-pirateparty.eu/wp-
+content/uploads/2019/05/Diana-Bargu-cerchiato.jpg"><img src="https://european-
+pirateparty.eu/wp-content/uploads/2019/05/Diana-Bargu-
+cerchiato-300x300.jpg" alt=""></a></p>
+<ul>
+<li><a href="https://youtu.be/5I8EJTdQHXA">YouTube</a></li>
+<li><a href="https://soundcloud.com/potkaars/20190514-cristina-diana-bargu-italy-ep2019-english">Soundcloud</a></li>
+<li><a href="https://itunes.apple.com/nl/podcast/ppu-podcast/id1436172406#">iTunes</a></li>
+<li><a href="https://open.spotify.com/episode/4RiyizMUIRRmq7kRs6Y9wD">Spotify</a></li>
+<li><a href="https://www.podcastrepublic.net/podcast/1436172406">PodcastRepublic</a></li>
+</ul>
+<hr>
+<p>Petrus Pennanen is the chairperson of the Finnish Pirates, a city councilor of
+Helsinki and <a href="https://piraattipuolue.fi/">Pirate Party Finland candidate</a>.
+Listen to what he has to say about the second oldest Pirate party – and as a
+bonus, watch the Finnish promotional clip
+<a href="https://www.youtube.com/watch?v=qYz2GRiqLVw">here</a>! <a href="https://european-pirateparty.eu/wp-
+content/uploads/2019/05/petrus-pennanen.png"><img src="https://european-
+pirateparty.eu/wp-content/uploads/2019/05/petrus-
+pennanen-300x253.png" alt=""></a></p>
+<ul>
+<li><a href="https://youtu.be/bJY4b9e6Sn0?rel=0">YouTube</a></li>
+<li><a href="https://soundcloud.com/potkaars/20190516-petrus-pennanen-finland-ep2019-english">Soundcloud</a></li>
+<li><a href="https://itunes.apple.com/nl/podcast/ppu-podcast/id1436172406#">iTunes</a></li>
+<li><a href="https://open.spotify.com/episode/3mAEzjOa8AMhVariJgFqTh">Spotify</a></li>
+<li><a href="https://www.podcastrepublic.net/podcast/1436172406">PodcastRepublic</a></li>
+</ul>
+<hr>
+<p>Interviewers: Rico Brouwer, Raymond Johansen, Bailey Lamon <a href="/pp-international.net/">Pirate Parties
+International</a>, <a href="/potkaars.nl/">Potkaars.nl</a></p>
+
+      </div>
+  </div>
+
+        </div>
+
+        <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row footer">
+            <div class="col-sm-4">
+                <img src="/static/svg/Logo_European_Pirate_Party-inversed.svg" alt="Logo" />
+            </div>
+            <div class="col-sm-4">
+                <h5>EUROPEAN ELECTIONS</h5>
+                <hr>
+                <a href="/ep-elections/"> Overview </a><br>
+                <a href="/programme">Programme</a><br>
+                <a href="/ep-elections/interviews-candidates/"> Interviews with Candidates </a><br>
+            </div>
+            <div class="col-sm-4">
+                <h5>ABOUT</h5>
+                <hr>
+                <a href="/contact-press/">Contact / Press</a><br>
+                <a href="/meetings/">Council meetings</a><br>
+                <a href="/streaming/">Streaming</a><br>
+                <a href="/provider/">Provider</a><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <hr>
+                <p class="copyright text-muted">♡2020 by Author/Artist. Copying is an act of love. Please copy.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </main>
+
+

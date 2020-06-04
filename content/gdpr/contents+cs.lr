@@ -1,0 +1,88 @@
+_model: gdpr
+---
+title: Zásady ochrany osobních údajů
+---
+body:
+##1 - O nás
+Pro správě našich dat používáme Matomo – open source webovou analytickou platformu. Vlastník webu
+používá webovou analytickou platformu k měření, shromažďování, analýze a hlášení údajů o
+návštěvnících za účelem porozumění a optimalizace webových stránek. Pokud chcete vidět, jak Matomo
+vypadá, můžete si vyzkoušet demo verzi na adrese: [https://demo.matomo.org](https://demo.matomo.org)
+
+**[Identifikace správce osobních údajů a kontaktní údaje](https://european-pirateparty.eu/contact-press/)**
+
+##2 - Účel zpracování
+Matomo se používá k analýze chování návštěvníků webových stránek a k identifikaci potenciálních
+nástrah – not found pages, problémy s indexováním vyhledávače, návštěvnost obsahu… Jakmile jsou data
+zpracována, Matomo generuje zprávy pro majitele webových stránek, aby se podle toho zařídili, což
+vede například ke změně rozvržení stránek, publikování čerstvého obsahu atd.
+
+Matomo zpracovává následující osobní údaje:
+
+* Cookies
+* Část IP adresy
+* Umístění uživatele
+* Datum a čas
+* Název zobrazené stránky
+* URL zobrazené stránky
+* URL stránky, která byla zobrazena před aktuální stránkou
+* Rozlišení obrazovky
+* Čas v místním časovém pásmu
+* Soubory, na které jste kliknuli a které jste stáhnuli
+* Prokliky na vnější doménu
+* Čas načtení stránky
+* Země, region, město
+* Hlavní jazyk prohlížeče
+* Typ prohlížeče
+
+Zpracování osobních údajů se společností Matomo je založeno na oprávněných zájmech.
+
+##3 - Oprávněné zájmy
+Zpracování vašich osobních údajů, jako jsou soubory cookies, nám pomáhá zjistit, co funguje a co
+chybí na našich webových stránkách. Například identifikujeme, zda způsoby naší komunikace jsou
+srozumitelné, či nikoli a jak můžeme lépe uspořádat strukturu webu. Náš tým využívá zpracování
+vašich návštěvnických údajů a poté webové stránky přizpůsobuje co nejpohodlnější návštěvě. Ze
+zpracování vašich údajů profitujete také vy, jelikož web je díky nim stále lepší a lepší.
+
+Bez návštěvnických údajů bychom vám nebyli schopni poskytnout službu, kterou pro vás v současné době
+nabízíme. Vaše data budou použita pouze ke zlepšení uživatelského dojmu na našem webu.
+
+##4 - Příjemce osobních údajů
+Osobní údaje přijaté prostřednictvím Matomo jsou zasílány:
+
+**[majiteli tohoto webu](https://european-pirateparty.eu/contact-press/)**
+
+**Poskytovateli webhostingu**
+
+Swissmade Mürtschenstrasse 30,<br>
+CH-8048 Curych<br>
+Švýcarsko<br>
+
+##5 - Podrobnosti o převodech do třetích zemí a zárukách
+Data Matomo jsou hostována ve Švýcarsku v rámci společnosti Swissmade a za pomoci švýcarského
+federálního zákona o ochraně údajů.
+
+##6 - Retenční období
+Vaše osobní údaje uchováváme tak dlouho, jak je to nutné pro účely, pro který byly shromážděny, a
+pro dodržení našich právních a regulačních požadavků. To zahrnuje uchování vašich informací po
+přiměřenou dobu po vaší návštěvě webu. (max. 36 měsíců)
+
+##7 - Existence práv každého subjektu údajů
+Protože Matomo zpracovává osobní údaje kvůli oprávněným zájmům, můžete uplatnit následující práva:
+
+**Právo na přístup:** můžete nás kdykoli požádat o přístup k vašim osobním údajům.
+
+**Právo na smazání:** můžete nás kdykoli požádat o smazání všech osobních údajů, které o vás
+zpracováváme.
+
+**Právo na akci:** proti sledování osobních údajů se můžete ohradit pomocí následující funkce odhlášení:
+
+<iframe style = "border: 1px solid black; width: 100%;" src = "https://matomo.european-pirateparty.eu/index.php?module=CoreAdminHome&action=optOut&language=cs&backgroundColor=&fontColor=&fontSize=15px&fontFamily="> </iframe>
+
+
+##8 - Právo podat stížnost orgánu dozoru
+Pokud si myslíte, že způsob, jakým zpracováváme vaše osobní údaje pomocí služby Matomo analytics, je
+v rozporu se zákonem, máte právo podat stížnost orgánu dozoru.
+
+##9 - Existence automatizovaného rozhodování, včetně profilování a informací o způsobu rozhodování, významu a důsledcích
+Matomo neprovádí žádné profilování.

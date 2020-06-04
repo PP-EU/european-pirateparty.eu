@@ -1,0 +1,731 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicon/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicon/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicon/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="/favicon/favicon-196x196.png" sizes="196x196">
+<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon/favicon-128.png" sizes="128x128">
+<link rel="stylesheet" type="text/css" href="/static/foundation-icons.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/unmi.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/dropdown.css" />
+<link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/custom-modifications.css" />
+
+<link rel="stylesheet" href="/static/css/jquery.cookieBar.min.css">
+
+<link rel="stylesheet" type="text/css" href="/static/foundation-icons.css" />
+<link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" type="text/css" href="/static/css/share_buttons.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.cookieBar.min.js"></script>
+
+<title>Blog</title>
+
+<body>
+
+    <!-- Navigation -->
+<script>
+    $(document).ready(function () {
+        function getCookie(cname) {
+          var name = cname + "=";
+          var ca = document.cookie.split(';');
+          for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+            }
+          }
+          return "";
+        }
+        $(function() {
+            $.cookieBar('addTranslation', 'en', {
+                        message:	"This site uses Matomo to analyze traffic and help us to improve your user experience. We process part of you IP address and your cookies, they are stored on your browser for 13 months. These data are only processed by us and our web hosting platform. Please read our Privacy Policy to learn more.",
+                        acceptText:	'OK',
+                        infoText: "Privacy Policy",
+
+            });
+            if (getCookie('cookies-state') !== 'accepted'){
+                $.cookieBar({
+                    style: 'bottom-right',
+                    language: 'en',
+                    infoLink: "/gdpr/",
+                });
+            }
+        });
+    });
+</script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v6.0"></script>
+<script>
+    window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+              t._e.push(f);
+            };
+
+      return t;
+    }(document, "script", "twitter-wjs"));
+</script>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" id="mainNav">
+    <div class="container">
+        <a href="/">
+            <img class="nav__logo" src="/static/svg/Logo_European_Pirate_Party.svg" alt="Logo" />
+        </a>
+
+        <button class="navbar-toggler navbar-toggler-right" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#navbarResponsive"
+                                                            aria-controls="navbarResponsive"
+                                                            aria-expanded="false"
+                                                            aria-label="Toggle
+                                                            navigation">
+            Menu <i class="fas fi-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                                                 role="button"
+                                                                 data-toggle="dropdown"
+                                                                 aria-haspopup="true"
+                                                                 aria-expanded="false">
+                        PARTY
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item"
+                           href="/about">About</a>
+                        <a class="dropdown-item"
+                           href="/members">Members</a>
+                        <a class="dropdown-item" href="/board/">Board</a>
+
+
+                        <a class="dropdown-item" href="/statuses">Statuses</a>
+
+                        <a class="dropdown-item" href="https://wiki.ppeu.net/doku.php?id=european_pirate_party" target="_blank">Wiki</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"data-toggle="collapse" href="#collapseExample" href="#" id="navbarDropdown"
+                                                                     role="button"
+                                                                     data-toggle="dropdown"
+                                                                     aria-haspopup="true"
+                                                                     aria-expanded="false">
+                            PROGRAMME
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="collapseExample">
+                            <a class="dropdown-item" href="/programme">Preamble</a>
+                            <a class="dropdown-item" href="/programme/agriculture-fisheries/">Agriculture & Fisheries</a>
+                            <a class="dropdown-item" href="/programme/civil-society/">Civil Society</a>
+                            <a class="dropdown-item" href="/programme/education-culture-research-free-knowledge/">Education, Culture, Research & Free Knowledge</a>
+                            <a class="dropdown-item" href="/programme/environment-climate-and-energy/">Environment, Climate and Energy</a>
+                            <a class="dropdown-item" href="/programme/finances/">Finances</a>
+                            <a class="dropdown-item" href="/programme/free-software/">Free Software</a>
+                            <a class="dropdown-item" href="/programme/human-rights-in-the-digital-era/">Human Rights in the Digital Era</a>
+                            <a class="dropdown-item" href="/programme/international-affairs/">International Affairs</a>
+                            <a class="dropdown-item" href="/programme/net-policy/">Net Policy</a>
+                            <a class="dropdown-item" href="/programme/open-data/">Open Data</a>
+                            <a class="dropdown-item" href="/programme/social-affairs-healthcare/">Social Affairs & Healthcare</a>
+                            <a class="dropdown-item" href="/programme/space-programme/">Space Programme</a>
+                            <a class="dropdown-item" href="/programme/transport/">Transport</a>
+                        </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mep/">PARLIAMENT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">NEWS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/events/">EVENTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/career/">CAREER</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact-press/">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.facebook.com/europeanpirateparty"><i class="fi-social-facebook icon"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://twitter.com/EuropeanPirates"><i class="fi-social-twitter icon"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <main role="main">
+        <!-- Page Header -->
+        <header class="masthead">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-10 mx-auto">
+                        
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/we-call-on-china-to-release-tibetan-political-prisoners/"><img class="thumbnail blog-posting__media" src="/img/daniele-salutari-NAdinUQTy2c-unsplash.jpg" alt="We call on China to release Tibetan political prisoners"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/we-call-on-china-to-release-tibetan-political-prisoners/" itemprop="headline">We call on China to release Tibetan political prisoners</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/we-call-on-china-to-release-tibetan-political-prisoners/" />
+                    <i class="blog-posting__pubdate">2020-04-24 </i>
+                    <span itemprop="description"><blockquote><p>Since recurring human rights abuses from China needs to be addressed, we
+urge the European Commission to call upon the Chinese government to finally
+ensure freedom of religion and belief in Tibet, by freeing Gedhun Choekyi
+Nyima and his parents immediately without any conditions, together with all
+Tibetan political prisoners</p>
+</blockquote>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/we-call-on-china-to-release-tibetan-political-prisoners/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/first-meps-pirate-newsletter/"><img class="thumbnail blog-posting__media" src="/img/absolutvision-WYd_PkCa1BY-unsplash.jpg" alt="Pirate MEPs Newsletter"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/first-meps-pirate-newsletter/" itemprop="headline">Pirate MEPs Newsletter</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/first-meps-pirate-newsletter/" />
+                    <i class="blog-posting__pubdate">2020-04-22 </i>
+                    <span itemprop="description"><p>Dear Pirates, our first nine months in the European Parliament are over and we
+would like to introduce our regular newsletter. We would like to give you
+information after each plenary session on how we voted, as well as on what
+happened last month in Brussels</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/first-meps-pirate-newsletter/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/why-corona-apps-will-do-more-harm-than-good/"><img class="thumbnail blog-posting__media" src="/img/49772619788_3f5acd2e31_o.jpg" alt="Why corona apps will do more harm than good"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/why-corona-apps-will-do-more-harm-than-good/" itemprop="headline">Why corona apps will do more harm than good</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/why-corona-apps-will-do-more-harm-than-good/" />
+                    <i class="blog-posting__pubdate">2020-04-18 </i>
+                    <span itemprop="description"><pre><code>_PHOTO: Ministero Difesa: Emergenza #Covid19: controlli stradali per il rispetto delle disposizioni contro il coronavirus. CC BY-NC 2.0, https://creativecommons.org/licenses/by-nc/2.0/, https://flic.kr/p/2iQeFP3_
+</code></pre>
+<h1>Pirate Party of the Netherlands</h1>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/why-corona-apps-will-do-more-harm-than-good/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/european-pirates-pandemic-situation-must-not-lead-to-suspending-freedom-of-speech/"><img class="thumbnail blog-posting__media" src="/img/william-iven-DfMMzzi3rmg-unsplash.jpg" alt="European Pirates: Pandemic situation must not lead to suspending freedom of speech"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/european-pirates-pandemic-situation-must-not-lead-to-suspending-freedom-of-speech/" itemprop="headline">European Pirates: Pandemic situation must not lead to suspending freedom of speech</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/european-pirates-pandemic-situation-must-not-lead-to-suspending-freedom-of-speech/" />
+                    <i class="blog-posting__pubdate">2020-04-17 </i>
+                    <span itemprop="description"><p><em>The Internet, 17 April 2020</em> - <strong>Today, the European Pirates voted against a
+resolution of the European Parliament, which calls on social network operators
+to proactively find and “stop disinformation and hate speech”. Upload filters
+used by Facebook and other operators pose a fundamental threat to freedom of
+expression on the Internet. Calling for such censorship is absolutely
+unacceptable, especially at a moment when accurate and timely information is
+essential if we are to successfully overcome the current situation.</strong> <em>“It is
+outrageous that some politicians use this pandemic and this crisis situation
+to pursue their long-term goal of silencing people. Just last year, hundreds
+of thousands of people protested on the streets against upload filters. Now,
+when the situation is critical, old ideas of restricting freedom of expression
+are coming back. We are determined to fight COVID-19. For this exact reason,
+it is imperative that citizens have access to accurate and verified
+information. We should work towards developing and promoting trusted sources,
+instead of calling for automated measures for the social media, which are
+technologically unreliable, because they also suppress legitimate essential
+information,”</em> said the Vice-President of the European Parliament Marcel
+Kolaja</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/european-pirates-pandemic-situation-must-not-lead-to-suspending-freedom-of-speech/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/call-to-defend-sexual-and-reproductive-health-and-right-in-poland/"><img class="thumbnail blog-posting__media" src="/img/Call_to_defend_sexual_and_reproductive_health_and_rights.pdf" alt="Call to defend sexual and reproductive health and right in Poland"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/call-to-defend-sexual-and-reproductive-health-and-right-in-poland/" itemprop="headline">Call to defend sexual and reproductive health and right in Poland</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/call-to-defend-sexual-and-reproductive-health-and-right-in-poland/" />
+                    <i class="blog-posting__pubdate">2020-04-16 </i>
+                    <span itemprop="description"><p><strong>Pirate MEPs called on the Polish Parliament to definitely NOT adopt laws
+known as ”Stop paedophilia” bill and “Stop Abortion” bill.</strong> [pdf-embedder
+url="<a href="https://european-pirateparty.eu/wp-">https://european-pirateparty.eu/wp-</a>
+content/uploads/2020/04/Call_to_defend_sexual_and_reproductive_health_and_rights.pdf"]</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/call-to-defend-sexual-and-reproductive-health-and-right-in-poland/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/kolaja-the-commissions-proposal-to-protect-privacy-of-users-of-mobile-applications-to-combat-covid-19-is-insufficient/"><img class="thumbnail blog-posting__media" src="/img/rodion-kutsaev-0VGG7cqTwCo-unsplash-2.jpg" alt="Kolaja: The Commission&#39;s proposal to protect privacy of users of mobile applications to combat COVID-19 is insufficient"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/kolaja-the-commissions-proposal-to-protect-privacy-of-users-of-mobile-applications-to-combat-covid-19-is-insufficient/" itemprop="headline">Kolaja: The Commission&#39;s proposal to protect privacy of users of mobile applications to combat COVID-19 is insufficient</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/kolaja-the-commissions-proposal-to-protect-privacy-of-users-of-mobile-applications-to-combat-covid-19-is-insufficient/" />
+                    <i class="blog-posting__pubdate">2020-04-16 </i>
+                    <span itemprop="description"><p><em>Brussels, 16 April 2020</em> - <strong>The</strong> <strong>European Commission's proposal for a
+common exit strategy in individual Member States envisages, among other
+things, various types of monitoring of the movement of persons by using mobile
+applications. Unfortunately, it is not clear from the document how</strong> <strong>the
+data will be protected. In fact, it raises even more questions than last
+week's Commission recommendation.</strong> " <em>Even though, the fundamental questions
+are still unanswered, there are new emerging ideas that raise doubts about
+adequate protection of privacy and security of European citizens' data</em> <em>,</em> "
+said European Parliament Vice-President Marcel Kolaja. According to him,
+previous questions, how exactly the Commission intends to protect data that
+should be used by smart quarantine applications, were not answered. “ <em>I asked
+questions to Commissioner Didier Reynders and I was more or less told that
+everything would be all right, referring to GDPR and the European Data
+Protection Board. That really did not calm me down</em> ,” Kolaja adds. According
+to Kolaja, it is essential that smart quarantine applications are Free
+Software, i.e. Open Source</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/kolaja-the-commissions-proposal-to-protect-privacy-of-users-of-mobile-applications-to-combat-covid-19-is-insufficient/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/10th-board-meeting/"><img class="thumbnail blog-posting__media" src="/img/logo_european_pirate_party.png" alt="10th Board meeting"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/10th-board-meeting/" itemprop="headline">10th Board meeting</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/10th-board-meeting/" />
+                    <i class="blog-posting__pubdate">2020-04-09 </i>
+                    <span itemprop="description"><p>Ahoi Pirates,</p>
+<p>we hereby thrillingly invite you to the next board meeting of the PPEU on
+April 12th 2020 at 20:00 CET. This next meeting will be the 10th meeting of
+the board and will be held on Mumble. We will meet on Mumble NRW, room
+PPEU/Board Meeting (see
+<a href="https://wiki.piratenpartei.de/NRW:Mumble-
+Server?fbclid=IwAR3cxqALFjFH4Ax77dgouCt_hkxakVShRsNHz0YZI9d77gBWdR4lU46nlR4">instructions</a>).
+The minutes for this meeting can be found <a href="https://etherpad.pp-
+international.net/p/board_meeting_1920_10">here</a></p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/10th-board-meeting/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/how-cyber-criminals-profit-from-the-covid-19-pandemic/"><img class="thumbnail blog-posting__media" src="/img/philipp-katzenberger-iIJrUoeRoCQ-unsplash.jpg" alt="How Cyber-criminals profit from the COVID-19 pandemic?"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/how-cyber-criminals-profit-from-the-covid-19-pandemic/" itemprop="headline">How Cyber-criminals profit from the COVID-19 pandemic?</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/how-cyber-criminals-profit-from-the-covid-19-pandemic/" />
+                    <i class="blog-posting__pubdate">2020-04-08 </i>
+                    <span itemprop="description"><p>The global pandemic of COVID-19 is not only a serious health issue but also a
+huge cyber-security risk. Cyber-criminals took advantage of the virus
+proliferation by abusing people’s fear and demand for information and
+supplies.  The number of cyber-attacks against organizations and individuals
+is on the rise and, <a href="https://www.europol.europa.eu/newsroom/news/catching-virus"><em>according to
+Europol</em></a> (EU
+Agency for Law Enforcement Cooperation) is expected to increase even further.
+Criminals use the current crisis to carry out social engineering attacks, such
+as various malware and ransomware packages, themed around the pandemic. In
+Romania, for instance, online attacks linked to COVID-19 have risen by 475 %
+in March 2020, as compared to the previous month.  The main reasons are that
+citizens remain at home and are increasingly teleworking, relying on digital
+solutions. The limitations to public life also make some criminal activities
+less visible and displace them to online settings. Overall, the increased
+anxiety and fear of the current situation make people more vulnerable and easy
+to exploit.  Europol is observing a high increase of cyber-attacks, primarily
+through massive email phishing campaigns, which distribute malware and
+ransomware via malicious links and attachments to infect computers to steal
+passwords and personal data.  Attackers tend to infect computers, usually via
+email, by fooling medical institutions’ personnel with information about
+medical procedures and therapies to treat COVID-19 infections. Such messages
+are mostly sent in the name of institutions such as the World Health
+Organisation (WHO). Once the computer is infected, they ask for a ransom to
+give back access to the data, including patients’ medical records necessary
+for treatment, while threatening to sell this data on the deep web.  We are
+also witnessing an increase in attacks on critical health infrastructures. For
+instance, cyber-criminals carried out cyber-attacks amid the COVID-19 outbreak
+on several Spanish hospitals, the Paris hospital authority, and on the Brno
+University Hospital.  In Czechia, the incident at the Brno University Hospital
+prompted the hospital to postpone urgent surgeries and reroute patients to a
+nearby hospital. The hospital was forced to shut down its entire IT network
+during the incident and two of the hospital’s other branches, the Children’s
+Hospital and the Maternity Hospital, were also affected. These types of attack
+during a public health crisis are particularly threatening and carry genuine
+risks to human lives.  Moreover, law enforcement in the EU Member States saw
+an increase in online activity by offenders seeking child abuse material.
+Paedophiles use opportunities to engage with children, usually through social
+media, whom they expect to be more vulnerable due to isolation, less
+supervision and greater online exposure. Finally, the pandemic also has an
+impact on the increased trade of illicit and fake goods on the on Darkweb, as
+certain anti-corona related products have become unavailable and therefore
+more expensive</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/how-cyber-criminals-profit-from-the-covid-19-pandemic/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/kolaja-europe-should-keep-an-eye-on-the-security-of-smart-quarantine-applications/"><img class="thumbnail blog-posting__media" src="/img/Smart-quarantine-1.jpg" alt="Kolaja: Europe should keep an eye on the security of smart quarantine applications"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/kolaja-europe-should-keep-an-eye-on-the-security-of-smart-quarantine-applications/" itemprop="headline">Kolaja: Europe should keep an eye on the security of smart quarantine applications</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/kolaja-europe-should-keep-an-eye-on-the-security-of-smart-quarantine-applications/" />
+                    <i class="blog-posting__pubdate">2020-04-08 </i>
+                    <span itemprop="description"><p><em>Brussels, 7 April 2020 –</em> <strong>After the initial onslaught and extreme measures
+related to the coronavirus pandemic, European countries are preparing to
+withdraw from the "hard" quarantine and replace it with "smart" quarantine in
+the coming weeks. Although there is no precedent, the word “smart” in the
+context of quarantine always refers to the use of large data, whether
+geolocation or financial transaction data. " <em>The data needed to create models
+of coronavirus development, whether from telephone operators or credit card
+issuers, or provided by users themselves through applications, must be fully
+anonymized and secured against abuse,"</em> said Vice-President of the European
+Parliament Marcel Kolaja.</strong></p>
+<p>The European Commission is trying to gather data from telephone operators at
+the European level to model the evolution of the pandemic. " <em>The Commissioner
+for Internal Market and Services, Thierry Breton, informed us at the meeting
+of the Committee on the Internal Market and Consumer Protection that the
+Commission has experience with this type of modeling and confirmed that the
+data would be fully anonymized and it will not be possible to abuse them,
+furthermore he assured us that this was also confirmed by the European Data
+Protection Supervisor,</em> ” says Kolaja</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/kolaja-europe-should-keep-an-eye-on-the-security-of-smart-quarantine-applications/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/lifting-the-veil-on-the-secretive-eu-terror-filter-negotiations-heres-where-we-stand/"><img class="thumbnail blog-posting__media" src="/img/logo_european_pirate_party.png" alt="LIFTING THE VEIL ON THE SECRETIVE EU TERROR FILTER NEGOTIATIONS: HERE’S WHERE WE STAND"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/lifting-the-veil-on-the-secretive-eu-terror-filter-negotiations-heres-where-we-stand/" itemprop="headline">LIFTING THE VEIL ON THE SECRETIVE EU TERROR FILTER NEGOTIATIONS: HERE’S WHERE WE STAND</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/lifting-the-veil-on-the-secretive-eu-terror-filter-negotiations-heres-where-we-stand/" />
+                    <i class="blog-posting__pubdate">2020-03-30 </i>
+                    <span itemprop="description"><p>Next week (18 March – update: postponed) the fourth <strong>“Trilogue” meeting</strong>
+will be held on the EU’s proposed terrorist content online law infamous for
+its “upload filter”/”preventive measures” and “one hour removal orders”
+provisions. Trilogue means: In a series of <strong>closed-door meetings</strong> , the
+European Parliament and the Council (representing the member state
+governments), supported by the Commission, hammer out a final text acceptable
+to both institutions. It’s the last chance to make changes before the
+regulation gets adopted. In my <strong><a href="https://www.patrick-
+breyer.de/?p=589500&amp;lang=en">previous blog post</a></strong> I have published the timetable of negotiations
+as well as the negotiators and external documents for further reading,
+including by the<a href="https://fra.europa.eu/sites/default/files/fra_uploads/fra-2019-opinion-
+online-terrorism-regulation-02-2019_en.pdf">
+F</a><a href="https://fra.europa.eu/sites/default/files/fra_uploads/fra-2019-opinion-
+online-terrorism-
+regulation-02-2019_en.pdf">undamental</a><a href="https://fra.europa.eu/sites/default/files/fra_uploads/fra-2019-opinion-
+online-terrorism-regulation-02-2019_en.pdf">R</a><a href="https://fra.europa.eu/sites/default/files/fra_uploads/fra-2019-opinion-
+online-terrorism-regulation-02-2019_en.pdf">ights
+Agency</a>, three <a href="https://spcommreports.ohchr.org/TMResultsBase/DownLoadPublicCommunicationFile?gId=24234">UN Special
+Rapporteurs</a>,
+<a href="https://www.digitaleurope.org/wp/wp-
+content/uploads/2019/10/DIGITALEUROPE-Views-on-Terrorist-Content-Online-
+Regulation-October-2019.pdf">Digitaleurope</a>, <a href="https://globalnetworkinitiative.org/wp-
+content/uploads/2019/01/GNI-Statement-Proposed-EU-Regulation-on-Terrorist-
+Content.pdf">Global Networks
+Initiative</a>and <a href="https://www.politico.eu/wp-
+content/uploads/2019/04/TCO-letter-to-rapporteurs.pdf">Internet pioneers</a>. Last Friday a <a href="https://www.politico.eu/wp-
+content/uploads/2020/03/SKM_C45820030612100.pdf">“4
+column document” was leaked</a> which reveals a <strong>compromise
+proposed by the European Parliament</strong> ‘s lead negotiator (rapporteur).
+Negotiations are <strong>nearing the end</strong>. Every meeting is more decisive than the
+previous one. Therefore, every minor change could be crucial. Below, you can
+see the different positions of the Parliament, Commission and Council and what
+how these would affect everyone, from internet users to SMEs and other online
+enterprises</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/lifting-the-veil-on-the-secretive-eu-terror-filter-negotiations-heres-where-we-stand/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+
+  
+  <div class="pagination row">
+    
+      <a class="arrow" href="/page/2/">&laquo; Previous</a>
+    
+
+    
+        <a href="/"> 1 </a>
+    
+        <a href="/page/2/"> 2 </a>
+    
+
+    <span class="pagination__current">3</span>
+
+    
+        <a href="/page/4/"> 4 </a>
+    
+        <a href="/page/5/"> 5 </a>
+    
+        <a href="/page/6/"> 6 </a>
+    
+        <a href="/page/7/"> 7 </a>
+    
+        <a href="/page/8/"> 8 </a>
+    
+        <a href="/page/9/"> 9 </a>
+    
+        <a href="/page/10/"> 10 </a>
+    
+        <a href="/page/11/"> 11 </a>
+    
+        <a href="/page/12/"> 12 </a>
+    
+        <a href="/page/13/"> 13 </a>
+    
+        <a href="/page/14/"> 14 </a>
+    
+        <a href="/page/15/"> 15 </a>
+    
+        <a href="/page/16/"> 16 </a>
+    
+        <a href="/page/17/"> 17 </a>
+    
+        <a href="/page/18/"> 18 </a>
+    
+        <a href="/page/19/"> 19 </a>
+    
+
+    
+      <a class="arrow" href="/page/4/">Next &raquo;</a>
+    
+  </div>
+
+
+        </div>
+
+        <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row footer">
+            <div class="col-sm-4">
+                <img src="/static/svg/Logo_European_Pirate_Party-inversed.svg" alt="Logo" />
+            </div>
+            <div class="col-sm-4">
+                <h5>EUROPEAN ELECTIONS</h5>
+                <hr>
+                <a href="/ep-elections/"> Overview </a><br>
+                <a href="/programme">Programme</a><br>
+                <a href="/ep-elections/interviews-candidates/"> Interviews with Candidates </a><br>
+            </div>
+            <div class="col-sm-4">
+                <h5>ABOUT</h5>
+                <hr>
+                <a href="/contact-press/">Contact / Press</a><br>
+                <a href="/meetings/">Council meetings</a><br>
+                <a href="/streaming/">Streaming</a><br>
+                <a href="/provider/">Provider</a><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <hr>
+                <p class="copyright text-muted">♡2020 by Author/Artist. Copying is an act of love. Please copy.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </main>
+
+

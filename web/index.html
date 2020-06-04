@@ -1,0 +1,802 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicon/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicon/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicon/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="/favicon/favicon-196x196.png" sizes="196x196">
+<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon/favicon-128.png" sizes="128x128">
+<link rel="stylesheet" type="text/css" href="/static/foundation-icons.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/unmi.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/dropdown.css" />
+<link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/custom-modifications.css" />
+
+<link rel="stylesheet" href="/static/css/jquery.cookieBar.min.css">
+
+<link rel="stylesheet" type="text/css" href="/static/foundation-icons.css" />
+<link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" type="text/css" href="/static/css/share_buttons.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.cookieBar.min.js"></script>
+
+<title>Blog</title>
+
+<body>
+
+    <!-- Navigation -->
+<script>
+    $(document).ready(function () {
+        function getCookie(cname) {
+          var name = cname + "=";
+          var ca = document.cookie.split(';');
+          for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+            }
+          }
+          return "";
+        }
+        $(function() {
+            $.cookieBar('addTranslation', 'en', {
+                        message:	"This site uses Matomo to analyze traffic and help us to improve your user experience. We process part of you IP address and your cookies, they are stored on your browser for 13 months. These data are only processed by us and our web hosting platform. Please read our Privacy Policy to learn more.",
+                        acceptText:	'OK',
+                        infoText: "Privacy Policy",
+
+            });
+            if (getCookie('cookies-state') !== 'accepted'){
+                $.cookieBar({
+                    style: 'bottom-right',
+                    language: 'en',
+                    infoLink: "/gdpr/",
+                });
+            }
+        });
+    });
+</script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v6.0"></script>
+<script>
+    window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+              t._e.push(f);
+            };
+
+      return t;
+    }(document, "script", "twitter-wjs"));
+</script>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" id="mainNav">
+    <div class="container">
+        <a href="/">
+            <img class="nav__logo" src="/static/svg/Logo_European_Pirate_Party.svg" alt="Logo" />
+        </a>
+
+        <button class="navbar-toggler navbar-toggler-right" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#navbarResponsive"
+                                                            aria-controls="navbarResponsive"
+                                                            aria-expanded="false"
+                                                            aria-label="Toggle
+                                                            navigation">
+            Menu <i class="fas fi-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                                                 role="button"
+                                                                 data-toggle="dropdown"
+                                                                 aria-haspopup="true"
+                                                                 aria-expanded="false">
+                        PARTY
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item"
+                           href="/about">About</a>
+                        <a class="dropdown-item"
+                           href="/members">Members</a>
+                        <a class="dropdown-item" href="/board/">Board</a>
+
+
+                        <a class="dropdown-item" href="/statuses">Statuses</a>
+
+                        <a class="dropdown-item" href="https://wiki.ppeu.net/doku.php?id=european_pirate_party" target="_blank">Wiki</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"data-toggle="collapse" href="#collapseExample" href="#" id="navbarDropdown"
+                                                                     role="button"
+                                                                     data-toggle="dropdown"
+                                                                     aria-haspopup="true"
+                                                                     aria-expanded="false">
+                            PROGRAMME
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="collapseExample">
+                            <a class="dropdown-item" href="/programme">Preamble</a>
+                            <a class="dropdown-item" href="/programme/agriculture-fisheries/">Agriculture & Fisheries</a>
+                            <a class="dropdown-item" href="/programme/civil-society/">Civil Society</a>
+                            <a class="dropdown-item" href="/programme/education-culture-research-free-knowledge/">Education, Culture, Research & Free Knowledge</a>
+                            <a class="dropdown-item" href="/programme/environment-climate-and-energy/">Environment, Climate and Energy</a>
+                            <a class="dropdown-item" href="/programme/finances/">Finances</a>
+                            <a class="dropdown-item" href="/programme/free-software/">Free Software</a>
+                            <a class="dropdown-item" href="/programme/human-rights-in-the-digital-era/">Human Rights in the Digital Era</a>
+                            <a class="dropdown-item" href="/programme/international-affairs/">International Affairs</a>
+                            <a class="dropdown-item" href="/programme/net-policy/">Net Policy</a>
+                            <a class="dropdown-item" href="/programme/open-data/">Open Data</a>
+                            <a class="dropdown-item" href="/programme/social-affairs-healthcare/">Social Affairs & Healthcare</a>
+                            <a class="dropdown-item" href="/programme/space-programme/">Space Programme</a>
+                            <a class="dropdown-item" href="/programme/transport/">Transport</a>
+                        </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mep/">PARLIAMENT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">NEWS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/events/">EVENTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/career/">CAREER</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact-press/">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.facebook.com/europeanpirateparty"><i class="fi-social-facebook icon"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://twitter.com/EuropeanPirates"><i class="fi-social-twitter icon"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <main role="main">
+        <!-- Page Header -->
+        <header class="masthead">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-10 mx-auto">
+                        
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/call-for-time-limit-to-emergency-laws/"><img class="thumbnail blog-posting__media" src="/img/justice-2071539_1920.jpg" alt="Call for time limit to emergency laws"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/call-for-time-limit-to-emergency-laws/" itemprop="headline">Call for time limit to emergency laws</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/call-for-time-limit-to-emergency-laws/" />
+                    <i class="blog-posting__pubdate">2020-05-27 </i>
+                    <span itemprop="description"><p>In the last few week, with the outbreak of the COVID-19 pandemic, some
+<strong>political leaders in Europe have taken advantage of anunprecedented health
+situation to take disproportionate and unlimited powers to themselves</strong></p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/call-for-time-limit-to-emergency-laws/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/chinas-proposal-for-imposing-new-national-security-laws-on-hong-kong/"><img class="thumbnail blog-posting__media" src="/img/pop-zebra-MJNuWswcAao-unsplash-2.jpg" alt="China’s proposal for imposing new national security laws on Hong Kong"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/chinas-proposal-for-imposing-new-national-security-laws-on-hong-kong/" itemprop="headline">China’s proposal for imposing new national security laws on Hong Kong</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/chinas-proposal-for-imposing-new-national-security-laws-on-hong-kong/" />
+                    <i class="blog-posting__pubdate">2020-05-25 </i>
+                    <span itemprop="description"><p>Brussels, 25/5/2020 - In reaction to China’s plans to push through sweeping
+national security laws for <strong>Hong Kong pro-democracy activists have called for
+mass prostests against what they see erosion of Hong Kong's autonomy</strong>.
+Markéta Gregorová MEP comments</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/chinas-proposal-for-imposing-new-national-security-laws-on-hong-kong/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/https-european-pirateparty-eu-p-1488/"><img class="thumbnail blog-posting__media" src="/img/european-parliament-1265254_1920.jpg" alt="How can the EU Parliament be more transparent and spend less money?"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/https-european-pirateparty-eu-p-1488/" itemprop="headline">How can the EU Parliament be more transparent and spend less money?</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/https-european-pirateparty-eu-p-1488/" />
+                    <i class="blog-posting__pubdate">2020-05-24 </i>
+                    <span itemprop="description"><p><strong>Pirates in the European Parliament managed to gather a majority</strong> <strong>to
+support</strong><a href="https://www.europarl.europa.eu/doceo/document/TA-9-2020-0084_EN.html"> <em> <strong>strong calls on the Parliament to be a more transparent and
+economical public
+institution</strong></em></a>.
+However, more needs to be done</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/https-european-pirateparty-eu-p-1488/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/12th-meeting-of-the-ppeu-board/"><img class="thumbnail blog-posting__media" src="/img/pirate-1.jpeg" alt="12th meeting of the PPEU board"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/12th-meeting-of-the-ppeu-board/" itemprop="headline">12th meeting of the PPEU board</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/12th-meeting-of-the-ppeu-board/" />
+                    <i class="blog-posting__pubdate">2020-05-23 </i>
+                    <span itemprop="description"><p>Wonderful Pirates! We hereby invite you to the next board meeting of the PPEU
+on June 7th 2020 at 20:00 CEST. We will continue our technical set up on Jitsi
+and Youtube to allow for a broader participation. The meeting will be
+organized on Jitsi and streamed to our channel on
+<a href="https://www.youtube.com/channel/UC0St6SkXApFki6dc1Q1BVKA">YouTube</a> . Guest
+speakers can ask for speaking time via Council channel on the Mattermost
+<a href="https://mattermost.european-
+pirateparty.eu/signup_email?id=a4dpo5154j8w3gwpudq45bie9c">channel</a>. The minutes for
+this meeting can be found <a href="https://etherpad.pp-
+international.net/p/board_meeting_1920_12">here</a>. on behalf of the board of the
+PPEU, Oktavía Hrund</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/12th-meeting-of-the-ppeu-board/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/parliaments-voice-in-shaping-the-future-internet-regulation/"><img class="thumbnail blog-posting__media" src="/img/andras-vas-Bd7gNnWJBkU-unsplash.jpg" alt="Parliament&#39;s voice in shaping the future Internet regulation"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/parliaments-voice-in-shaping-the-future-internet-regulation/" itemprop="headline">Parliament&#39;s voice in shaping the future Internet regulation</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/parliaments-voice-in-shaping-the-future-internet-regulation/" />
+                    <i class="blog-posting__pubdate">2020-05-20 </i>
+                    <span itemprop="description"><h1>Pirate MEP Marcel Kolaja</h1>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/parliaments-voice-in-shaping-the-future-internet-regulation/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/scientist-matthijs-pontier-have-more-confidence-in-society/"><img class="thumbnail blog-posting__media" src="/img/a78acd0e1dffbb3fb017824db748be14.png" alt="Scientist Matthijs Pontier: &#34;Have more confidence in society&#34;"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/scientist-matthijs-pontier-have-more-confidence-in-society/" itemprop="headline">Scientist Matthijs Pontier: &#34;Have more confidence in society&#34;</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/scientist-matthijs-pontier-have-more-confidence-in-society/" />
+                    <i class="blog-posting__pubdate">2020-05-19 </i>
+                    <span itemprop="description"><p>Tracing apps, emergency ordinances, more police on the streets to enforce the
+rules. Tackling the Corona crisis has a major impact on daily life and our
+freedom of movement. It makes the government proud that we abide by the rules
+en masse, but as in every crisis there is also a different sound. How great is
+the tension between tackling the crisis and our freedom? How self-evident is
+it that we will regain our freedoms when this emergency is over? We went
+looking for that different sound in our province, for people who each in their
+own way stand up for freedom. Dr. Matthijs Pontier (35) is an AI scientist
+(VU-Amsterdam) and activist. He has been <strong>active for the Pirate Party for
+many years and was previously a list leader in the European elections</strong>.
+Personal freedom and the right to self-determination, both in the physical and
+the digital world, are his main motives. "The choices we make now determine
+what kind of world we wake up in." Pontier argues for more confidence in
+society. It is the government's task to inform and facilitate, not to control
+us. He sees an area of tension between the fight against the Coronavirus and
+our democratic rights and freedoms. <strong>Shortsightedness</strong> Almost all advice is
+based on the policy of the Outbreak Management Team (OMT). The data and models
+have not been made public. Nor are the considerations made within the OMT -
+only the advice itself. It is therefore not clear how the advice is arrived
+at. Nevertheless, the Cabinet seems to be blind to this. We are currently
+governed by a very small club and then you run the risk of a narrowing of
+vision. The government is deploying various measures to control the crisis,
+measures that until recently seemed unthinkable. For fear of Corona, the
+population accepts without protest that the government is claiming powers that
+we would normally protect with all our might. "If we surrender a lot of
+fundamental rights now, you wake up in a much less free world than before the
+Corona crisis. You saw that happening after 9/11. A lot of surveillance
+measures were put in place, which were never reversed after that. In a
+situation like this, there is always a risk that this will happen. That's what
+I want to warn people about."
+[embed]<a href="https://www.youtube.com/watch?v=MV4g7CGXvow[/embed">https://www.youtube.com/watch?v=MV4g7CGXvow[/embed</a>] <strong>Contact tracing
+apps</strong> The Cabinet now wants to use contact tracing apps to check whether
+someone has been in the vicinity of an infected person and to estimate whether
+someone has been infected on the basis of symptoms. Such apps are already
+being used in various countries. Often developed by companies that once did
+business with the secret services. In China and Israel there is totalitarian
+surveillance. Citizens are monitored every step of the way. "I find it
+frightening that the government can keep an eye on me all the time. My fear is
+that this will continue after the crisis. That's where it seems to be going
+now. That kind of data is also used to manipulate our behaviour. Apple and
+Google even want to build this into their operating system." The app creates a
+log of users who have been in the vicinity of infected persons. Users can then
+share the log with the authorities. And that's where the shoe pinches, because
+apart from the care personnel, hardly anyone is tested for the virus. The use
+of Bluetooth also makes the app very unreliable, says Pontier. "It's always a
+few metres off, even under ideal circumstances. What we can do better is to
+trace infections through human professionals. For example, you can keep a
+diary yourself or be interviewed by a trained person who can then map that
+out. That works much better."</p>
+<blockquote><p>"I don't have much confidence that the Minister and his team are going to be
+okay now."</p>
+</blockquote>
+<p>"I do have some technical knowledge and that was especially important when
+judging those apps. That I can assess that fairly well. I'm concerned with the
+ethics of technology in general. With my technical knowledge, I know what
+conditions must always be imposed on technology. In any case, the apps that
+have been tested so far did not meet those conditions. In addition, the
+government does not have such a good track record of technological solutions.
+So I also have little confidence that Hugo de Jonge and his team will do well
+now". <strong>Mass testing</strong> In order to control Corona, it seems especially
+important to test en masse, so that the number of infections can be properly
+mapped out. By temporarily isolating infected people, vulnerable people are
+better protected, as for example in Germany. There the mortality rate is
+considerably lower than in other countries, including the Netherlands. Pontier
+believes that a democratic society should be based on free choices that people
+make themselves "By providing good information, but also give citizens the
+right not to work if you do not have a safe workplace and the right to keep
+children at home if they have a vulnerable person in the family, and it is
+unsafe to send their child to school". Especially with the mouth caps, things
+are going completely wrong according to Pontier. "You have to enable people to
+protect themselves and others. The availability is great and we've been
+working on it for a long time, it's not a man on the moon project. The Dutch
+even advise against wearing mouthpieces, while the advice of the comparable
+Institutes - in Belgium and Germany is to wear mouthpieces. All studies show
+that homemade mouthpieces don't stop everything, but it's certainly better
+than nothing. If 60% of the population wears them, then that virus will die
+out much faster". <strong>Wrong starting point</strong> It is difficult to find out why
+these opinions differ so much, because the considerations of the OMT are not
+public. "They're actually saying we're too stupid to understand. That's
+basically what it comes down to, and that's weird. Then you're actually
+lacking in confidence that we could make wise choices ourselves. Which, in my
+opinion, should be the starting point. You see, we do: After the advice came
+not to shake hands, 99 percent stuck to it. People really do want to take care
+of themselves, but as a government you have to give the trust, and then you
+get that trust back. Then people are going to stick to those measures."</p>
+<blockquote><p>"Eventually this Corona crisis will blow over again, but now it's very
+important to stay alert."</p>
+</blockquote>
+<p>He absolutely does not agree with experts who say that society will degenerate
+into chaos if no measures are imposed. "A very large group of young people,
+who are not really at risk, lock themselves up out of solidarity and generally
+abide very well by the rules. I advocate giving people more responsibility
+based on their own role. Be more open about how these choices are made, so
+that we don't get caught up in a tunnel vision. By giving people more insight
+into the decisions that are made, you also create more confidence and people
+will comply more quickly with the measures that are taken". <strong>Fighting
+spirit</strong> Despite his fighting spirit, it is difficult to draw attention to
+this subject and to link concrete actions to it. "Our right to demonstrate is
+also being stripped down quite a bit at the moment. In any case, we are very
+active online. On Twitter, for example, I'm very busy with it and sometimes I
+ask open questions because, yes, I don't have all the answers either. We don't
+know what the best solution is because there's no access to that information.
+I think it's good to discuss this with each other and also ask critical
+questions. So that the government and the OMT just don’t get into that tunnel
+vision and make the wrong choices. Ultimately, the Corona crisis will blow
+over again, but it is now very important to remain alert"</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/scientist-matthijs-pontier-have-more-confidence-in-society/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/european-pirate-party-6th-council-meeting-2020/"><img class="thumbnail blog-posting__media" src="/img/logo_european_pirate_party.png" alt="6th Council Meeting 2020"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/european-pirate-party-6th-council-meeting-2020/" itemprop="headline">6th Council Meeting 2020</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/european-pirate-party-6th-council-meeting-2020/" />
+                    <i class="blog-posting__pubdate">2020-05-18 </i>
+                    <span itemprop="description"><p>Despite the dangerous pandemic, Pirate party cannot stop working. We need to
+move forward. We hereby invite you to the upcoming on-line Council meeting
+that will take place on 23 May 2020. On behalf of Board, the organization of
+the event will be coordinated by Alessandro Ciofini. The proposed agenda is
+following <strong>Saturday 23rd May</strong> 10:00 - 10:15 Registration and International
+delegates admitttance 10:15 - 10:30 Council Meeting chairperson election 10:30</p>
+<ul>
+<li>11:00 Presentation of any motions from members and agenda approval. 11:00 -
+11:30 Report from the Board 11:30 - 12:00 Budget 2020 12:00 - 13:00 New
+members admission 13:00 - 13:30 Break 13:30 - 14:00 Board member election
+14:00 - 15:00 Code of Conduct Council election 15:00 - 16:00 European Pirate
+Party's guests 16:00 - 16:15 Break 16:15 - 18:00 Motions from member's
+delegates. 18:00 - 18:15 Closing the meeting and planning the next meeting We
+will gather in the channel on <a href="https://mattermost.european-
+pirateparty.eu/signup_user_complete/?id=a4dpo5154j8w3gwpudq45bie9c">European Pirates
+Mattermost.</a> For
+further information see <a href="https://wiki.ppeu.net/doku.php?id=6th_council_meeting_2020_management">our wiki
+page.</a></li>
+</ul>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/european-pirate-party-6th-council-meeting-2020/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/european-parliament-strongly-recommends-any-software-developed-by-and-for-the-eu-institutions-to-be-made-publicly-available-under-free-and-open-source-software-licence/"><img class="thumbnail blog-posting__media" src="/img/digitization-5140069_1920.jpg" alt="European Parliament strongly recommends any software developed by and for the EU institutions to be made publicly available under Free and Open Source Software licence"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/european-parliament-strongly-recommends-any-software-developed-by-and-for-the-eu-institutions-to-be-made-publicly-available-under-free-and-open-source-software-licence/" itemprop="headline">European Parliament strongly recommends any software developed by and for the EU institutions to be made publicly available under Free and Open Source Software licence</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/european-parliament-strongly-recommends-any-software-developed-by-and-for-the-eu-institutions-to-be-made-publicly-available-under-free-and-open-source-software-licence/" />
+                    <i class="blog-posting__pubdate">2020-05-15 </i>
+                    <span itemprop="description"><p>Brussels, 15/5/2020 - <strong>Y</strong> <strong>esterday</strong> <strong>, in plenary, the</strong> <strong>European
+Parliament</strong> <strong>endorsed a number of budgetary</strong> <strong>discharge report</strong> <strong>s,</strong>
+<strong>which include</strong> <strong>Pirate amendment</strong> <strong>s</strong> <strong>**</strong>urging EU institutions to<strong></strong>predominantly<strong> </strong>use<strong> </strong>Open Source<strong> </strong>solutions<strong> </strong>.<strong> </strong>This success
+happened d<strong> </strong>espite the joint effort of the<strong> </strong>EPP and ECR<strong> </strong>Groups to
+strike out these essential parts of the reports<strong> </strong>. I<strong> </strong>n<strong> </strong>practic<strong></strong>e,<strong> </strong>from now on,<strong> </strong>all<strong> </strong>IT solution<strong> </strong>s<strong> <em>**</em></strong>developed by<strong>
+<em>**</em></strong>and for<strong> </strong>the<strong> </strong>EU institutions<strong> </strong>will<strong> <em>**</em></strong>first<strong> </strong>need<strong>
+<em>**</em></strong>to be<strong> <em>**</em></strong>asses<strong> </strong>sed against<strong> </strong>the<strong> </strong>possibility of<strong></strong>using<strong> </strong>Open Source solution<strong> </strong>s. A<strong> </strong>ssessments will<strong> </strong>then<strong></strong>have to be reported<strong> </strong>back to the Budgetary Control Committee of the
+Parliament on an<strong> </strong>annual<strong> </strong>basis, during<strong> </strong>the discharge procedure.
+This<strong> </strong>is a strong call for enhancing<strong> </strong>our important citizens right to
+transparent and trustworthy information<strong> </strong>.** <em>"</em> <em>It's</em> <em>__a milestone for
+transparent and open digitization of the European institutions. From now on,
+the Open Source ecosystem has a stepping ground for offering Open Source
+solutions and the Pirates will gladly play the role of the</em> <em>guardians</em> <em>and
+will try to solve and highlight any attempt to bypass this strong
+recommendation. It’s a really important step to remove vendor lock-ins in the
+Parliament“</em> , says Pirate Vice-President of European Parliament Marcel
+Kolaja. <em>"Open Source Software improves transparency and trust from citizens,
+as information is published in open and machine-readable formats, so that
+everyone can access, comment and re-use it to drive value. It also provides
+access to the source code, which enab</em> <em>les public participation and scrutiny
+of the presentation and analysis methods,“</em> comments Pirate MEP Mikuláš Peksa.
+It is essential for the European institutions to retain control over its own
+technical systems, especially in a context of disinformation and foreign
+interference. Open Source promotes local technical support, leads to rapid
+development of software and helps to avoid dependency on specific suppliers or
+vendor lock-in effects, which exist when only one company is in charge of
+software or even the entire IT infrastructure supply. Open Source Software
+also has potential for security improvements because it permits the
+identification and the fixing of weaknesses in a transparent and collaborative
+manner, while making it more difficult for hackers to introduce malware in the
+system. Finally, publicly financed software developed for the public sector
+should be made publicly available under a Free and Open Source Software
+licence. If it is public money, it should be public code as well. Free and
+Open Source Software gives everybody the right to use, study, share, and
+improve software. This right helps support other fundamental freedoms like
+freedom of speech, press, and privacy. Full text of the Free and Open Source
+Software related parts of the European Parliament discharge report 2018:  §48
+|  |  |  |  | Recognises that the production of public data under open,
+machine-readable format, easily accessible and re-usable, offers great
+opportunities both for transparency towards the public and innovation;
+welcomes the current initiatives to create and convert part of its data that
+are of interest to the public under that format; underlines the need to have a
+more user-friendly, systematic and coordinated approach for such initiatives,
+under a well-defined Parliament open data policy;<br>
+---|---|---|---|---|---<br>
+§49 |  |  |  |  | Recognises the added value that free and open source
+software can bring to Parliament; underlines in particular their role in
+increasing transparency and avoiding vendor lock-in effects; recognises also
+their potential for security improvements as they permit to identify and fix
+the weaknesses; strongly recommends any software developed for the institution
+to be made publicly available under free and open-source software licence;<br>
+§50 |  |  |  |  | Notes that the results of roll-call votes in plenary should
+be available in an open, machine-readable format and easily visible on
+Parliament’s website; calls on Parliament therefore to publish the machine-
+readable version of the roll-call vote results next to the non-machine-
+readable versions, on the plenary minutes’ webpage;<br>
+§79 |  |  |  |  | and further encourages the use of free open-sources self-
+hosted social network platforms having special regards to users’ data
+protection;</p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/european-parliament-strongly-recommends-any-software-developed-by-and-for-the-eu-institutions-to-be-made-publicly-available-under-free-and-open-source-software-licence/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/patrick-breyer-stop-biometric-mass-surveillance-now/"><img class="thumbnail blog-posting__media" src="/img/lianhao-qu-LfaN1gswV5c-unsplash.jpg" alt="Patrick Breyer: Stop biometric mass surveillance now!"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/patrick-breyer-stop-biometric-mass-surveillance-now/" itemprop="headline">Patrick Breyer: Stop biometric mass surveillance now!</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/patrick-breyer-stop-biometric-mass-surveillance-now/" />
+                    <i class="blog-posting__pubdate">2020-05-14 </i>
+                    <span itemprop="description"><p>Pirate Party and Greens/EFA Member of the European Parliament Patrick Breyer
+supports today's call by 44 civil society organisations on EU bodies and EU
+Member States to ban biometric mass surveillance: "Just like China and Russia,
+some EU Member States such as France are exploring the use of facial
+recognition and behavioral detection technology to control public spaces. I
+don't want to live with technology that permanently matches my face in public
+or reports 'unusual behaviour'. Such mass surveillance has a massive chilling
+effect on society, results in false incrimination and discriminates certain
+groups of people such as people of colour or elderly. Now is the time for the
+Commission to live up to its promises on ethical AI and propose a ban on
+biometric mass surveillance!" The Greens/EFA group in the European Parliament
+advocates an EU moratorium on the use of facial recognition and behavioral
+detection technology for mass surveillance of public spaces. Link to today's
+call by 44 civil society organisations: <a href="https://edri.org/blog-ban-biometric-
+mass-surveillance/">https://edri.org/blog-ban-biometric-
+mass-surveillance/</a></p>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/patrick-breyer-stop-biometric-mass-surveillance-now/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+    
+
+    <article class="blog-posting" itemtype="http://schema.org/BlogPosting" itemscope>
+      <div class="row">
+        
+            <div class="small-12 medium-4 columns imagebox">
+                <a href="/lessons-learned-from-the-avia-law/"><img class="thumbnail blog-posting__media" src="/img/t-chick-mcclure-UFNWLYzBR9w-unsplash-2.jpg" alt="Lessons learned from the Avia law"></a>
+            </div>
+         
+          <div class="small-12 medium-8 columns">
+              <h1 class="blog-posting__headline t-h4">
+                <a href="/lessons-learned-from-the-avia-law/" itemprop="headline">Lessons learned from the Avia law</a>
+              </h1>
+              <p class="blog-posting__excerpt">
+                    <link itemprop="mainEntityOfPage" href="/lessons-learned-from-the-avia-law/" />
+                    <i class="blog-posting__pubdate">2020-05-13 </i>
+                    <span itemprop="description"><h1>MEP Marcel Kolaja</h1>
+</span>
+              </p>
+
+                <p>
+                    <a class="blog-posting__readmore" href="/lessons-learned-from-the-avia-law/">READ MORE</a>
+                </p>
+          </div>
+      </div>
+    </article>
+
+  
+
+  
+  <div class="pagination row">
+    
+      <span class="disabled">&laquo; Previous</span>
+    
+
+    
+
+    <span class="pagination__current">1</span>
+
+    
+        <a href="/page/2/"> 2 </a>
+    
+        <a href="/page/3/"> 3 </a>
+    
+        <a href="/page/4/"> 4 </a>
+    
+        <a href="/page/5/"> 5 </a>
+    
+        <a href="/page/6/"> 6 </a>
+    
+        <a href="/page/7/"> 7 </a>
+    
+        <a href="/page/8/"> 8 </a>
+    
+        <a href="/page/9/"> 9 </a>
+    
+        <a href="/page/10/"> 10 </a>
+    
+        <a href="/page/11/"> 11 </a>
+    
+        <a href="/page/12/"> 12 </a>
+    
+        <a href="/page/13/"> 13 </a>
+    
+        <a href="/page/14/"> 14 </a>
+    
+        <a href="/page/15/"> 15 </a>
+    
+        <a href="/page/16/"> 16 </a>
+    
+        <a href="/page/17/"> 17 </a>
+    
+        <a href="/page/18/"> 18 </a>
+    
+        <a href="/page/19/"> 19 </a>
+    
+
+    
+      <a class="arrow" href="/page/2/">Next &raquo;</a>
+    
+  </div>
+
+
+        </div>
+
+        <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row footer">
+            <div class="col-sm-4">
+                <img src="/static/svg/Logo_European_Pirate_Party-inversed.svg" alt="Logo" />
+            </div>
+            <div class="col-sm-4">
+                <h5>EUROPEAN ELECTIONS</h5>
+                <hr>
+                <a href="/ep-elections/"> Overview </a><br>
+                <a href="/programme">Programme</a><br>
+                <a href="/ep-elections/interviews-candidates/"> Interviews with Candidates </a><br>
+            </div>
+            <div class="col-sm-4">
+                <h5>ABOUT</h5>
+                <hr>
+                <a href="/contact-press/">Contact / Press</a><br>
+                <a href="/meetings/">Council meetings</a><br>
+                <a href="/streaming/">Streaming</a><br>
+                <a href="/provider/">Provider</a><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <hr>
+                <p class="copyright text-muted">♡2020 by Author/Artist. Copying is an act of love. Please copy.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </main>
+
+

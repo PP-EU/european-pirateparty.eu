@@ -1,0 +1,339 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicon/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicon/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicon/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="/favicon/favicon-196x196.png" sizes="196x196">
+<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon/favicon-128.png" sizes="128x128">
+<link rel="stylesheet" type="text/css" href="/static/foundation-icons.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/unmi.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/dropdown.css" />
+<link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/custom-modifications.css" />
+
+<link rel="stylesheet" href="/static/css/jquery.cookieBar.min.css">
+
+<link rel="stylesheet" type="text/css" href="/static/foundation-icons.css" />
+<link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" type="text/css" href="/static/css/share_buttons.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.cookieBar.min.js"></script>
+
+<title>HUMAN RIGHTS IN THE DIGITAL ERA</title>
+
+<body>
+
+    <!-- Navigation -->
+<script>
+    $(document).ready(function () {
+        function getCookie(cname) {
+          var name = cname + "=";
+          var ca = document.cookie.split(';');
+          for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+            }
+          }
+          return "";
+        }
+        $(function() {
+            $.cookieBar('addTranslation', 'en', {
+                        message:	"This site uses Matomo to analyze traffic and help us to improve your user experience. We process part of you IP address and your cookies, they are stored on your browser for 13 months. These data are only processed by us and our web hosting platform. Please read our Privacy Policy to learn more.",
+                        acceptText:	'OK',
+                        infoText: "Privacy Policy",
+
+            });
+            if (getCookie('cookies-state') !== 'accepted'){
+                $.cookieBar({
+                    style: 'bottom-right',
+                    language: 'en',
+                    infoLink: "/gdpr/",
+                });
+            }
+        });
+    });
+</script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v6.0"></script>
+<script>
+    window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+              t._e.push(f);
+            };
+
+      return t;
+    }(document, "script", "twitter-wjs"));
+</script>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" id="mainNav">
+    <div class="container">
+        <a href="/">
+            <img class="nav__logo" src="/static/svg/Logo_European_Pirate_Party.svg" alt="Logo" />
+        </a>
+
+        <button class="navbar-toggler navbar-toggler-right" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#navbarResponsive"
+                                                            aria-controls="navbarResponsive"
+                                                            aria-expanded="false"
+                                                            aria-label="Toggle
+                                                            navigation">
+            Menu <i class="fas fi-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                                                 role="button"
+                                                                 data-toggle="dropdown"
+                                                                 aria-haspopup="true"
+                                                                 aria-expanded="false">
+                        PARTY
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item"
+                           href="/about">About</a>
+                        <a class="dropdown-item"
+                           href="/members">Members</a>
+                        <a class="dropdown-item" href="/board/">Board</a>
+
+
+                        <a class="dropdown-item" href="/statuses">Statuses</a>
+
+                        <a class="dropdown-item" href="https://wiki.ppeu.net/doku.php?id=european_pirate_party" target="_blank">Wiki</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"data-toggle="collapse" href="#collapseExample" href="#" id="navbarDropdown"
+                                                                     role="button"
+                                                                     data-toggle="dropdown"
+                                                                     aria-haspopup="true"
+                                                                     aria-expanded="false">
+                            PROGRAMME
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="collapseExample">
+                            <a class="dropdown-item" href="/programme">Preamble</a>
+                            <a class="dropdown-item" href="/programme/agriculture-fisheries/">Agriculture & Fisheries</a>
+                            <a class="dropdown-item" href="/programme/civil-society/">Civil Society</a>
+                            <a class="dropdown-item" href="/programme/education-culture-research-free-knowledge/">Education, Culture, Research & Free Knowledge</a>
+                            <a class="dropdown-item" href="/programme/environment-climate-and-energy/">Environment, Climate and Energy</a>
+                            <a class="dropdown-item" href="/programme/finances/">Finances</a>
+                            <a class="dropdown-item" href="/programme/free-software/">Free Software</a>
+                            <a class="dropdown-item" href="/programme/human-rights-in-the-digital-era/">Human Rights in the Digital Era</a>
+                            <a class="dropdown-item" href="/programme/international-affairs/">International Affairs</a>
+                            <a class="dropdown-item" href="/programme/net-policy/">Net Policy</a>
+                            <a class="dropdown-item" href="/programme/open-data/">Open Data</a>
+                            <a class="dropdown-item" href="/programme/social-affairs-healthcare/">Social Affairs & Healthcare</a>
+                            <a class="dropdown-item" href="/programme/space-programme/">Space Programme</a>
+                            <a class="dropdown-item" href="/programme/transport/">Transport</a>
+                        </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mep/">PARLIAMENT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">NEWS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/events/">EVENTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/career/">CAREER</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact-press/">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.facebook.com/europeanpirateparty"><i class="fi-social-facebook icon"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://twitter.com/EuropeanPirates"><i class="fi-social-twitter icon"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <main role="main">
+        <!-- Page Header -->
+        <header class="masthead">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-10 mx-auto">
+                        
+<h1>HUMAN RIGHTS IN THE DIGITAL ERA</h1>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            
+  <div class="row content">
+      <div class="col-md-10 col-lg-12 mx-auto">
+          <h3>Right to Self-determination</h3>
+<p>We consider the people’s right to self-determination as self-evident.</p>
+<h3>Right to Privacy</h3>
+<p>A right to privacy is about protecting the powerless from the abuse and mistreatment of the
+powerful. Pirates believe that all individuals should have a right to privacy in their own personal
+lives. Privacy includes the rights to discretion and the right to be anonymous. Anonymity does not
+relieve any person of responsibility for their actions.</p>
+<h4>Security in Freedom</h4>
+<p>The expansion of our civil rights and protection of our freedom is a primary motivation for Pirates.</p>
+<p>The threat posed by unlawful and excessive surveillance measures, imposed on us by governments both
+foreign and domestic, whether in response to terrorism or other types of crime, is grave. There is
+an immediate need for action to redress the balance and restore our privacy.</p>
+<h4>Privacy and Mass Surveillance</h4>
+<p>Europeans have a proud history of fighting for their fundamental rights and the freedoms of their
+fellow citizens.</p>
+<p>To preserve our rights and freedoms, and to ensure the effectiveness of law enforcement, Pirates
+demand that data collection and monitoring is limited to people who are suspected of committing or
+preparing a crime and requires judicial approval and oversight.</p>
+<p>Adequate protection against crime is an important responsibility of the state. We must ensure this
+responsibility is fulfilled through an intelligent, rational and evidence-based security policy.</p>
+<p>Pirates wish to abolish the practice of routine, automated and untargeted data collection, storage
+and matching. We reject the blanket and indiscriminate collection of communications data (data
+retention), traveling data (PNR) and biometric data. Pirates oppose the automated profiling of
+people to divide them into risk categories (“profiling”) at borders (entry/exit system).</p>
+<p>Public spaces are full of cameras that monitor the movement of people and vehicles, track faces, and
+combine this information without considering the potential for the erosion of privacy. Evidence
+demonstrates that the presence of such systems has little effect on the rate of crime and that, at
+best, crime simply shifts to other spaces. Pirates support and would prioritize the movement of
+police personnel from monitoring duties, to patrolling the streets. Pirates are against individuals
+being required to identify themselves if they are not suspected of committing a crime, especially
+when they are exercising their rights to protest or assemble.</p>
+<p>Pirates oppose the exchange of personal data with countries that lack effective protection of
+fundamental rights except in emergencies.</p>
+<h4>Stopping New Surveillance Plans</h4>
+<p>Pirates want to stop the erosion of civil rights, that has taken on dramatic proportions in recent
+history. To ensure our safety, we do not need new surveillance laws, existing laws are sufficient.</p>
+<p>In particular, we reject:</p>
+<ul>
+<li>The proposal to make fingerprinting of all identity card holders in the EU obligatory.</li>
+<li>Attempts to allow providers to retain communications data indiscriminately for “security” purposes in the context of the proposed ePrivacy regulation.</li>
+<li>The proposed creation of a centralized EU Identity Register including fingerprints and facial images (“interoperability”).</li>
+<li>Unilateral cross-border law enforcement access to data bypassing mutual assistance channels (“e-evidence regulation”).</li>
+<li>Screening travelers using lie detectors („iBorderCtrl“ project).</li>
+</ul>
+<h4>Systematic Evaluation of Existing Surveillance Powers and Moratorium</h4>
+<p>Pirates support well-reflected measures to keep us safe but intend to abolish harmful
+interferences in our fundamental rights. We, therefore, want the European Fundamental Rights
+Agency to systematically examine all current and future surveillance powers and programmes as to
+their effectiveness, cost, adverse side effects, alternatives and compatibility with our
+fundamental rights.</p>
+<p>Pirates advocate a moratorium on any further interference with our human rights by the security
+agencies of the EU in the name of internal security until the systematic review of existing
+powers by the FRA is complete.</p>
+<h4>Security Research</h4>
+<p>Pirates support the funding of research through the EU, however, the frequent involvement of
+government agencies in surveillance and filtering operations like INDECT and CleanIT
+demonstrates a clear intention to use such technologies in a way which makes them publicly
+funded tools for dismantling civil rights. We, therefore, argue that the EU must not fund
+technologies that limit fundamental rights.</p>
+<h4>Protecting Our Privacy Online</h4>
+<p>The proposed e-Privacy regulation will update privacy rules for e-communications. We reject
+attempts to allow providers to retain communications data indiscriminately for “security”
+purposes. The collection or use of personal data for data trade, advertising or market or
+opinion research must be allowed only with the active and informed consent of the person
+concerned.</p>
+<p>Additional Internet privacy legislation is needed to ensure that information society services
+can be used and paid for anonymously, and do not indiscriminately record our online activities.
+We intend to replace the surveillance economy with an anonymous micropayment economy.</p>
+<p>The right to use encryption shall be guaranteed. Support for end-to-end encryption shall be made
+compulsory for manufacturers of telecommunications equipment. Transport encryption shall be made
+compulsory for telecommunications operators, especially operators of international cables.
+National and inter-EU communications shall no longer be routed via third countries to prevent
+foreign intelligence agencies from intercepting them.</p>
+<h4>Export Controls of Surveillance and Censorship Technology</h4>
+<p>We support export controls of surveillance and censorship technology. We will not support the
+proliferation, by means of export credit or other state guarantees, of European-made
+surveillance and censorship technology to authoritarian countries that do not respect the rule
+of law. We will fight to uphold the privacy of journalists, activists and citizens around the
+world, by supporting legislation that prevents oppressive regimes from acquiring such technology
+and services from any entity in the European Union.</p>
+
+      </div>
+  </div>
+
+        </div>
+
+        <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row footer">
+            <div class="col-sm-4">
+                <img src="/static/svg/Logo_European_Pirate_Party-inversed.svg" alt="Logo" />
+            </div>
+            <div class="col-sm-4">
+                <h5>EUROPEAN ELECTIONS</h5>
+                <hr>
+                <a href="/ep-elections/"> Overview </a><br>
+                <a href="/programme">Programme</a><br>
+                <a href="/ep-elections/interviews-candidates/"> Interviews with Candidates </a><br>
+            </div>
+            <div class="col-sm-4">
+                <h5>ABOUT</h5>
+                <hr>
+                <a href="/contact-press/">Contact / Press</a><br>
+                <a href="/meetings/">Council meetings</a><br>
+                <a href="/streaming/">Streaming</a><br>
+                <a href="/provider/">Provider</a><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <hr>
+                <p class="copyright text-muted">♡2020 by Author/Artist. Copying is an act of love. Please copy.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </main>
+
+

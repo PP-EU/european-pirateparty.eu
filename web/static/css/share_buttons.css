@@ -1,0 +1,11 @@
+.share_buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.share_buttons div{
+    margin-left: 0.25rem;
+}
+.fb_iframe_widget span {
+    vertical-align: top !important;
+}
