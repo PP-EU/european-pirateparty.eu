@@ -4,8 +4,8 @@ type: post
 ---
 tags: 
  
-articles
 default
+articles
 
 ---
 pub_date: 2020-02-20
@@ -39,14 +39,14 @@ of the definition in light of future technological change and gives a long
 description:
 
 > “[…] main elements that compose AI[, which] are ‘data’ and ‘algorithms’. AI
-can be integrated in hardware. In case of machine learning techniques, which
-constitute a subset of AI, algorithms are trained to infer certain patterns
-based on a set of data in order to determine the actions needed to achieve a
-given goal. Algorithms may continue to learn when in use. While AI-based
-products can act autonomously by perceiving their environment and without
-following a pre-determined set of instructions, their behaviour is largely
-defined and constrained by its developers. Humans determine and programme the
-goals, which an AI system should optimise for.”
+> can be integrated in hardware. In case of machine learning techniques, which
+> constitute a subset of AI, algorithms are trained to infer certain patterns
+> based on a set of data in order to determine the actions needed to achieve a
+> given goal. Algorithms may continue to learn when in use. While AI-based
+> products can act autonomously by perceiving their environment and without
+> following a pre-determined set of instructions, their behaviour is largely
+> defined and constrained by its developers. Humans determine and programme
+> the goals, which an AI system should optimise for.”
 
 ## Promoting innovation is important; however,…
 

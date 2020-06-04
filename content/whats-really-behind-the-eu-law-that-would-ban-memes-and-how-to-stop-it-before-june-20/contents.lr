@@ -4,9 +4,9 @@ type: post
 ---
 tags: 
  
+default
 articles
 internet_freedom
-default
 
 ---
 pub_date: 2018-06-17
@@ -24,8 +24,8 @@ realising
 body: :
 
 > Our freedom to upload media and share links, and thus to express ourselves
-online, is under threat.[ __Tweet
-this!](https://juliareda.eu/2018/06/saveyourinternet/#)
+> online, is under threat.[ __Tweet
+> this!](https://juliareda.eu/2018/06/saveyourinternet/#)
 
 Article 13 of the Copyright Directive will force internet platforms (social
 networks, video sites, image hosts, etc.) to install **upload filters** to

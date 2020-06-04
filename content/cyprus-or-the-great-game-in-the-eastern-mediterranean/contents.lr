@@ -4,8 +4,8 @@ type: post
 ---
 tags: 
  
-articles
 default
+articles
 
 ---
 pub_date: 2020-01-28

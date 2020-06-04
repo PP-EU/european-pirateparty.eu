@@ -4,12 +4,12 @@ type: post
 ---
 tags: 
  
-internet_freedom
-pirate_parties
-european_politics
-events
 default
+events
+pirate_parties
 articles
+european_politics
+internet_freedom
 
 ---
 pub_date: 2020-01-19

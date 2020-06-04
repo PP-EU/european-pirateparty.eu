@@ -4,8 +4,8 @@ type: post
 ---
 tags: 
  
-articles
 default
+articles
 
 ---
 pub_date: 2020-04-24
@@ -13,10 +13,10 @@ pub_date: 2020-04-24
 img: /daniele-salutari-NAdinUQTy2c-unsplash.jpg
 ---
 description: > Since recurring human rights abuses from China needs to be addressed, we
-urge the European Commission to call upon the Chinese government to finally
-ensure freedom of religion and belief in Tibet, by freeing Gedhun Choekyi
-Nyima and his parents immediately without any conditions, together with all
-Tibetan political prisoners
+> urge the European Commission to call upon the Chinese government to finally
+> ensure freedom of religion and belief in Tibet, by freeing Gedhun Choekyi
+> Nyima and his parents immediately without any conditions, together with all
+> Tibetan political prisoners
 ---
 body: .
 

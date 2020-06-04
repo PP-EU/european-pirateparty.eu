@@ -4,9 +4,9 @@ type: post
 ---
 tags: 
  
-articles
-default
 newsletter
+default
+articles
 
 ---
 pub_date: 2020-04-22

@@ -4,9 +4,9 @@ type: post
 ---
 tags: 
  
+default
 articles
 anti-corruption
-default
 
 ---
 pub_date: 2019-12-11
