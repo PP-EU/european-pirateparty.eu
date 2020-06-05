@@ -12,17 +12,14 @@ pub_date: 2020-02-20
 ---
 img: /franck-v-jIBMSMs4_kA-unsplash.jpg
 ---
-description: # PIRATE MEP MARCEL KOLAJA
----
-body: :
-
-On February 19, the Commission
+description: On February 19, the Commission
 [presented](https://ec.europa.eu/commission/presscorner/detail/en/ip_20_273)
 its [white paper](https://eur-lex.europa.eu/summary/glossary/white_paper.html)
 on Artificial Intelligence (AI): [a European approach to excellence and
 trust](https://ec.europa.eu/info/files/white-paper-artificial-intelligence-
-european-approach-excellence-and-trust_en). As [previously explained on my
-blog](https://www.kolaja.eu/en/post/20200215-automated_decision_making/), the
+european-approach-excellence-and-trust_en). 
+---
+body: As [previously explained on my blog](https://www.kolaja.eu/en/post/20200215-automated_decision_making/), the
 topic is not merely a techy issue, but already impacts the life of many of us,
 be it applying for a job, ordering food, or content moderation software, etc.
 The proposal is open for consultation for any interested stakeholder or
