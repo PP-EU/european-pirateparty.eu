@@ -17,7 +17,9 @@ description: The German pirate party warns of the EU Commission‘s [new
 plan](https://ec.europa.eu/commission/sites/beta-
 political/files/soteu2018-preventing-terrorist-content-online-
 regulation-640_en.pdf) aimed at “preventing the dissemination of terrorist
-content online”. “The proposed easy-to-bypass Internet blocking and automated
+content online”. 
+---
+body: “The proposed easy-to-bypass Internet blocking and automated
 upload filters existentially threaten countless Internet services and endanger
 freedom of expression on the Internet,” warns **Patrick Breyer,** civil
 liberties activist and top candidate of the **Pirate Party** for the European
@@ -81,7 +83,5 @@ recorded in the first place according to the GDPR. There is a danger that
 providers will identify and track all users only to be able to comply with the
 data preservation obligation. A free Internet requires anonymity. Anonymity is
 essential for journalists, whistleblowers or people seeking advice, to name
-but a few
----
-body: .
+but a few.
 
