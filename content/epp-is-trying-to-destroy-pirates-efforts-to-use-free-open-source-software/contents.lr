@@ -16,7 +16,9 @@ description: We, Pirates, want to inform you that the **European People’s Part
 the European Parliament is trying to destroy Pirates’ efforts to encourage EU
 institutions to develop publicly available Free and Open Source Software** ,
 which would increase transparency, reduce administrative costs, increase
-security and metadata quality, and avoid vendor lock-in effects. Open Source
+security and metadata quality, and avoid vendor lock-in effects. 
+---
+body: Open Source
 Software improves transparency and trust from citizens, as information is
 published in open and machine-readable formats, so that everyone can access,
 comment and re-use it to drive value. It also provides access to the source
@@ -46,7 +48,5 @@ using the opportunity of the remote Parliament Plenary session to delete our
 recommendation to develop Open Source Software even though this already
 obtained a majority of votes at the Committee level.** Please help us in
 raising awareness of this important citizens right towards your EU public
-administration
----
-body: .
+administration.
 
