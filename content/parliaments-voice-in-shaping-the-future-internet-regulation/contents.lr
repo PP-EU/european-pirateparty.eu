@@ -15,17 +15,14 @@ pub_date: 2020-05-20
 ---
 img: /andras-vas-Bd7gNnWJBkU-unsplash.jpg
 ---
-description: # Pirate MEP Marcel Kolaja
----
-body: :
-
-The Digital Services Act is expected to be one of the most important pieces of
+description: The Digital Services Act is expected to be one of the most important pieces of
 legislation in this parliamentary term, enhancing the liability and safety
 regime of Internet platforms, services, and on-line marketplaces. Since the
 recovery plan of the European economy after COVID-19 crisis stands on two
 pillars—the Green New Deal and digitization—the urgent necessity to draft this
-act just right is our major task for the following months. This legislation
-will update the 2000s [Directive on Electronic Commerce](https://eur-
+act just right is our major task for the following months.
+---
+body: : This legislation will update the 2000s [Directive on Electronic Commerce](https://eur-
 lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32000L0031&from=EN), which
 defined levels of protection of rights and freedoms on-line and how
 intermediaries—such as social media or search engines—govern users activities
