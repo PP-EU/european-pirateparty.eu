@@ -17,7 +17,10 @@ description: Automatic license plate reading systems (ANPR) are currently used i
 [German states](https://piratenpartei.de/kfzscan) to match the license plates
 of all passing cars with police databases. Although Germany does not follow
 the UK, Denmark and the Netherlands in retaining no-hits in a database, the
-system is facing growing opposition. Patrick Breyer, lead candidate of the
+system is facing growing opposition. 
+
+---
+body: Patrick Breyer, lead candidate of the
 German Pirate Party for the 2019 EU elections, today presents instructions for
 the construction of a device to uncover the location of [hidden ANPR
 scanners](https://github.com/Scan-Rec/Scan-Rec). 15 scanner locations have
@@ -57,7 +60,3 @@ issued alerts for over 3 million license plates throughout
 including requests for seizure, checks, questioning or covert collection of
 information. ANPR portal of the German Pirate Party:
 <https://piratenpartei.de/kfzscan>
-
-
----
-body: 
