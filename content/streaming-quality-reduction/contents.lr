@@ -15,9 +15,7 @@ pub_date: 2020-05-10
 ---
 img: /marvin-meyer-wiwkUgfd0dE-unsplash.jpg
 ---
-description: # MEP MARCEL KOLAJA
----
-body: :
+description: 
 
 Lockdown, social distancing, work from home, and on-line schooling resulted in
 an increased demand for Internet connectivity during the coronavirus crisis.
@@ -31,6 +29,8 @@ market/en/news/commission-and-european-regulators-calls-streaming-services-
 operators-and-users-prevent-network) the streaming platforms to lower the
 quality of streaming during the coronavirus crisis, in another words switching
 from high definition to a standard one.
+---
+body: :
 
 ## No discrimination of Internet traffic
 
