@@ -18,7 +18,11 @@ related to the coronavirus pandemic, European countries are preparing to
 withdraw from the "hard" quarantine and replace it with "smart" quarantine in
 the coming weeks. Although there is no precedent, the word “smart” in the
 context of quarantine always refers to the use of large data, whether
-geolocation or financial transaction data. " _The data needed to create models
+geolocation or financial transaction data. 
+---
+body: 
+
+" _The data needed to create models
 of coronavirus development, whether from telephone operators or credit card
 issuers, or provided by users themselves through applications, must be fully
 anonymized and secured against abuse,"_ said Vice-President of the European
@@ -32,8 +36,6 @@ Commission has experience with this type of modeling and confirmed that the
 data would be fully anonymized and it will not be possible to abuse them,
 furthermore he assured us that this was also confirmed by the European Data
 Protection Supervisor,_ ” says Kolaja
----
-body: .
 
 The second option, that is the collection of data from applications installed
 on citizens' mobile phones, has some additional pitfalls apart from protecting
