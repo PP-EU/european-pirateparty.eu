@@ -15,14 +15,16 @@ pub_date: 2020-05-13
 ---
 img: /t-chick-mcclure-UFNWLYzBR9w-unsplash-2.jpg
 ---
-description: # MEP Marcel Kolaja
----
-body: :
+description: 
 
 While the European Union is about to start the process leading to the adoption
 of the Digital Services Act, a.k.a. the future Internet regulation, France—as
 one of the most powerful countries in the Council—proceeds with its own
-legislation. On May 13, the French Avia law governing platforms conduct
+legislation.
+---
+body: :
+
+On May 13, the French Avia law governing platforms conduct
 regarding hate speech on-line, shall get adopted in the final reading. The
 [text](http://www.assemblee-nationale.fr/dyn/15/textes/l15t0388_texte-adopte-
 seance) has been voted previously in the Assemblée Nationale.
