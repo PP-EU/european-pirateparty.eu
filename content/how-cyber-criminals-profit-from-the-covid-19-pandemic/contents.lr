@@ -15,7 +15,9 @@ img: /philipp-katzenberger-iIJrUoeRoCQ-unsplash.jpg
 description: The global pandemic of COVID-19 is not only a serious health issue but also a
 huge cyber-security risk. Cyber-criminals took advantage of the virus
 proliferation by abusing people’s fear and demand for information and
-supplies.  The number of cyber-attacks against organizations and individuals
+supplies.  
+---
+body: The number of cyber-attacks against organizations and individuals
 is on the rise and, [_according to
 Europol_](https://www.europol.europa.eu/newsroom/news/catching-virus) (EU
 Agency for Law Enforcement Cooperation) is expected to increase even further.
@@ -53,9 +55,7 @@ media, whom they expect to be more vulnerable due to isolation, less
 supervision and greater online exposure. Finally, the pandemic also has an
 impact on the increased trade of illicit and fake goods on the on Darkweb, as
 certain anti-corona related products have become unavailable and therefore
-more expensive
----
-body: .
+more expensive.
 
 * * *
 
