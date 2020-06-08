@@ -13,7 +13,10 @@ pub_date: 2017-05-02
 img: /logo_european_pirate_party.png
 ---
 description: The following email has been sent to all the members of the European pirate
-party, and is reposted here for convenience.   Dear Members, After more than
+party, and is reposted here for convenience.   
+
+---
+body: Dear Members, After more than
 one year of delay the board invites our members to participate in a Council
 Meeting. The meeting will be held online and it will take place from the 25th
 of May to the 15th of June to give all members a reasonable amount of time to
@@ -68,7 +71,3 @@ changes. **This is the draft agenda for the meeting:**
   * * Closing of the meeting (15th of June)
 
 Best regards, The Board
-
-
----
-body: 
