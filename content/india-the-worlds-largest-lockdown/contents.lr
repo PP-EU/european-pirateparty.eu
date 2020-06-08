@@ -17,16 +17,16 @@ pub_date: 2020-05-06
 ---
 img: /20200505-Aarogya_Setu.png
 ---
-description: # MEP Marcel Kolaja
----
-body: :
-
-India has adopted the largest worldwide lockdown and 1.3 billion people must
+description: India has adopted the largest worldwide lockdown and 1.3 billion people must
 stay at their homes since March 25. To prevent the virus from spreading, the
 Indian government developed an app called _Aarogya Setu_ to trace COVID-19
 patients or suspected cases. Recently, there have been attacks from the
 government on the freedoms on the Internet, so the question of the tracing app
-raises concerns. As a member of the delegation for relations with India in the
+raises concerns.
+---
+body: :
+
+As a member of the delegation for relations with India in the
 European Parliament, I have been watching the issue of digital rights for
 quite some time. On March 25, the conservative Prime Minister Nárendra Modi
 announced a lockdown of the entire country, consisting of a few phases and
