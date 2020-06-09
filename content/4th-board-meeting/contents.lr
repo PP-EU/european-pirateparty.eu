@@ -13,11 +13,10 @@ pub_date: 2020-01-08
 img: /pirates-globus.jpg
 ---
 description: Happy New year! We are kindly announcing that the 4th meeting of the PPEU
-Board will be held on mumble on 12th January at [20:00 CET](//time.is/). Let
-us get back to work! The minutes for this meeting can be found
+Board will be held on mumble on 12th January at [20:00 CET](//time.is/). 
+---
+body: Let us get back to work! The minutes for this meeting can be found
 [here](//etherpad.pp-international.net/p/board_meeting_1920_04). We will meet
 on Mumble NRW, room PPEU/Board Meeting ([see
-instructions](https://wiki.piratenpartei.de/NRW:Mumble-Server))
----
-body: .
+instructions](https://wiki.piratenpartei.de/NRW:Mumble-Server)).
 
