@@ -13,9 +13,10 @@ pub_date: 2020-05-23
 ---
 img: /pirate-1.jpeg
 ---
-description: Invitation to the next board meeting of the PPEU on June 7th
-
-body: Wonderful Pirates! We hereby invite you to the next board meeting of the PPEU
+description: Invitation to the next board meeting of the PPEU on June 7th.
+---
+body: 
+Wonderful Pirates! We hereby invite you to the next board meeting of the PPEU
 on June 7th 2020 at 20:00 CEST. We will continue our technical set up on Jitsi
 and Youtube to allow for a broader participation. The meeting will be
 organized on Jitsi and streamed to our channel on
@@ -26,7 +27,3 @@ pirateparty.eu/signup_email?id=a4dpo5154j8w3gwpudq45bie9c). The minutes for
 this meeting can be found [here](https://etherpad.pp-
 international.net/p/board_meeting_1920_12). On behalf of the board of the
 PPEU, Oktavía Hrund
-
-
----
-body: 
