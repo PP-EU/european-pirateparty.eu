@@ -13,10 +13,10 @@ pub_date: 2019-02-02
 img: /microphone-704255_1920.jpg
 ---
 description: The next meeting of the PPEU Board will be held on 3rd February at 16:00 CET.
-We will meet on Mumble NRW, room PPEU/Board Meeting (instructions:
+
+---
+body: We will meet on Mumble NRW, room PPEU/Board Meeting (instructions:
 <https://wiki.piratenpartei.de/NRW:Mumble-Server>). The agenda is here:
 <https://etherpad.pp-international.net/p/board_meeting_03>. Everyone is
-welcome
----
-body: !
+welcome!
 
