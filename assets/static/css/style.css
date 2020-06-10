@@ -82,6 +82,10 @@ img {
     display: block;
 }
 
+main {
+    margin-top: 1rem;
+}
+
 footer{
     background: #471659;
     color: white;
